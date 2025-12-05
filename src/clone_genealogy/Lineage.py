@@ -14,4 +14,3 @@ class Lineage:
             s += version.toXML()
         s += "</lineage>\n"
         return s
-

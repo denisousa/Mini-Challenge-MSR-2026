@@ -6,11 +6,12 @@ import warnings
 import json
 import time
 import requests
+import numpy as np
+import pandas as pd
 
 warnings.filterwarnings("ignore")
 
-
-def create_individual_boxplots(merged_prs_per_project, output_dir="rq1/individual_boxplots/"):
+def create_individual_boxplots(merged_prs_per_project, output_dir="01_results/individual_boxplots/"):
     os.makedirs(output_dir, exist_ok=True)
 
     df = merged_prs_per_project.copy()
@@ -223,9 +224,9 @@ def generate_summary_report(language_stats):
         print(f"• Q3+ PRs represent {pct_q3:.1f}% of all PRs")
         print(f"• Outlier PRs represent {pct_outliers:.1f}% of all PRs")
 
-    os.makedirs("rq1", exist_ok=True)
-    summary_df.to_csv("rq1/pr_statistics_summary.csv", index=False)
-    print("\n📁 Summary report saved to: rq1/pr_statistics_summary.csv")
+    os.makedirs("01_results", exist_ok=True)
+    summary_df.to_csv("01_results/pr_statistics_summary.csv", index=False)
+    print("\n📁 Summary report saved to: 01_results/pr_statistics_summary.csv")
 
     return summary_df, total_prs_q3, total_prs_outliers
 
@@ -240,33 +241,155 @@ def main_individual_analysis(merged_prs_per_project):
     return language_stats, summary_df, total_prs_q3, total_prs_outliers
 
 
-def github_merged_pr_count(repo_full_name: str, token: str, timeout: int = 30) -> int:
-    q = f"repo:{repo_full_name} is:pr is:merged"
+def get_merged_pr_counts_batch(repo_list: list[str], token: str, batch_size: int = 50) -> dict[str, int]:
+    """Recupera a contagem total de PRs para uma lista de repos usando um único request por lote."""
     url = "https://api.github.com/graphql"
-    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
-    payload = {
-        "query": """
-        query($q: String!) {
-          search(query: $q, type: ISSUE, first: 1) { issueCount }
-        }
-        """,
-        "variables": {"q": q},
+    headers = {"Authorization": f"Bearer {token}"}
+    results = {}
+
+    for i in range(0, len(repo_list), batch_size):
+        chunk = repo_list[i : i + batch_size]
+        query_parts = []
+        
+        # Monta a query com aliases (repo_0, repo_1...)
+        for idx, full_name in enumerate(chunk):
+            try:
+                owner, name = full_name.split("/")
+                part = f"""
+                repo_{idx}: repository(owner: "{owner}", name: "{name}") {{
+                    pullRequests(states: MERGED) {{ totalCount }}
+                }}
+                """
+                query_parts.append(part)
+            except ValueError:
+                continue
+
+        if not query_parts: continue
+        
+        full_query = "query { " + " ".join(query_parts) + " }"
+        
+        # Tentativa com retry simples para Rate Limit
+        while True:
+            try:
+                r = requests.post(url, headers=headers, json={"query": full_query}, timeout=30)
+                if r.status_code == 200:
+                    data = r.json()
+                    if "errors" in data: print(f"Errors in batch: {data['errors'][0]['message']}")
+                    
+                    # Mapeia de volta para o nome do repo
+                    for idx, full_name in enumerate(chunk):
+                        alias = f"repo_{idx}"
+                        repo_data = data.get("data", {}).get(alias)
+                        results[full_name] = repo_data["pullRequests"]["totalCount"] if repo_data else -1
+                    break
+                elif r.status_code in [403, 429]:
+                    print("Rate Limit. Sleeping 60s...")
+                    time.sleep(60)
+                else:
+                    print(f"Error {r.status_code}: {r.text}")
+                    break
+            except Exception as e:
+                print(f"Exception: {e}. Sleeping 5s...")
+                time.sleep(5)
+                
+    return results
+
+def get_until_date_counts_batch(repo_date_pairs: list[tuple], token: str, batch_size: int = 40) -> dict[str, int]:
+    """
+    Recupera contagem de PRs até uma data específica usando Search API via GraphQL em lote.
+    Input: [(repo_name, date_string), ...]
+    """
+    url = "https://api.github.com/graphql"
+    headers = {"Authorization": f"Bearer {token}"}
+    results = {}
+
+    for i in range(0, len(repo_date_pairs), batch_size):
+        chunk = repo_date_pairs[i : i + batch_size]
+        query_parts = []
+        
+        # Monta query de busca dinâmica
+        for idx, (repo, date_str) in enumerate(chunk):
+            # Alias precisa começar com letra, usamos s_INDEX
+            q_str = f"repo:{repo} is:pr is:merged merged:<={date_str}"
+            part = f"""
+            s_{idx}: search(query: "{q_str}", type: ISSUE, first: 0) {{ issueCount }}
+            """
+            query_parts.append(part)
+
+        full_query = "query { " + " ".join(query_parts) + " }"
+        
+        while True:
+            try:
+                r = requests.post(url, headers=headers, json={"query": full_query}, timeout=45)
+                if r.status_code == 200:
+                    data = r.json()
+                    for idx, (repo, date_str) in enumerate(chunk):
+                        key = f"{repo}@{date_str}"
+                        val = data.get("data", {}).get(f"s_{idx}", {}).get("issueCount", -1)
+                        results[key] = val
+                    break
+                elif r.status_code in [403, 429]:
+                    print("Rate Limit (Search). Sleeping 60s...")
+                    time.sleep(60)
+                else:
+                    print(f"Error {r.status_code}")
+                    break
+            except Exception as e:
+                time.sleep(5)
+                
+    return results
+
+
+def get_merged_pr_count(repository_full_name: str, github_token: str) -> int:
+    url = "https://api.github.com/search/issues"
+    query = f"repo:{repository_full_name} is:pr is:merged"
+    
+    headers = {
+        "Accept": "application/vnd.github.v3+json"
     }
-    r = requests.post(url, headers=headers, json=payload, timeout=timeout)
-    if r.status_code == 401:
-        raise RuntimeError("Invalid GitHub token/permissions (401).")
-    r.raise_for_status()
-    data = r.json()
-    if "errors" in data and data["errors"]:
-        raise RuntimeError(f"GitHub GraphQL error: {data['errors']}")
-    return int(data["data"]["search"]["issueCount"])
+    if github_token:
+        headers["Authorization"] = f"token {github_token}"
+    
+    params = {
+        "q": query,
+        "per_page": 1, 
+    }
+
+    print(f"Fetching merged PRs for: {repository_full_name}...")
+
+    # Start the infinite loop
+    while True:
+        try:
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            
+            # SUCCESS
+            if response.status_code == 200:
+                data = response.json()
+                return data.get("total_count", 0)
+
+            if response.status_code in [403, 429]:
+                print(f"Rate Limit hit ({response.status_code}). Sleeping for 10 seconds...")
+                time.sleep(10)
+                continue # Restart the loop
+
+            if 400 <= response.status_code < 500:
+                print(f"Critical Client Error ({response.status_code}). Cannot retry.")
+                print(f"Response: {response.text}")
+                return -1
+
+            response.raise_for_status()
+
+        except requests.exceptions.RequestException as e:
+            print(f"Network or Server Error occurred: {e}")
+            print("Retrying in 10 seconds...")
+            time.sleep(10)
 
 
 def enrich_projects_with_github_counts(
     projects_df: pd.DataFrame,
     token: str | None = None,
-    cache_path: str = "rq1/github_pr_counts_cache.json",
-    sleep_seconds: float = 0.2,
+    cache_path: str = "01_results/github_pr_counts_cache.json",
+    sleep_seconds: float = 0.2, # Não é mais usado, mas mantido p/ compatibilidade
 ) -> pd.DataFrame:
     if token is None:
         token = os.getenv("GITHUB_TOKEN")
@@ -282,19 +405,29 @@ def enrich_projects_with_github_counts(
         with open(cache_path, "r", encoding="utf-8") as f:
             cache = json.load(f)
 
-    pairs = []
-    for repo in df["full_name"].unique():
-        if repo not in cache:
-            cache[repo] = github_merged_pr_count(repo, token)
-            time.sleep(sleep_seconds)
-        pairs.append((repo, cache[repo]))
+    # Identifica quais repos não estão no cache
+    unique_repos = df["full_name"].unique().tolist()
+    missing_repos = [r for r in unique_repos if r not in cache]
 
-    with open(cache_path, "w", encoding="utf-8") as f:
-        json.dump(cache, f, ensure_ascii=False, indent=2)
+    if missing_repos:
+        print(f"Fetching total PR counts for {len(missing_repos)} repos in batches...")
+        # === AQUI ESTÁ A MUDANÇA MÁGICA ===
+        new_data = get_merged_pr_counts_batch(missing_repos, token)
+        cache.update(new_data)
+        
+        # Salva o cache atualizado
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
 
-    counts_df = pd.DataFrame(pairs, columns=["full_name", "github_num_merged_prs"])
-    return df.merge(counts_df, on="full_name", how="left")
-
+    # Cria o dataframe final a partir do cache
+    # map retorna NaN se não achar, então fillna(0) ou trate como quiser
+    df["total_merged_prs"] = df["full_name"].map(cache)
+    
+    # Limpeza final
+    df["total_merged_prs"] = pd.to_numeric(df["total_merged_prs"], errors="coerce")
+    out = df[(df["total_merged_prs"].fillna(0) != 0)].copy()
+    
+    return out
 
 def github_merged_pr_count_until(repo_full_name: str, token: str, until_dt, timeout: int = 30) -> int:
     # until_dt can be datetime/string; we use only the date part
@@ -329,8 +462,8 @@ def enrich_projects_with_github_counts_until_date(
     projects_df: pd.DataFrame,
     date_col: str = "latest_merged_at",
     token: str | None = None,
-    cache_path: str = "rq1/github_pr_counts_until_cache.json",
-    sleep_seconds: float = 0.2,
+    cache_path: str = "01_results/github_pr_counts_until_cache.json",
+    sleep_seconds: float = 2,
 ) -> pd.DataFrame:
     if token is None:
         token = os.getenv("GITHUB_TOKEN")
@@ -339,10 +472,11 @@ def enrich_projects_with_github_counts_until_date(
 
     df = projects_df.dropna(subset=["full_name", "language"]).copy()
     if date_col not in df.columns:
-        raise RuntimeError(f"Column '{date_col}' does not exist in the dataframe (it must include latest_merged_at).")
+        raise RuntimeError(f"Column '{date_col}' missing.")
 
     df["full_name"] = df["full_name"].astype(str)
     df[date_col] = pd.to_datetime(df[date_col], errors="coerce")
+    df["latest_merged_date"] = df[date_col].dt.date.astype(str)
 
     os.makedirs(os.path.dirname(cache_path) or ".", exist_ok=True)
     cache = {}
@@ -350,35 +484,61 @@ def enrich_projects_with_github_counts_until_date(
         with open(cache_path, "r", encoding="utf-8") as f:
             cache = json.load(f)
 
-    unique_pairs = (
-        df.dropna(subset=[date_col])[["full_name", date_col]]
-        .drop_duplicates()
-        .values
-        .tolist()
+    # Prepara lista de (repo, data) que faltam no cache
+    pairs_to_fetch = []
+    unique_pairs = df[["full_name", "latest_merged_date"]].drop_duplicates().values.tolist()
+    
+    for repo, date_str in unique_pairs:
+        if pd.isna(date_str): continue
+        key = f"{repo}@{date_str}"
+        if key not in cache:
+            pairs_to_fetch.append((repo, date_str))
+
+    if pairs_to_fetch:
+        print(f"Fetching time-based PR counts for {len(pairs_to_fetch)} items in batches...")
+        # === AQUI ESTÁ A MUDANÇA MÁGICA ===
+        new_results = get_until_date_counts_batch(pairs_to_fetch, token)
+        cache.update(new_results)
+
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+
+    # Aplica os dados do cache ao DataFrame
+    def get_val(row):
+        k = f"{row['full_name']}@{row['latest_merged_date']}"
+        return cache.get(k, 0)
+
+    df["number_prs_merged_up_to_date"] = df.apply(get_val, axis=1)
+
+    # Lógica original de cálculo e ordenação
+    df["difference_num_prs"] = (
+        pd.to_numeric(df["number_prs_merged_up_to_date"], errors="coerce")
+        - pd.to_numeric(df["num_prs"], errors="coerce")
     )
 
-    rows = []
-    for repo, dt in unique_pairs:
-        date_key = pd.to_datetime(dt).date().isoformat()
-        key = f"{repo}@{date_key}"
-        if key not in cache:
-            cache[key] = github_merged_pr_count_until(repo, token, dt)
-            time.sleep(sleep_seconds)
-        rows.append((repo, date_key, cache[key]))
+    df = df.sort_values("difference_num_prs", ascending=True)
+    
+    # ... Restante da sua lógica de ordenação e prop ...
+    df["prop_num_prs"] = np.where(
+        df["number_prs_merged_up_to_date"] > 0,
+        df["num_prs"] / df["number_prs_merged_up_to_date"],
+        np.nan
+    )
+    df = df.sort_values("prop_num_prs", ascending=False).reset_index(drop=True)
+    
+    # Reindex columns (mantive sua lógica original)
+    desired_order = [
+        "full_name", "language", "difference_num_prs", "prop_num_prs",
+        "num_prs", "number_prs_merged_up_to_date", "total_merged_prs",
+        "latest_merged_at", "number"
+    ]
+    df = df.reindex(columns=[c for c in desired_order if c in df.columns])
 
-    with open(cache_path, "w", encoding="utf-8") as f:
-        json.dump(cache, f, ensure_ascii=False, indent=2)
-
-    counts_df = pd.DataFrame(rows, columns=["full_name", "latest_merged_date", "github_num_merged_prs_until_latest"])
-    df["latest_merged_date"] = df[date_col].dt.date.astype(str)
-
-    df = df.merge(counts_df, on=["full_name", "latest_merged_date"], how="left").drop(columns=["latest_merged_date"])
     return df
-
 
 def export_outlier_projects_csv(
     merged_prs_per_project: pd.DataFrame,
-    output_path: str = "rq1/outlier_projects_by_language.csv",
+    output_path: str = "01_results/outlier_projects_by_language.csv",
     token: str | None = None,
 ) -> pd.DataFrame:
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
@@ -412,7 +572,7 @@ def export_outlier_projects_csv(
 
 def export_q3plus_projects_csv(
     merged_prs_per_project: pd.DataFrame,
-    output_path: str = "rq1/q3plus_projects_by_language.csv",
+    output_path: str = "01_results/q3plus_projects_by_language.csv",
     token: str | None = None,
 ) -> pd.DataFrame:
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)

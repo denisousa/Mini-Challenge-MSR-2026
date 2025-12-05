@@ -17,9 +17,12 @@ class CloneFragment:
         return self.file == other.file and self.ls == other.ls and self.le == other.le
 
     def matches(self, other):
-        matches_result, _ = match_hashes(self.hash, other.hash, threshold=0.9)
+        if self.file == other.file and self.ls == other.ls and self.le == other.le:
+            return True
+
+        matches_result, _ = match_hashes(self.hash, other.hash, threshold=0.90)
         return matches_result
-    
+
     def matchesStrictly(self, other):
         matches_result, _ = match_hashes(self.hash, other.hash, threshold=1.0)
         return self.file == other.file and matches_result
@@ -32,4 +35,3 @@ class CloneFragment:
 
     def countLOC(self):
         return self.le - self.ls
-

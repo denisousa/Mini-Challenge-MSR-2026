@@ -8,8 +8,14 @@ rq1/*.csv
 repos/**
 AiDev_Dataset/**
 
+
+
 rq1/*
 rq2/*
+01_results/*
+02_results/*
+03_results/*
+04_results/*
 
 .env
 

@@ -93,31 +93,3 @@ def match_hashes(hash1: int, hash2: int, threshold: float = 0.9) -> Tuple[bool, 
     """
     score = similarity(hash1, hash2)
     return score >= threshold, score
-
-
-if __name__ == "__main__":
-    # Example usage with your two code versions:
-
-    code_v1 = """
-    public DefaultIntervalCategoryDataset(double[][] starts, double[][] ends) {
-        this(DataUtilities.createNumberArray2D(starts),
-                DataUtilities.createNumberArray2D(ends));
-    }
-    """
-
-    code_v2 = """
-    public DefaultIntervalCategoryDatasetNow(double[][] startsNow, double[][] endsNow) { 
-        this(DataUtilities.createNumberArray2D(startsNow), 
-                DataUtilities.createNumberArray2D(endsNow)); 
-    }
-    """
-
-    h1 = generate_simhash(code_v1)
-    h2 = generate_simhash(code_v2)
-
-    print(f"SimHash v1: {h1:#018x}")  # hex formatted
-    print(f"SimHash v2: {h2:#018x}")
-
-    matches, score = match_hashes(h1, h2, threshold=0.9)
-    print(f"Similarity: {score:.3f}")
-    print(f"Match (>= 0.9): {matches}")

@@ -151,7 +151,7 @@ def main():
         # Get clone data from NiCad result
         try:
             repo_name = full_name.replace("/","_")
-            nicad_result_xml_path = f"{nicad_results_path}/{repo_name}_functions-clones-0.30-classes.xml"
+            nicad_result_xml_path = f"{nicad_results_path}/{repo_name}_functions-clones-0.60-classes.xml"
             system_lines = count_lines_of_code(os.path.abspath(repo_local_path), LANGUAGES[pr_language])
             clones_lines = calculate_lines_of_code(nicad_result_xml_path)
             clone_density_by_repo = round((clones_lines * 100) / system_lines, 2)

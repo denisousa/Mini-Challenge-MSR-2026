@@ -1,22 +1,34 @@
 import os
 import time
 import shutil
+import logging
 import subprocess
-from dataclasses import dataclass, field
 from pathlib import Path
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
+from dataclasses import dataclass, field
 from typing import List, Iterable, Optional
-from git import Repo
+from utils.folders_paths import results_03_path
 from clone_genealogy.CloneFragment import CloneFragment
 from clone_genealogy.CloneClass import CloneClass
 from clone_genealogy.CloneVersion import CloneVersion
 from clone_genealogy.Lineage import Lineage
 from clone_genealogy.utils import safe_rmtree
+from clone_genealogy.clone_density import compute_clone_density, WriteCloneDensity
 from clone_genealogy.git_operations import SetupRepo, GitCheckout, GitFecth
 from clone_genealogy.prints_operations import printError, printInfo
 from clone_genealogy.compute_time import timed, timeToString
-from utils.folders_paths import rq2_path
+from clone_genealogy.git_operations import get_last_merged_pr_commit
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv("GITHUB_TOKEN")
+
+log_file = f'{results_03_path}/errors.log'
+if os.path.exists(log_file):
+    os.remove(log_file)  # D
+
+logging.basicConfig(filename=log_file, level=logging.INFO)
 
 # =========================
 # Configuration models
@@ -40,9 +52,6 @@ class Context:
     git_url: str
     state: State
 
-# =========================
-# xxxxxxxxx
-# =========================
 
 def GetPattern(v1: CloneVersion, v2: CloneVersion):
     evolution = "None"
@@ -165,7 +174,7 @@ def RunCloneDetection(ctx: "Context", language: str):
                 cwd="NiCad",
                 check=True)
 
-    nicad_xml = f"{paths.prod_data_dir}_functions-clones/production_functions-clones-0.30-classes.xml"
+    nicad_xml = f"{paths.prod_data_dir}_functions-clones/production_functions-clones-0.20-classes.xml"
     shutil.move(nicad_xml, paths.clone_detector_xml)
     clones_dir = Path(f"{paths.prod_data_dir}_functions-clones")
     shutil.rmtree(clones_dir, ignore_errors=True)
@@ -181,23 +190,6 @@ def RunCloneDetection(ctx: "Context", language: str):
 
     print("Finished clone detection.\n")
 
-def CheckDoubleMatch(cc_original: CloneClass, cc1: CloneClass, cc2: CloneClass) -> int:
-    cc1_strict_match = False
-    cc2_strict_match = False
-    for fragment in cc_original.fragments:
-        for f1 in cc1.fragments:
-            if fragment.matchesStrictly(f1):
-                cc1_strict_match = True
-        for f2 in cc2.fragments:
-            if fragment.matchesStrictly(f2):
-                cc2_strict_match = True
-    if cc1_strict_match == cc2_strict_match:
-        return 0
-    if cc1_strict_match:
-        return 1
-    elif cc2_strict_match:
-        return 2
-    return 0
 
 def parseCloneClassFile(cloneclass_filename: str) -> List[CloneClass]:
     cloneclasses: List[CloneClass] = []
@@ -237,32 +229,12 @@ def RunGenealogyAnalysis(ctx: "Context", commitNr: int, hash_: str, author_pr: s
             found = False
             for lineage in st.genealogy_data:
                 if lineage.matches(pcc):
-                    if lineage.versions[-1].nr == commitNr:
-                        
-                        if len(lineage.versions) <= 1:
-                            continue
 
-                        checkDoubleMatch = CheckDoubleMatch(
-                            lineage.versions[-2].cloneclass,
-                            lineage.versions[-1].cloneclass,
-                            pcc,
-                        )
-                        if checkDoubleMatch == 1:
-                            continue
-                        elif checkDoubleMatch == 2:
-                            pcloneclasses.append(lineage.versions[-1].cloneclass)
+                    if lineage.versions[-1].nr == commitNr:
+                        continue
 
                     evolution, change = GetPattern(lineage.versions[-1], CloneVersion(pcc))
-                    if (
-                        evolution == "Same"
-                        and change == "Same"
-                        and lineage.versions[-1].evolution_pattern == "Same"
-                        and lineage.versions[-1].change_pattern == "Same"
-                    ):
-                        lineage.versions[-1].nr = commitNr
-                        lineage.versions[-1].hash = hash_
-                    else:
-                        lineage.versions.append(CloneVersion(pcc, hash_, commitNr, author_pr, evolution, change))
+                    lineage.versions.append(CloneVersion(pcc, hash_, commitNr, author_pr, evolution, change))
                     found = True
                     break
             if not found:
@@ -317,8 +289,16 @@ def _derive_repo_name(ctx: Context) -> str:
     base = os.path.splitext(base)[0] or base
     return base or "repo"
 
+def _insert_last_merged_commit(full_name, merged_commits):
+    last_pr_sha, last_pr_number = get_last_merged_pr_commit(full_name.split(".com/")[-1], token)
+    new_commit_context = merged_commits[-1].copy()
+    new_commit_context["sha"] = last_pr_sha
+    new_commit_context["pr_number"] = last_pr_number
+
+    merged_commits.append(new_commit_context)
+
 @timed()
-def get_clone_genealogy(full_name, methodology_commits) -> str:
+def get_clone_genealogy(full_name, merged_commits) -> str:
     git_url = full_name
     paths = Paths()
     state = State()
@@ -349,52 +329,64 @@ def get_clone_genealogy(full_name, methodology_commits) -> str:
     SetupRepo(ctx)
     total_time = 0
     hash_index = 0
-    for methodology_commits_item in methodology_commits:
-        total_commits = len(methodology_commits)*2
-        language = methodology_commits_item["language"]
-        set_commits = methodology_commits_item["commits"]
-        for author_pr, commit_pr in set_commits.items(): 
-            if author_pr == "coding_agent":
-                author_pr = methodology_commits_item["agent"]
+    total_commits = len(merged_commits)
+    clone_density_rows: List[dict] = []
+    coding_agent_name = merged_commits[-1]["author"]
 
-            iteration_start_time = time.time()
-            hash_index += 1
+    _insert_last_merged_commit(full_name, merged_commits)
 
-            printInfo(f"Analyzing commit nr.{hash_index} with hash {hash_index} | total commits: {total_commits} | author: {author_pr}")
+    for commit_context in merged_commits:
+        language = commit_context["language"]
+        author_pr = commit_context["author"]
+        commit_pr = commit_context["sha"]
+        number_pr = commit_context["pr_number"]
 
-            # Ensure we are at the correct commit
-            GitFecth(commit_pr, ctx)
-            GitCheckout(commit_pr, ctx)
+        iteration_start_time = time.time()
+        hash_index += 1
 
-            # Prepare source code
-            if not PrepareSourceCode(ctx, language):
-                continue
+        printInfo(
+            f"Analyzing commit nr.{hash_index} (PR #{number_pr}) with hash {commit_pr} | "
+            f"total commits: {total_commits} | author: {author_pr}"
+        )
 
-            RunCloneDetection(ctx, language)
-            RunGenealogyAnalysis(ctx, hash_index, commit_pr, author_pr)
-            WriteLineageFile(ctx, ctx.state.genealogy_data, paths.genealogy_xml)
+        # Ensure we are at the correct commit
+        GitFecth(commit_pr, ctx)
+        GitCheckout(commit_pr, ctx)
 
-            # Timing
-            iteration_end_time = time.time()
-            iteration_time = iteration_end_time - iteration_start_time
-            total_time += iteration_time
+        # Prepare source code
+        if not PrepareSourceCode(ctx, language):
+            continue
 
-            print("Iteration finished in " + timeToString(int(iteration_time)))
-            avg = int(total_time / hash_index) if hash_index else 0
-            remaining = int((total_time / hash_index) * (len(methodology_commits) - hash_index)) if hash_index else 0
-            print(" >>> Average iteration time: " + timeToString(avg))
-            print(" >>> Estimated remaining time: " + timeToString(remaining))
+        RunCloneDetection(ctx, language)
+        RunGenealogyAnalysis(ctx, hash_index, commit_pr, author_pr)
+        WriteLineageFile(ctx, ctx.state.genealogy_data, paths.genealogy_xml)
 
-            WriteLineageFile(ctx, ctx.state.genealogy_data, paths.genealogy_xml)
+        clone_density_by_repo = compute_clone_density(ctx, language, repo_name, git_url, number_pr, commit_pr, author_pr)
+        clone_density_rows.append(clone_density_by_repo)
 
-        # If nothing was accumulated, return a clear XML message
-        if len(ctx.state.genealogy_data) == 0:
-            return build_no_clones_message("nicad"), None, None
+        # Timing
+        iteration_end_time = time.time()
+        iteration_time = iteration_end_time - iteration_start_time
+        total_time += iteration_time
 
-        # Otherwise, finalize outputs
-        repo_complete_name = full_name.split(".com/")[-1].replace("/","_")
-        lineages_xml = WriteLineageFile(ctx,
-                                        ctx.state.genealogy_data,
-                                        f"{rq2_path}/{repo_complete_name}.xml")
+        print("Iteration finished in " + timeToString(int(iteration_time)))
+        avg = int(total_time / hash_index) if hash_index else 0
+        remaining = int((total_time / hash_index) * (len(merged_commits) - hash_index)) if hash_index else 0
+        print(" >>> Average iteration time: " + timeToString(avg))
+        print(" >>> Estimated remaining time: " + timeToString(remaining))
 
-        print("\nDONE")
+    repo_complete_name = full_name.split(".com/")[-1].replace("/","_")
+
+    if len(ctx.state.genealogy_data) == 0:
+        logging.error(f"Don't have code clones {full_name}")
+        return build_no_clones_message("nicad"), None, None
+
+    WriteCloneDensity(clone_density_rows,
+                      language, coding_agent_name,
+                      repo_complete_name)
+
+    WriteLineageFile(ctx,
+                    ctx.state.genealogy_data,
+                    f"{results_03_path}/{language}_{coding_agent_name}_{repo_complete_name}.xml")
+
+    print("\nDONE")

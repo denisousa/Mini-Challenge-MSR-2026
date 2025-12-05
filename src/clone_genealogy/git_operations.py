@@ -5,6 +5,34 @@ from clone_genealogy.utils import safe_rmtree
 from clone_genealogy.prints_operations import printInfo, printWarning
 from typing import Union
 import subprocess
+import requests
+
+def get_last_merged_pr_commit(repo: str, github_token: str):
+    url = f"https://api.github.com/repos/{repo}/pulls"
+    
+    headers = {"Accept": "application/vnd.github+json"}
+    if github_token:
+        headers["Authorization"] = f"token {github_token}"
+
+    params = {
+        "state": "closed",
+        "sort": "updated",
+        "direction": "desc",
+        "per_page": 50
+    }
+
+    response = requests.get(url, headers=headers, params=params)
+    response.raise_for_status()
+
+    pull_requests = response.json()
+
+    for pr in pull_requests:
+        if pr.get("merged_at"):
+            merge_commit_sha = pr.get("merge_commit_sha")
+            pr_number = pr.get("number")
+            return merge_commit_sha, pr_number
+
+    return None, None
 
 def clean_git_locks(repo_path: Union[str, Path]) -> None:
     """Remove Git lock files that may prevent operations."""
