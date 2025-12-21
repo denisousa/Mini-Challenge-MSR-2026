@@ -47,8 +47,8 @@ def compute_clone_density(ctx, language, repo_name, git_url, number_pr, commit_p
             "clone_density": clone_density_by_repo,
         }
 
-def WriteCloneDensity(clone_density_rows, language, author_pr, repo_complete_name):
+def WriteCloneDensity(clone_density_rows, language, repo_complete_name):
     density_df = pd.DataFrame(clone_density_rows)
-    clone_density_path = os.path.join(results_03_path, f"{language}_{author_pr}_{repo_complete_name}_clone_density.csv")
+    clone_density_path = os.path.join(results_03_path, f"{language}_{repo_complete_name}_clone_density.csv")
     density_df.to_csv(clone_density_path, index=False)
     print(f"\nSaved clone density data to {clone_density_path}")

@@ -1,0 +1,42 @@
+import os
+import pandas as pd
+import requests
+from utils.languages import LANGUAGES
+from utils.folders_paths import aidev_path, results_01_path
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv("GITHUB_TOKEN")
+os.makedirs(results_01_path, exist_ok=True)
+
+# === Load datasets ===
+print("Loading datasets...")
+repo_df = pd.read_csv(os.path.join(aidev_path, "repository.csv"))
+pr_df = pd.read_csv(os.path.join(aidev_path, "pull_request.csv"))
+
+repo_df = repo_df[repo_df["language"].isin(LANGUAGES.keys())]
+pr_df_merged = pr_df[pr_df["merged_at"].notna()].copy()
+pr_df_merged['pr_type'] = 'agent'
+
+merged_prs = pd.merge(
+    pr_df_merged,              
+    repo_df[["id", "url", "full_name", "language", "stars", "forks"]],
+    how='inner',        # 'inner' keeps only rows that match in both tables
+    left_on='repo_id',  # Column name in pr_df
+    right_on='id'       # Column name in repo_df
+)
+
+# Rename id_x to id and remove id_y
+merged_prs = merged_prs.rename(columns={'id_x': 'id'})
+merged_prs = merged_prs.drop(columns=['id_y'])
+
+# === Remove duplicate PRs ===
+print("Removing duplicate PRs by id...")
+merged_prs = merged_prs.drop_duplicates(subset=['id'], keep='first')
+print(f"Agent PRs after removing duplicates: {len(merged_prs)}")
+
+
+print(f"Total merged PRs to process: {len(merged_prs)}")
+
+output_csv = os.path.join(results_01_path, "new_agent_pull_request.csv")
+merged_prs.to_csv(output_csv, index=False)

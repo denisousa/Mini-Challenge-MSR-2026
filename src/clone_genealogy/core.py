@@ -325,7 +325,7 @@ def _insert_last_merged_commit(full_name, merged_commits):
     new_commit_context = merged_commits[-1].copy()
     new_commit_context["sha"] = last_pr_sha
     new_commit_context["pr_number"] = last_pr_number
-    new_commit_context["author"] = "Developer"
+    new_commit_context["pr_type"] = "Developer"
 
     merged_commits.append(new_commit_context)
 
@@ -363,13 +363,13 @@ def get_clone_genealogy(full_name, merged_commits) -> str:
     hash_index = 0
     total_commits = len(merged_commits)
     clone_density_rows: List[dict] = []
-    coding_agent_name = merged_commits[-1]["author"]
+    coding_agent_name = merged_commits[-1]["pr_type"]
 
     _insert_last_merged_commit(full_name, merged_commits)
 
     for commit_context in merged_commits:
         language = commit_context["language"]
-        author_pr = commit_context["author"]
+        author_pr = commit_context["pr_type"]
         commit_pr = commit_context["sha"]
         number_pr = commit_context["pr_number"]
 
