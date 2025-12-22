@@ -5,8 +5,8 @@ import xml.etree.ElementTree as ET
 
 # --- Configuration ---
 INPUT_FOLDER = "03_results"
-OUTPUT_FOLDER = "06_results"
-PR_CSV_PATH = "02_results_copy/projects_with_pr_sha.csv"
+OUTPUT_FOLDER = "10_results"
+PR_CSV_PATH = "01_results/human_agent_prs_with_commits.csv"
 
 # Create output directory if it doesn't exist
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
@@ -113,13 +113,18 @@ def analyze_clone_evolution(file_path):
             if evolution == "None" and change == "None":
                 raw_author = version.get('author')
                 # Classification Logic
-                if raw_author == "Developer":
-                    author_category = "Developer"
+                if raw_author == "human":
+                    author_category = "human"
                 else:
-                    author_category = "Agent" # Groups all agents together
+                    print(version.get('change'), full_name, file_path)
+                    author_category = "agent" # Groups all agents together
                 found_birth = True
+
+                if evolution == "None" and change == "None" and author_category == "agent":
+                    print(f"Agent birth found in file: {file_path}")
+            
                 break
-        
+
         # If for some reason no birth version is found, skip or mark unknown
         if not found_birth:
             continue 
@@ -194,11 +199,11 @@ if all_data:
     global_stats = print_stats("GLOBAL RESULTS", df)
     
     # 2. Developer Stats
-    dev_df = df[df['author_type'] == 'Developer']
+    dev_df = df[df['author_type'] == 'human']
     dev_stats = print_stats("DEVELOPER RESULTS", dev_df)
 
     # 3. Agent Stats
-    agent_df = df[df['author_type'] == 'Agent']
+    agent_df = df[df['author_type'] == 'agent']
     agent_stats = print_stats("AGENT RESULTS", agent_df)
 
     print("=" * 40)
@@ -221,8 +226,8 @@ if all_data:
         died = total - survived
         
         # By author type
-        dev_project = project_df[project_df['author_type'] == 'Developer']
-        agent_project = project_df[project_df['author_type'] == 'Agent']
+        dev_project = project_df[project_df['author_type'] == 'human']
+        agent_project = project_df[project_df['author_type'] == 'agent']
         
         dev_total = len(dev_project)
         dev_survived = dev_project['survived'].sum()

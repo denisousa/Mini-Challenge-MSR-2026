@@ -2,12 +2,13 @@ import os
 import pandas as pd
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from utils.folders_paths import results_03_path, results_04_path
+from utils.folders_paths import results_03_path
 
 
-results_03_path = os.path.abspath("03_results copy")
+results_03_path = os.path.abspath("03_results")
+results_06_path = os.path.abspath("06_results")
 # Ensure output directory exists
-os.makedirs(results_04_path, exist_ok=True)
+os.makedirs(results_06_path, exist_ok=True)
 
 print("Starting analysis of agent-created clones modifications...")
 
@@ -158,7 +159,7 @@ if df_agent_clones is not None and not df_agent_clones.empty:
     print(df_change_patterns.to_string(index=False))
     
     # Save Change Patterns
-    change_output_path = os.path.join(results_04_path, "agent_clones_change_patterns.csv")
+    change_output_path = os.path.join(results_06_path, "agent_clones_change_patterns.csv")
     df_change_patterns.to_csv(change_output_path, index=False)
     print(f"\n✓ Saved: {change_output_path}")
     
@@ -169,7 +170,7 @@ if df_agent_clones is not None and not df_agent_clones.empty:
     print(df_evolution_patterns.to_string(index=False))
     
     # Save Evolution Patterns
-    evolution_output_path = os.path.join(results_04_path, "agent_clones_evolution_patterns.csv")
+    evolution_output_path = os.path.join(results_06_path, "agent_clones_evolution_patterns.csv")
     df_evolution_patterns.to_csv(evolution_output_path, index=False)
     print(f"\n✓ Saved: {evolution_output_path}")
     

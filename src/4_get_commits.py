@@ -30,8 +30,6 @@ def get_pr_last_commit(repo_full_name: str, pr_number: int, token: str) -> tuple
         return None, None
 
 
-import requests
-
 def get_last_merged_pr_commit(repo_full_name: str, token: str) -> tuple:
     """
     Returns:

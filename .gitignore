@@ -21,6 +21,12 @@ rq2/*
 05_results/*
 06_results/*
 07_results/*
+08_results/*
+09_results/*
+10_results/*
+11_results/*
+*.rar
+*.zip
 
 .env
 

@@ -199,7 +199,7 @@ def RunCloneDetection(ctx: "Context", hash_index: str, language: str):
                     cwd="NiCad",
                     check=True)
 
-        nicad_xml = f"{paths.prod_data_dir}_functions-clones/production_functions-clones-0.20-classes.xml"
+        nicad_xml = f"{paths.prod_data_dir}_functions-clones/production_functions-clones-0.30-classes.xml"
         shutil.move(nicad_xml, paths.clone_detector_xml)
         clones_dir = Path(f"{paths.prod_data_dir}_functions-clones")
         shutil.rmtree(clones_dir, ignore_errors=True)
@@ -240,7 +240,7 @@ def parseCloneClassFile(cloneclass_filename: str) -> List[CloneClass]:
         raise e
     return cloneclasses
 
-def RunGenealogyAnalysis(ctx: "Context", commitNr: int, hash_: str, author_pr: str, hash_index: str):
+def RunGenealogyAnalysis(ctx: "Context", commitNr: int, hash_: str, number_pr: int, author_pr: str, hash_index: str):
     try:
         paths, st = ctx.paths, ctx.state
         print(f"Extract Code Code Genealogy (CCG) - Hash Commit {hash_}")
@@ -248,7 +248,7 @@ def RunGenealogyAnalysis(ctx: "Context", commitNr: int, hash_: str, author_pr: s
 
         if not st.genealogy_data:
             for pcc in pcloneclasses:
-                v = CloneVersion(pcc, hash_, commitNr, author_pr)
+                v = CloneVersion(pcc, hash_, commitNr, number_pr, author_pr)
                 l = Lineage()
                 l.versions.append(v)
                 st.genealogy_data.append(l)
@@ -261,12 +261,12 @@ def RunGenealogyAnalysis(ctx: "Context", commitNr: int, hash_: str, author_pr: s
                         if lineage.versions[-1].nr == commitNr:
                             continue
 
-                        evolution, change, n_evo, n_change, clones_loc = GetPattern(lineage.versions[-1], CloneVersion(pcc))
-                        lineage.versions.append(CloneVersion(pcc, hash_, commitNr, author_pr, evolution, change, n_evo, n_change, clones_loc))
+                        evolution, change, n_evo, n_change, clones_loc = GetPattern(lineage.versions[-1], CloneVersion(pcc, hash_, commitNr, number_pr, author_pr))
+                        lineage.versions.append(CloneVersion(pcc, hash_, commitNr, number_pr, author_pr, evolution, change, n_evo, n_change, clones_loc))
                         found = True
                         break
                 if not found:
-                    v = CloneVersion(pcc, hash_, commitNr, author_pr)
+                    v = CloneVersion(pcc, hash_, commitNr, number_pr, author_pr)
                     l = Lineage()
                     l.versions.append(v)
                     st.genealogy_data.append(l)
@@ -293,12 +293,14 @@ def build_no_clones_message(detector: Optional[str]) -> str:
 
 def WriteLineageFile(ctx: "Context", lineages: List[Lineage], filename: str):
     xml_txt = "<lineages>\n"
+    path_intro = ctx.paths.ws_dir.split("cloned_repositories/")[0]
 
     with open(filename, "w+", encoding="utf-8") as output_file:
         output_file.write("<lineages>\n")
         for lineage in lineages:
-            output_file.write(lineage.toXML())
-            xml_txt += lineage.toXML()
+            lineage_xml = lineage.toXML().replace(path_intro, "")
+            output_file.write(lineage_xml)
+            xml_txt += lineage_xml
         output_file.write("</lineages>\n")
         xml_txt += "</lineages>\n"
 
@@ -320,17 +322,11 @@ def _derive_repo_name(ctx: Context) -> str:
     base = os.path.splitext(base)[0] or base
     return base or "repo"
 
-def _insert_last_merged_commit(full_name, merged_commits):
-    last_pr_sha, last_pr_number = get_last_merged_pr_commit(full_name.split(".com/")[-1], token)
-    new_commit_context = merged_commits[-1].copy()
-    new_commit_context["sha"] = last_pr_sha
-    new_commit_context["pr_number"] = last_pr_number
-    new_commit_context["pr_type"] = "Developer"
-
-    merged_commits.append(new_commit_context)
-
 @timed()
 def get_clone_genealogy(full_name, merged_commits) -> str:
+    # Sort merged_commits by pr_number
+    merged_commits = sorted(merged_commits, key=lambda x: x.get("pr_number", 0))
+    
     git_url = full_name
     paths = Paths()
     state = State()
@@ -363,9 +359,6 @@ def get_clone_genealogy(full_name, merged_commits) -> str:
     hash_index = 0
     total_commits = len(merged_commits)
     clone_density_rows: List[dict] = []
-    coding_agent_name = merged_commits[-1]["pr_type"]
-
-    _insert_last_merged_commit(full_name, merged_commits)
 
     for commit_context in merged_commits:
         language = commit_context["language"]
@@ -391,7 +384,7 @@ def get_clone_genealogy(full_name, merged_commits) -> str:
             continue
 
         RunCloneDetection(ctx, hash_index, language)
-        RunGenealogyAnalysis(ctx, hash_index, commit_pr, author_pr, hash_index)
+        RunGenealogyAnalysis(ctx, hash_index, commit_pr, number_pr, author_pr, hash_index)
         WriteLineageFile(ctx, ctx.state.genealogy_data, paths.genealogy_xml)
 
         clone_density_by_repo = compute_clone_density(ctx, language, repo_name, git_url, number_pr, commit_pr, author_pr)
@@ -415,11 +408,11 @@ def get_clone_genealogy(full_name, merged_commits) -> str:
         return build_no_clones_message("nicad"), None, None
 
     WriteCloneDensity(clone_density_rows,
-                      language, coding_agent_name,
+                      language,
                       repo_complete_name)
 
     WriteLineageFile(ctx,
                     ctx.state.genealogy_data,
-                    f"{results_03_path}/{language}_{coding_agent_name}_{repo_complete_name}.xml")
+                    f"{results_03_path}/{language}_{repo_complete_name}.xml")
 
     print("\nDONE")

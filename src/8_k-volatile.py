@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # --- Directory Configuration ---
 INPUT_FOLDER = '03_results'
-OUTPUT_FOLDER = '07_results'
+OUTPUT_FOLDER = '08_results'
 
 # Ensure the output folder exists
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)

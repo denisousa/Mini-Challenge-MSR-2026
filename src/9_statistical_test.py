@@ -11,7 +11,7 @@ from scipy.stats import chi2_contingency
 
 # Configuration
 INPUT_FOLDER = "03_results"
-OUTPUT_FOLDER = "05_results"
+OUTPUT_FOLDER = "09_results"
 
 def parse_filename(filename):
     """

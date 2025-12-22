@@ -1,53 +1,10 @@
 import os
 import pandas as pd
-import requests
-from utils.languages import LANGUAGES
-from utils.folders_paths import aidev_path, results_01_path
+from utils.folders_paths import results_01_path
 from dotenv import load_dotenv
-from datetime import datetime
-from typing import Any, Dict, List, Optional
 
 load_dotenv()
 token = os.getenv("GITHUB_TOKEN")
-
-def list_commits_until(
-    timestamp: str,
-    repo: str,
-    *,
-    token: Optional[str] = None,
-    per_page: int = 100,
-    timeout: int = 30,
-) -> List[Dict[str, Any]]:
-    """Return commits on the default branch up to `timestamp` (inclusive)."""
-    dt = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
-    until = dt.isoformat()
-
-    session = requests.Session()
-    session.headers.update({
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "commits-until-script",
-        **({"Authorization": f"Bearer {token}"} if token else {}),
-    })
-
-    url = f"https://api.github.com/repos/{repo}/commits"
-    params = {"until": until, "per_page": per_page}
-
-    commits: List[Dict[str, Any]] = []
-    while url:
-        r = session.get(url, params=params, timeout=timeout)
-        r.raise_for_status()
-        commits.extend(r.json())
-
-        next_url = None
-        for part in (r.headers.get("Link") or "").split(","):
-            if 'rel="next"' in part:
-                next_url = part.split(";")[0].strip().strip("<>")
-                break
-
-        url, params = next_url, None  # next_url already contains query params
-
-    return commits
-
 
 os.makedirs(results_01_path, exist_ok=True)
 
