@@ -22,6 +22,9 @@ def main():
     # === Group by full_name to process each project ===
     projects_grouped = df_prs.groupby("full_name")
     for full_name, project_prs in projects_grouped:
+        if "airbyte" not in full_name :
+            continue  # For testing, process only the 3rd project
+
         total_prs = len(project_prs)
         
         print(f"\n=== Processing project: {full_name} ({total_prs} PRs) ===")

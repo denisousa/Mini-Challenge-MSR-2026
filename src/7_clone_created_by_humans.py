@@ -136,34 +136,64 @@ def main():
     
     evolution_data, change_data = process_all_xml_files(xml_dir)
     
-    # Create DataFrames
-    df_evolution = pd.DataFrame(evolution_data)
-    df_change = pd.DataFrame(change_data)
+    # Create DataFrames and sort alphabetically
+    df_evolution = pd.DataFrame(evolution_data).sort_values(['project', 'evolution_pattern'])
+    df_change = pd.DataFrame(change_data).sort_values(['project', 'change_pattern'])
     
     # Add summary statistics
     print("\n" + "="*80)
     print("EVOLUTION PATTERNS SUMMARY")
     print("="*80)
-    print(df_evolution.groupby('evolution_pattern').agg({
+    
+    evolution_summary = df_evolution.groupby('evolution_pattern').agg({
         'total_occurrences': 'sum',
         'sum_n_evo': 'sum',
         'human_occurrences': 'sum',
         'human_sum_n_evo': 'sum',
         'agent_occurrences': 'sum',
         'agent_sum_n_evo': 'sum'
-    }))
+    })
+    print(evolution_summary)
+    
+    # Add total row for evolution patterns
+    totals_evolution = pd.DataFrame({
+        'total_occurrences': [evolution_summary['total_occurrences'].sum()],
+        'sum_n_evo': [evolution_summary['sum_n_evo'].sum()],
+        'human_occurrences': [evolution_summary['human_occurrences'].sum()],
+        'human_sum_n_evo': [evolution_summary['human_sum_n_evo'].sum()],
+        'agent_occurrences': [evolution_summary['agent_occurrences'].sum()],
+        'agent_sum_n_evo': [evolution_summary['agent_sum_n_evo'].sum()]
+    }, index=['TOTAL'])
+    
+    print("-"*80)
+    print(totals_evolution)
     
     print("\n" + "="*80)
     print("CHANGE PATTERNS SUMMARY")
     print("="*80)
-    print(df_change.groupby('change_pattern').agg({
+    
+    change_summary = df_change.groupby('change_pattern').agg({
         'total_occurrences': 'sum',
         'sum_n_cha': 'sum',
         'human_occurrences': 'sum',
         'human_sum_n_cha': 'sum',
         'agent_occurrences': 'sum',
         'agent_sum_n_cha': 'sum'
-    }))
+    })
+    print(change_summary)
+    
+    # Add total row for change patterns
+    totals_change = pd.DataFrame({
+        'total_occurrences': [change_summary['total_occurrences'].sum()],
+        'sum_n_cha': [change_summary['sum_n_cha'].sum()],
+        'human_occurrences': [change_summary['human_occurrences'].sum()],
+        'human_sum_n_cha': [change_summary['human_sum_n_cha'].sum()],
+        'agent_occurrences': [change_summary['agent_occurrences'].sum()],
+        'agent_sum_n_cha': [change_summary['agent_sum_n_cha'].sum()]
+    }, index=['TOTAL'])
+    
+    print("-"*80)
+    print(totals_change)
     
     # Save the CSVs
     output_dir = os.path.join(base_dir, '07_results')

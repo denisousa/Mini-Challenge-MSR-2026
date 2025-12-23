@@ -154,6 +154,9 @@ def run_chi_square(df, context_name, pattern_column, exclude_same=False):
         print(f"\n    Result: No statistically significant relationship found")
         print(f"            between AUTHOR and {pattern_column} (p >= 0.05)")
         print()
+
+
+
     
     result = {
         'context': context_name,

@@ -13,29 +13,20 @@ print("Loading datasets...")
 repo_df = pd.read_csv(os.path.join(aidev_path, "repository.csv"))
 pr_df = pd.read_csv(os.path.join(aidev_path, "pull_request.csv"))
 
-repo_df = repo_df[repo_df["language"].isin(LANGUAGES.keys())]
 pr_df_merged = pr_df[pr_df["merged_at"].notna()].copy()
 pr_df_merged['pr_type'] = 'agent'
 
-# merged_prs = pd.merge(
-#     pr_df_merged,              
-#     repo_df[["id", "url", "full_name", "language", "stars", "forks"]],
-#     how='inner',        # 'inner' keeps only rows that match in both tables
-#     left_on='repo_id',  # Column name in pr_df
-#     right_on='id'       # Column name in repo_df
-# )
-
-merged_prs = pr_df_merged.merge(
+merged_prs = pd.merge(
+    pr_df_merged,
     repo_df,
-    left_on="repo_url",
-    right_on="url",
-    how="left",
-    suffixes=("_pr", "_repo"),
+    left_on="repo_id",
+    right_on="id",
+    how="inner",
 )
 
-# Rename id_x to id and remove id_y
-# merged_prs = merged_prs.rename(columns={'id_x': 'id'})
-# merged_prs = merged_prs.drop(columns=['id_y'])
+# Rename PR identifier column for clarity
+if "id_x" in merged_prs.columns:
+    merged_prs = merged_prs.rename(columns={"id_x": "id"})
 
 output_csv = os.path.join(results_01_path, "new_agent_pull_request.csv")
 merged_prs.to_csv(output_csv, index=False)

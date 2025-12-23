@@ -10,13 +10,13 @@ results_06_path = os.path.abspath("06_results")
 # Ensure output directory exists
 os.makedirs(results_06_path, exist_ok=True)
 
-print("Starting analysis of agent-created clones modifications...")
+print("Starting analysis of human-created clones modifications...")
 
-def analyze_agent_clones_modifications(results_folder):
+def analyze_human_clones_modifications(results_folder):
     """
-    For each project, analyzes modifications made to clones created by agents.
+    For each project, analyzes modifications made to clones created by humans.
     Tracks who (human or agent) performs Consistent, Inconsistent, Add, Subtract operations
-    on clones that were originally created by agents.
+    on clones that were originally created by humans.
     Excludes "Same" patterns from the count.
     """
     
@@ -48,13 +48,13 @@ def analyze_agent_clones_modifications(results_folder):
             project_name = filename
             language = "Unknown"
         
-        # Track patterns by who modified agent-created clones in this project
-        agent_clone_modifications = {
+        # Track patterns by who modified human-created clones in this project
+        human_clone_modifications = {
             "human": {"Consistent": 0, "Inconsistent": 0, "Add": 0, "Subtract": 0},
             "agent": {"Consistent": 0, "Inconsistent": 0, "Add": 0, "Subtract": 0}
         }
         
-        has_agent_clones = False  # Track if project has any agent-created clones
+        has_human_clones = False  # Track if project has any human-created clones
         
         try:
             tree = ET.parse(file_path)
@@ -67,17 +67,17 @@ def analyze_agent_clones_modifications(results_folder):
                 if not versions:
                     continue
                 
-                # Check if first version is created by agent
+                # Check if first version is created by human
                 first_version = versions[0]
                 first_evolution = first_version.get("evolution")
                 first_change = first_version.get("change")
                 first_author = first_version.get("author")
                 
-                # If clone was created by agent (evolution="None" AND change="None" AND author!="human")
+                # If clone was created by human (evolution="None" AND change="None" AND author="human")
                 if (first_evolution == "None" and first_change == "None" and 
-                    first_author != "human"):
+                    first_author == "human"):
                     
-                    has_agent_clones = True  # Mark that this project has agent-created clones
+                    has_human_clones = True  # Mark that this project has human-created clones
                     
                     # Now analyze all subsequent versions (updates)
                     for version in versions:
@@ -97,28 +97,28 @@ def analyze_agent_clones_modifications(results_folder):
                         
                         # Count change patterns (only Consistent and Inconsistent, exclude Same)
                         if change in ["Consistent", "Inconsistent"]:
-                            agent_clone_modifications[author_group][change] += 1
+                            human_clone_modifications[author_group][change] += 1
                         
                         # Count evolution patterns (only Add and Subtract, exclude Same)
                         if evolution in ["Add", "Subtract"]:
-                            agent_clone_modifications[author_group][evolution] += 1
+                            human_clone_modifications[author_group][evolution] += 1
             
             # Calculate totals for this project
-            human_consistent = agent_clone_modifications["human"]["Consistent"]
-            human_inconsistent = agent_clone_modifications["human"]["Inconsistent"]
-            human_add = agent_clone_modifications["human"]["Add"]
-            human_subtract = agent_clone_modifications["human"]["Subtract"]
+            human_consistent = human_clone_modifications["human"]["Consistent"]
+            human_inconsistent = human_clone_modifications["human"]["Inconsistent"]
+            human_add = human_clone_modifications["human"]["Add"]
+            human_subtract = human_clone_modifications["human"]["Subtract"]
             
-            agent_consistent = agent_clone_modifications["agent"]["Consistent"]
-            agent_inconsistent = agent_clone_modifications["agent"]["Inconsistent"]
-            agent_add = agent_clone_modifications["agent"]["Add"]
-            agent_subtract = agent_clone_modifications["agent"]["Subtract"]
+            agent_consistent = human_clone_modifications["agent"]["Consistent"]
+            agent_inconsistent = human_clone_modifications["agent"]["Inconsistent"]
+            agent_add = human_clone_modifications["agent"]["Add"]
+            agent_subtract = human_clone_modifications["agent"]["Subtract"]
             
             # Separate data for change and evolution patterns
             change_total = human_consistent + human_inconsistent + agent_consistent + agent_inconsistent
             evolution_total = human_add + human_subtract + agent_add + agent_subtract
             
-            # Add project to results regardless of whether it has agent-created clones
+            # Add project to results regardless of whether it has human-created clones
             project_results.append({
                 "Project": project_name,
                 "Human_Consistent": human_consistent,
@@ -142,34 +142,34 @@ def analyze_agent_clones_modifications(results_folder):
     return df
 
 # --- Execution ---
-df_agent_clones = analyze_agent_clones_modifications(results_03_path)
+df_human_clones = analyze_human_clones_modifications(results_03_path)
 
-if df_agent_clones is not None and not df_agent_clones.empty:
+if df_human_clones is not None and not df_human_clones.empty:
     # Split into two separate tables and sort alphabetically
-    df_change_patterns = df_agent_clones[["Project", "Human_Consistent", "Human_Inconsistent", 
+    df_change_patterns = df_human_clones[["Project", "Human_Consistent", "Human_Inconsistent", 
                                            "Agent_Consistent", "Agent_Inconsistent", "Total_Change"]].sort_values('Project')
-    df_evolution_patterns = df_agent_clones[["Project", "Human_Add", "Human_Subtract", 
+    df_evolution_patterns = df_human_clones[["Project", "Human_Add", "Human_Subtract", 
                                               "Agent_Add", "Agent_Subtract", "Total_Evolution"]].sort_values('Project')
     
     # Display Change Patterns
     print("\n" + "="*100)
-    print("CHANGE PATTERNS ON AGENT-CREATED CLONES (By Project)")
+    print("CHANGE PATTERNS ON HUMAN-CREATED CLONES (By Project)")
     print("="*100)
     print(df_change_patterns.to_string(index=False))
     
     # Save Change Patterns
-    change_output_path = os.path.join(results_06_path, "agent_clones_change_patterns.csv")
+    change_output_path = os.path.join(results_06_path, "human_clones_change_patterns.csv")
     df_change_patterns.to_csv(change_output_path, index=False)
     print(f"\n✓ Saved: {change_output_path}")
     
     # Display Evolution Patterns
     print("\n" + "="*100)
-    print("EVOLUTION PATTERNS ON AGENT-CREATED CLONES (By Project)")
+    print("EVOLUTION PATTERNS ON HUMAN-CREATED CLONES (By Project)")
     print("="*100)
     print(df_evolution_patterns.to_string(index=False))
     
     # Save Evolution Patterns
-    evolution_output_path = os.path.join(results_06_path, "agent_clones_evolution_patterns.csv")
+    evolution_output_path = os.path.join(results_06_path, "human_clones_evolution_patterns.csv")
     df_evolution_patterns.to_csv(evolution_output_path, index=False)
     print(f"\n✓ Saved: {evolution_output_path}")
     
@@ -177,7 +177,7 @@ if df_agent_clones is not None and not df_agent_clones.empty:
     print("\n" + "="*100)
     print("SUMMARY")
     print("="*100)
-    print(f"Total projects analyzed: {len(df_agent_clones)}")
+    print(f"Total projects analyzed: {len(df_human_clones)}")
     print(f"Total change patterns: {df_change_patterns['Total_Change'].sum()}")
     print(f"Total evolution patterns: {df_evolution_patterns['Total_Evolution'].sum()}")
     print("="*100)

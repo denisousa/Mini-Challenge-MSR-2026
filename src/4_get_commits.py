@@ -22,7 +22,12 @@ def get_pr_last_commit(repo_full_name: str, pr_number: int, token: str) -> tuple
         if commits:
             last_commit = commits[-1]  # Get the last commit
             sha = last_commit.get('sha')
-            author = last_commit.get('commit', {}).get('author', {}).get('name', '')
+            # Prefer commit author name; fallback to GitHub login
+            author = (
+                last_commit.get('commit', {}).get('author', {}).get('name')
+                or (last_commit.get('author') or {}).get('login')
+                or ''
+            )
             return sha, author
         return None, None
     except Exception as e:
@@ -30,10 +35,27 @@ def get_pr_last_commit(repo_full_name: str, pr_number: int, token: str) -> tuple
         return None, None
 
 
+def validate_commit(repo_full_name: str, sha: str, token: str) -> bool:
+    """Validate that a commit SHA exists and is reachable in the given repository."""
+    if not sha:
+        return False
+    url = f"https://api.github.com/repos/{repo_full_name}/commits/{sha}"
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "Authorization": f"Bearer {token}",
+        "User-Agent": "commit-validation-script"
+    }
+    try:
+        resp = requests.get(url, headers=headers, timeout=20)
+        return resp.status_code == 200
+    except Exception:
+        return False
+
+
 def get_last_merged_pr_commit(repo_full_name: str, token: str) -> tuple:
     """
     Returns:
-        (merge_commit_sha, pr_number, pr_language)
+        (merge_commit_sha, pr_number, pr_language, author)
     """
     headers = {
         "Accept": "application/vnd.github+json",
@@ -79,7 +101,20 @@ def get_last_merged_pr_commit(repo_full_name: str, token: str) -> tuple:
         # Get dominant language (highest byte count)
         pr_language = max(languages, key=languages.get) if languages else None
 
-        return merge_commit_sha, pr_number, pr_language
+        # Fetch commit author for the merge commit SHA
+        commit_author = None
+        if merge_commit_sha:
+            commit_url = f"https://api.github.com/repos/{repo_full_name}/commits/{merge_commit_sha}"
+            commit_resp = requests.get(commit_url, headers=headers, timeout=30)
+            if commit_resp.ok:
+                commit_data = commit_resp.json()
+                commit_author = (
+                    (commit_data.get('commit', {}).get('author') or {}).get('name')
+                    or (commit_data.get('author') or {}).get('login')
+                    or None
+                )
+
+        return merge_commit_sha, pr_number, pr_language, commit_author
 
     except Exception as e:
         print(f"Error fetching last merged PR for repo {repo_full_name}: {e}")
@@ -132,6 +167,10 @@ for _, row in human_prs_df.iterrows():
         print(f"Processing {i}/{total} PRs...")
     
     sha, author = get_pr_last_commit(row['full_name'], row['number'], token)
+    # Validate the SHA; if invalid, log and mark as None
+    if not validate_commit(row['full_name'], sha, token):
+        print(f"[WARN] Invalid commit for human PR {row['full_name']}#{row['number']} (id={row['id']}): {sha}")
+        sha, author = None, None
     last_commits.append({
         'id': row['id'],
         'sha': sha,
@@ -150,9 +189,35 @@ human_prs_with_commits = pd.merge(
 
 print(f"Human PRs with last commit: {len(human_prs_with_commits)}")
 
+# === Validate agent PR commits and repair with API when possible ===
+print("\nValidating agent PR commit SHAs and repairing when needed...")
+fixed_count = 0
+invalid_count = 0
+validated_rows = []
+for _, row in agent_prs_with_commits.iterrows():
+    sha_ok = validate_commit(row['full_name'], row['sha'], token)
+    if not sha_ok:
+        print(f"[WARN] Invalid agent commit SHA {row['sha']} for {row['full_name']}#{row['number']} (id={row['id']}). Trying repair...")
+        # Try to refetch last commit from API using PR number
+        new_sha, new_author = get_pr_last_commit(row['full_name'], row['number'], token)
+        if new_sha and validate_commit(row['full_name'], new_sha, token):
+            row['sha'] = new_sha
+            row['author'] = new_author
+            fixed_count += 1
+            print(f"[INFO] Fixed agent commit for {row['full_name']}#{row['number']} -> {new_sha}")
+        else:
+            invalid_count += 1
+            row['sha'] = None
+            print(f"[WARN] Still invalid after repair: {row['full_name']}#{row['number']} (id={row['id']})")
+    validated_rows.append(row)
+agent_prs_with_commits = pd.DataFrame(validated_rows)
+print(f"Agent commits fixed: {fixed_count}, still invalid: {invalid_count}")
+
 # === Concatenate human and agent PRs ===
 print("\nConcatenating human and agent PRs...")
 all_prs_with_commits = pd.concat([human_prs_with_commits, agent_prs_with_commits], ignore_index=True)
+# Drop rows without valid SHA
+all_prs_with_commits = all_prs_with_commits[all_prs_with_commits['sha'].notna()].copy()
 print(f"Total PRs with commits: {len(all_prs_with_commits)}")
 
 # === Get last commit for each repository ===
@@ -168,11 +233,15 @@ for _, row in unique_repos.iterrows():
     i += 1
     print(f"Processing repository {i}/{len(unique_repos)}...")
     
-    sha, number, language = get_last_merged_pr_commit(row['full_name'], token)
+    sha, number, language, author = get_last_merged_pr_commit(row['full_name'], token)
+    # Skip if SHA is missing to avoid invalid records
+    if not sha:
+        print(f"[WARN] No merge commit found for repo {row['full_name']}; skipping.")
+        continue
     repo_last_commits.append({
         'full_name': row['full_name'],
         'language': language,
-        'number': int(number),
+        'number': int(number) if isinstance(number, int) or (isinstance(number, str) and number.isdigit()) else None,
         'sha': sha,
         'author': author,
         'pr_type': 'human'
