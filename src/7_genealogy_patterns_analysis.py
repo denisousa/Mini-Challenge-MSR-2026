@@ -4,23 +4,11 @@ import xml.etree.ElementTree as ET
 from utils.folders_paths import genealogy_results_path
 
 results_07_path = os.path.abspath("07_results")
-# Ensure output directory exists
 os.makedirs(results_07_path, exist_ok=True)
 
 print("Starting analysis of clones modifications (Human & Agent)...")
 
 def analyze_clones_modifications(results_folder, clone_creator_type):
-    """
-    For each project, analyzes modifications made to clones created by the specified type (human or agent).
-    Tracks who (human or agent) performs Consistent, Inconsistent, Add, Subtract operations
-    on clones that were originally created by the specified type.
-    Excludes "Same" patterns from the count.
-    
-    Args:
-        results_folder: Path to folder containing XML files
-        clone_creator_type: "human" or "agent" - the type of clones to analyze
-    """
-    
     project_results = []
     
     if not os.path.exists(results_folder):
@@ -152,15 +140,6 @@ def analyze_clones_modifications(results_folder, clone_creator_type):
 
 
 def save_and_display_results(df, clone_creator_type, results_07_path):
-    """
-    Save and display results for the given clone creator type.
-    
-    Args:
-        df: DataFrame with analysis results
-        clone_creator_type: "human" or "agent"
-        results_07_path: Path to save results
-    """
-    
     creator_label = clone_creator_type.upper()
     
     if df is None or df.empty:
@@ -205,19 +184,20 @@ def save_and_display_results(df, clone_creator_type, results_07_path):
     print("="*100)
 
 
-# --- Execution ---
-print("\n" + "="*100)
-print("ANALYZING HUMAN-CREATED CLONES")
-print("="*100)
-df_human_clones = analyze_clones_modifications(genealogy_results_path, "human")
-save_and_display_results(df_human_clones, "human", results_07_path)
+if __name__ == '__main__':
+    # --- Execution ---
+    print("\n" + "="*100)
+    print("ANALYZING HUMAN-CREATED CLONES")
+    print("="*100)
+    df_human_clones = analyze_clones_modifications(genealogy_results_path, "human")
+    save_and_display_results(df_human_clones, "human", results_07_path)
 
-print("\n" + "="*100)
-print("ANALYZING AGENT-CREATED CLONES")
-print("="*100)
-df_agent_clones = analyze_clones_modifications(genealogy_results_path, "agent")
-save_and_display_results(df_agent_clones, "agent", results_07_path)
+    print("\n" + "="*100)
+    print("ANALYZING AGENT-CREATED CLONES")
+    print("="*100)
+    df_agent_clones = analyze_clones_modifications(genealogy_results_path, "agent")
+    save_and_display_results(df_agent_clones, "agent", results_07_path)
 
-print("\n" + "="*100)
-print("ANALYSIS COMPLETE")
-print("="*100)
+    print("\n" + "="*100)
+    print("ANALYSIS COMPLETE")
+    print("="*100)

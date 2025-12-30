@@ -134,7 +134,7 @@ def parse_and_plot(file_path):
     
     print(f"  > Plot saved at: {output_path}\n")
 
-def main():
+if __name__ == "__main__":
     # Search for all .xml files in the input folder
     search_pattern = os.path.join(INPUT_FOLDER, '*.xml')
     xml_files = glob.glob(search_pattern)
@@ -142,14 +142,11 @@ def main():
     if not xml_files:
         print(f"No XML files found in folder '{INPUT_FOLDER}'.")
         print("Please ensure the '03_results' folder exists and contains valid .xml files.")
-        return
-
-    print(f"Found {len(xml_files)} files. Starting processing...\n")
     
-    for file_path in xml_files:
-        parse_and_plot(file_path)
+    else:
+        print(f"Found {len(xml_files)} files. Starting processing...\n")
+        
+        for file_path in xml_files:
+            parse_and_plot(file_path)
 
-    print("Processing complete.")
-
-if __name__ == "__main__":
-    main()
+        print("Processing complete.")

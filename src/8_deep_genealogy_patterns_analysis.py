@@ -159,7 +159,7 @@ def process_all_xml_files(directory):
     
     return all_evolution_data, all_change_data
 
-def main():
+if __name__ == '__main__':
     base_dir = Path(__file__).resolve().parent.parent
     xml_dir = genealogy_results_path
     
@@ -319,5 +319,3 @@ def main():
     print(f"   - {evolution_csv}")
     print(f"   - {change_csv}")
 
-if __name__ == '__main__':
-    main()

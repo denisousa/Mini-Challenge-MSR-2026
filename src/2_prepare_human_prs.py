@@ -1,23 +1,12 @@
-"""
-Docstring for prepare_human_prs
-
-Esse script enriquece o dataset Human-PRs com informações language, forks, stars e url dos repositórios
-"""
-
-import os
-import time
-import requests
-import pandas as pd
-from typing import Dict, Optional
-import os
-import pandas as pd
-import requests
 from utils.folders_paths import aidev_path, main_results
-from dotenv import load_dotenv
-import requests
+from typing import Dict, Optional
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from utils.languages import LANGUAGES
+from dotenv import load_dotenv
+import pandas as pd
+import requests
+import os
 
 load_dotenv()
 os.makedirs(main_results, exist_ok=True)

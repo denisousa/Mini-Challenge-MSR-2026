@@ -1,8 +1,6 @@
 '''
-Docstring for 5_statistical_test
 This code was made using Gemini 3: https://gemini.google.com/share/4ea36988955e
 '''
-
 import os
 import glob
 import xml.etree.ElementTree as ET
@@ -94,10 +92,6 @@ def load_data(folder_path):
     return pd.DataFrame(all_data), project_counts
 
 def run_chi_square(df, context_name, pattern_column, exclude_same=False):
-    """
-    Performs the Chi-Square test for a specific pattern column.
-    Returns a dictionary with the test results.
-    """
     print(f"\n  > Analyzing relationship between AUTHOR and {pattern_column} ({context_name})...")
     
     # Filter out "Same" if requested
@@ -269,7 +263,7 @@ def generate_summary_report(all_results, output_folder):
         f.write("      NO  = No significant correlation (p >= 0.05)\n")
         f.write("="*100 + "\n")
 
-def main():
+if __name__ == "__main__":
     # Create output folder
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
     
@@ -286,13 +280,13 @@ def main():
             # 1. Load Data
             if not os.path.exists(INPUT_FOLDER):
                 print(f"Error: Folder '{INPUT_FOLDER}' not found.")
-                return
+                sys.exit(1)
 
             df, project_counts = load_data(INPUT_FOLDER)
     
             if df.empty:
                 print("No valid data found in XML files.")
-                return
+                sys.exit(1)
     
             # List to store all statistical test results
             all_results = []
@@ -459,6 +453,3 @@ def main():
     # Print confirmation to console
     print(f"Detailed output saved to: {output_txt_path}")
     print(f"Summary report saved to: {os.path.join(OUTPUT_FOLDER, 'correlation_summary.txt')}")
-
-if __name__ == "__main__":
-    main()

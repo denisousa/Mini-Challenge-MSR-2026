@@ -114,7 +114,7 @@ def analyze_xml_file(xml_path):
     }
 
 
-def main():
+if __name__ == '__main__':
     results_dir = Path(genealogy_results_path)
     csv_path = Path(main_results) / "balanced_repositories.csv"
     
@@ -244,8 +244,3 @@ def main():
           f"{total_evolution:<11} "
           f"{total_change:<11}")
     
-    print()
-
-
-if __name__ == '__main__':
-    main()

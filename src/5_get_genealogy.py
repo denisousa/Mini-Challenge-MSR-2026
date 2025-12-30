@@ -1,10 +1,10 @@
 import os
 import pandas as pd
 from dotenv import load_dotenv
-from utils.folders_paths import main_results, aidev_path
 from utils.compute_time import timed
+from omniccg.core import get_clone_genealogy
+from utils.folders_paths import main_results
 from utils.languages import LANGUAGES
-from clone_genealogy.core import get_clone_genealogy
 
 load_dotenv()
 token = os.getenv("GITHUB_TOKEN") 
