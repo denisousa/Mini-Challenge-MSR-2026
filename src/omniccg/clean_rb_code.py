@@ -1,6 +1,5 @@
 import os
 import re
-import sys
 
 class RubyBlackHoleSanitizer:
     def __init__(self, filepath):

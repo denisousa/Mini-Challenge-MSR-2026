@@ -206,27 +206,20 @@ if __name__ == '__main__':
     print()
     
     # Create a formatted table
-    print(f"{'Project':<40} {'Lineages':<10} {'Human':<8} {'Agent':<8} {'Alive':<8} {'Dead':<8} {'Avg Size':<10} {'Total PRs':<10} {'Evolution':<11} {'Change':<11}")
+    print(f"{'Project':<40} {'Human Alive':<12} {'Human Dead':<12} {'Agent Alive':<12} {'Agent Dead':<12} {'Avg Size':<10} {'Total PRs':<10}")
     print("-" * 130)
     
     total_prs_sum = 0
-    total_evolution = 0
-    total_change = 0
     
     for project_name, result in sorted(all_results.items()):
         total_prs_sum += result.get('total_prs', 0)
-        total_evolution += result.get('evolution_count', 0)
-        total_change += result.get('change_count', 0)
         print(f"{project_name:<40} "
-              f"{result['total_lineages']:<10} "
-              f"{result['human_created_clones']:<8} "
-              f"{result['agent_created_clones']:<8} "
-              f"{result['alive_lineages']:<8} "
-              f"{result['dead_lineages']:<8} "
+              f"{result['human_alive']:<12} "
+              f"{result['human_dead']:<12} "
+              f"{result['agent_alive']:<12} "
+              f"{result['agent_dead']:<12} "
               f"{int(round(result['avg_versions_per_lineage'])):<10} "
-              f"{result.get('total_prs', 0):<10} "
-              f"{result.get('evolution_count', 0):<11} "
-              f"{result.get('change_count', 0):<11}")
+              f"{result.get('total_prs', 0):<10}")
     
     # Calculate overall average
     total_versions = sum(r['total_versions'] for r in all_results.values())
@@ -234,13 +227,10 @@ if __name__ == '__main__':
     
     print("-" * 130)
     print(f"{'TOTAL':<40} "
-          f"{total_lineages:<10} "
-          f"{total_human_clones:<8} "
-          f"{total_agent_clones:<8} "
-          f"{total_alive:<8} "
-          f"{total_dead:<8} "
+          f"{total_human_alive:<12} "
+          f"{total_human_dead:<12} "
+          f"{total_agent_alive:<12} "
+          f"{total_agent_dead:<12} "
           f"{int(round(overall_avg)):<10} "
-          f"{total_prs_sum:<10} "
-          f"{total_evolution:<11} "
-          f"{total_change:<11}")
+          f"{total_prs_sum:<10}")
     
