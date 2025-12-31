@@ -1,0 +1,996 @@
+full_name,sha,author,pr_type,language,number
+airbytehq/airbyte,c41032bdc0de0d2218c988bb2b1e299b45c1d6c9,Airbyte,human,Python,60691
+airbytehq/airbyte,044b07284b3a796876a708003857c8112bfc9935,Airbyte,human,Python,52421
+airbytehq/airbyte,a95b508869ff012d3c7f7c27bdce8f4808e7ddff,Marcos Marx,human,Python,56369
+airbytehq/airbyte,489872a97444b064112bcf0e7d2db63716e69148,Airbyte,human,Python,58991
+airbytehq/airbyte,7a8fa5ada829d59e2d434cd8f19f691484cef3de,Airbyte,human,Python,53485
+airbytehq/airbyte,3e03d6b04e5e490af2e4d2b95159fc9cc7cda538,Edward Gao,human,Python,50971
+airbytehq/airbyte,3a0f91545bddf6a142f0c9bb197011768361b03c,Airbyte,human,Python,58189
+airbytehq/airbyte,fdce5fa0753d2cf755afe90e9ad0f8cc6c1b7d65,Airbyte,human,Python,59370
+airbytehq/airbyte,df4a025070c2879a5497c3cff84438d3e7f4571b,darynaishchenko,human,Python,61502
+airbytehq/airbyte,f9ddc6f91895dcb30cf91ec0a35a1bbcd5f6ef87,Airbyte,human,Python,54298
+airbytehq/airbyte,2ee7f208fc4919ec7dfcb21a3321004e82cb646f,Airbyte,human,Python,58022
+airbytehq/airbyte,137be2ae14278b17d95297ab1871ba54b08facc1,Airbyte,human,Python,56504
+airbytehq/airbyte,628fe9db4f38812b56d4254d728eaef94a43b81a,Airbyte,human,Python,54057
+airbytehq/airbyte,695eddc37eedc6c9df122637be06a46e7bac114e,Airbyte,human,Python,54504
+airbytehq/airbyte,9276a7db160d8be5306895fc1ac51f50a15b6fa8,Edward Gao,human,Python,53686
+airbytehq/airbyte,9556af8c0f5f9cbfa10792f944588b06d5ddfab8,Airbyte,human,Python,53081
+airbytehq/airbyte,c9a2e8876c5119b5ab6fc4ab77ce7d012841270c,Airbyte,human,Python,51109
+airbytehq/airbyte,4853f74131a9e13081a40e7fc71cf37a9901e977,Airbyte,human,Python,60402
+airbytehq/airbyte,212878a6b26b5bddf96ee162f8ec7d78804404a3,Airbyte,human,Python,51714
+airbytehq/airbyte,43a4bb3cd68443c006d356df719a66fb1fb26336,Airbyte,human,Python,55913
+airbytehq/airbyte,d369aa93eeec31ccb57a7663beccefac68bbfc8b,Airbyte,human,Python,59068
+airbytehq/airbyte,c067dabcc84dd7185804ab389dfbe8d437413eaa,Airbyte,human,Python,55145
+airbytehq/airbyte,66cca744bc1a58f5571fd6d99fb2a35fbf8297a6,Airbyte,human,Python,54808
+airbytehq/airbyte,cbfd9383ab0f9d0c3acd372b990b6cbb0554b2f4,Airbyte,human,Python,54029
+airbytehq/airbyte,63976490390de3bebc3dae641a28578eef5d8e16,Edward Gao,human,Python,61530
+airbytehq/airbyte,46ad6e4abf4d9417e8dec22ba1aed8563dadde7e,Airbyte,human,Python,55144
+airbytehq/airbyte,f4516e84c53f13ad424aa60bf2c5b812d9ee4d51,Airbyte,human,Python,56682
+airbytehq/airbyte,05402a872da1553d3ad945f81a77a3120d9993e1,Airbyte,human,Python,56841
+airbytehq/airbyte,b6e972e5dc3b7c5a96ccc0665b0cb9e6331152ef,Airbyte,human,Python,54547
+airbytehq/airbyte,af669a9917fb458ec37cd1d4830dc58434621b87,Aaron Steers,human,Python,60335
+airbytehq/airbyte,da37b1fb08fb9a77db926ab7f98f26eaa38c366c,Airbyte,human,Python,61956
+airbytehq/airbyte,f4eac780abf72045bd92ebaf797ac935251be0d2,Airbyte,human,Python,58830
+airbytehq/airbyte,85241fa171654e7f59208a59e21a8d63f28cfa06,Airbyte,human,Python,59373
+airbytehq/airbyte,7e84979bc94fd5db5d1724fcb069553c6b442cd3,Airbyte,human,Python,51072
+airbytehq/airbyte,e041a1254b927341343d37b58d0db0f9b5743fa7,Airbyte,human,Python,58002
+airbytehq/airbyte,30fd98ac2f085b93026bcaf6430c50f8d8c5bf4d,Airbyte,human,Python,58223
+airbytehq/airbyte,3f63c5cf0db11dd645ae6d3d5f72493084c36a21,Airbyte,human,Python,61819
+airbytehq/airbyte,c8cbfc9684d7b31583f06c241727c813303e672a,Airbyte,human,Python,51651
+airbytehq/airbyte,020c93ea7fce2ba36bc16cbd303dcae9d46ca24a,Airbyte,human,Python,51736
+airbytehq/airbyte,d1bc5c70550a91b21ab658141847ea84d68915e9,Airbyte,human,Python,57719
+airbytehq/airbyte,e25f694a84a50c960ed9451477bf584c84bbd8d7,Airbyte,human,Python,61939
+airbytehq/airbyte,05a18131594f9ba5086648eb73005080a55a9aca,Airbyte,human,Python,53334
+airbytehq/airbyte,c8528e7f4635e13c56719a6c067477163fc3c629,Airbyte,human,Python,54577
+airbytehq/airbyte,ede5c9989be2889209b953d8829993e6e465c104,Airbyte,human,Python,51857
+airbytehq/airbyte,322b118dae63e41f209671e77fd9614257dc7d04,Evan Tahler,human,Python,55831
+airbytehq/airbyte,1cedd151817b01dfea7ddbf84c4ac43658044f0a,Airbyte,human,Python,57944
+airbytehq/airbyte,a5ec69a7693e7c3d6f6873e8da3e4050fe6f288c,Airbyte,human,Python,53512
+airbytehq/airbyte,60f433e52c5224483326b57ecab2f6a5e2210be5,Airbyte,human,Python,52249
+airbytehq/airbyte,434f0e91f4bf99a625f737f6f1934b3a9ccbb776,Airbyte,human,Python,57969
+airbytehq/airbyte,fe906f2820b59232b061b55910c8d4a3f20f0b58,Airbyte,human,Python,58221
+airbytehq/airbyte,2025f40c37525ad4dc107461ea7d7068c5abdfbb,Airbyte,human,Python,51146
+airbytehq/airbyte,41abb71af6e920d3186ddc36f7bc3095db24382a,Airbyte,human,Python,58889
+airbytehq/airbyte,3af062e06fd0bd14b9d9bf4c37b600a98eac8681,Airbyte,human,Python,57253
+airbytehq/airbyte,0e5b7ec9e72c1cd49d503ab9beadcb68af82136a,Airbyte,human,Python,56888
+airbytehq/airbyte,db7e40045401684dc7674950224cffff0e0e9519,Airbyte,human,Python,51858
+airbytehq/airbyte,c53a9e4cc319bb9dcbd3b97acee52295c6f153b2,Airbyte,human,Python,56099
+airbytehq/airbyte,5ba355bbf903db8e0ec66123728f660ae906f859,Airbyte,human,Python,58211
+airbytehq/airbyte,42326cb75bb27595e24e5a5293dd3bd4999e4aad,Airbyte,human,Python,52177
+airbytehq/airbyte,bf8996443659f492500652e05e9d61004d0c7da1,Airbyte,human,Python,55107
+airbytehq/airbyte,fd1a357cfdaf43dd203b848902aec0dc1f3cad81,Airbyte,human,Python,57910
+airbytehq/airbyte,ab8ee45c67ae8b8c483235b2cd2e8eb224fc488f,Airbyte,human,Python,58217
+airbytehq/airbyte,de3057733eb63f53804e94786c1ee3fb35b3b76b,Airbyte,human,Python,54326
+airbytehq/airbyte,b904ffbc49a74214d3c96bcb69f2716538887236,Airbyte,human,Python,55307
+airbytehq/airbyte,b3bbc5c981c58f1e0a17b962dbb4b1660e7b5300,Airbyte,human,Python,51875
+airbytehq/airbyte,a537affc0fdfbf3b0584878e78bc39ded2a94b1a,Airbyte,human,Python,59445
+airbytehq/airbyte,9f94782e013b32bfb799ec321d0360541d894081,Tyler B,human,Python,51561
+airbytehq/airbyte,b5528893fe3e9d6f1777bb2b75476d50553a3f29,Airbyte,human,Python,57081
+airbytehq/airbyte,22c409d8f0dd8aeecddb017f3d5c7f216e81cbfb,Airbyte,human,Python,53798
+airbytehq/airbyte,37626eba3ed36b7cbf7c7afd5312f2f68e38ebf4,Airbyte,human,Python,52404
+airbytehq/airbyte,7989c392aaccca6539cccfefaba3fceea711fdb6,Airbyte,human,Python,60534
+airbytehq/airbyte,7211fa151bff18d41c831c2de2609e791f71eb31,Airbyte,human,Python,51308
+airbytehq/airbyte,75a7f47f24359607590a8f5d9f5e11245aad1790,Airbyte,human,Python,61991
+airbytehq/airbyte,e6c4104bd485ddfc491ee76ec456c889b5905b91,Airbyte,human,Python,56131
+airbytehq/airbyte,a386c2dfa1b8fec94ab398b2d7f4c1f3b671eb2d,Airbyte,human,Python,51437
+airbytehq/airbyte,dfc012d080d0ae3cb8a407e75091100ab9a889f0,Airbyte,human,Python,52007
+airbytehq/airbyte,42322b8e8abb35e261eb7d27a9a14bfc8db60889,Airbyte,human,Python,59377
+airbytehq/airbyte,f8dee82da18d718be7ee5032228cfaafadb69790,Airbyte,human,Python,53807
+airbytehq/airbyte,82e66044e9b0f528dfecc8eb4323682aee66e08e,benmoriceau,human,Python,50961
+airbytehq/airbyte,6ab17f14e418323fe09108b76e9289c11fcbf6e6,Airbyte,human,Python,56667
+airbytehq/airbyte,0595a32d3868985655dd4967bce0d462619c1823,Airbyte,human,Python,61610
+airbytehq/airbyte,4f120e3abd02e129444a636a20309275dfbd1083,ian-at-airbyte,human,Python,60815
+airbytehq/airbyte,fe6cb3ef11267bb96ff790d150ec27f69f33460f,Airbyte,human,Python,57405
+airbytehq/airbyte,b2872cdf943c11328ac9d5fad06e5f46cd48aa1d,Airbyte,human,Python,54090
+airbytehq/airbyte,e484044420ea4cf8d39ccf47cc7ab2451bdd2a36,Airbyte,human,Python,57127
+airbytehq/airbyte,74ecfe8b43bdf9fa7fce4fb4202d4c85ba0edb47,Airbyte,human,Python,56613
+airbytehq/airbyte,a980b0e88eb8e40078b3eb85ef769d1d6c86cae7,Airbyte,human,Python,54943
+airbytehq/airbyte,598a0856dbd99a5cbb23daf9bc7fe2378bbb091a,Airbyte,human,Python,54936
+airbytehq/airbyte,dc8aa1addb7ce382aa06da541dda15fce9870af3,Airbyte,human,Python,59814
+airbytehq/airbyte,f829f390a15fe889e56371b5685ffbd0f9fcdc59,Airbyte,human,Python,51742
+airbytehq/airbyte,caa27549fdf1e339ad8c2e7a35f03127e63283d5,Airbyte,human,Python,58154
+airbytehq/airbyte,a72b8097f6e7430b523a58e7e992aa87bcc9457e,Airbyte,human,Python,59603
+airbytehq/airbyte,a60109bdda3fe604ee0c2a5bcaa508598af863b9,Airbyte,human,Python,60140
+airbytehq/airbyte,61a905af87f91a97082d02b6ea449b8e75dc7cd9,Aldo Gonzalez,human,Python,59711
+airbytehq/airbyte,3f04230eb96b6e26113590ef58567afd9ee46d21,Airbyte,human,Python,55650
+airbytehq/airbyte,a3bf64191b0596bd14f65ab677a692d923b52f58,Airbyte,human,Python,59957
+airbytehq/airbyte,5e272d040b1b20dd0f47f2f96a6338fb3fd51c9a,Airbyte,human,Python,60727
+airbytehq/airbyte,5c19b5513ee3ae7ed26e926b64af72e482f14c43,Airbyte,human,Python,60629
+airbytehq/airbyte,5a4d364f90742be18964e85bf6b2d88d19960385,"Aaron (""AJ"") Steers",human,Python,60906
+airbytehq/airbyte,8af1ac352055a9dc0d64cf5e1c0d31b21494c27a,Airbyte,human,Python,57633
+airbytehq/airbyte,cf7289543bc6331c6bdd6ce8227ea480403cc7a0,Airbyte,human,Python,51624
+airbytehq/airbyte,54d419673ad81daa3b3fa465acb8419b2f352d6d,Airbyte,human,Python,54305
+airbytehq/airbyte,ffc7e26edf05cb6ce48fe4736748fbac0d074b14,Airbyte,human,Python,51827
+airbytehq/airbyte,148707781050cb1ec72d7df1b9fead39aff2f62e,Airbyte,human,Python,56820
+airbytehq/airbyte,0323655d1d2509f4736f9dff952803a73f8d3b18,Airbyte,human,Python,54433
+airbytehq/airbyte,807085f1f6ab3f761124d83a61fa2c0fad70bdab,Airbyte,human,Python,58981
+airbytehq/airbyte,72765ec02e0bf8ac029acdb1a99aac912d103ada,Airbyte,human,Python,55417
+airbytehq/airbyte,3dfb40d2f88f4a826d46b8096abca084e4bb4aaa,Airbyte,human,Python,56322
+airbytehq/airbyte,30b5d1917468a7465968c21db134fc46607bd952,github-actions[bot],human,Python,54656
+airbytehq/airbyte,16e6b9761a8a9c6df47a4d3c4910a83caa953c32,Airbyte,human,Python,54875
+airbytehq/airbyte,0a33921c923b99e9f6fb9d1021227b2abac215a9,Airbyte,human,Python,55361
+airbytehq/airbyte,56f8b27024fec0bdbf3fb4c5d9cfe88c3700e984,Airbyte,human,Python,58841
+airbytehq/airbyte,62cfdd12a360fe4f4cdaff81e57c3c7d6030ff5d,Marcos Marx,human,Python,60910
+airbytehq/airbyte,107ab9b996654fca0ba3dfc875357f3952186166,Airbyte,human,Python,56600
+airbytehq/airbyte,868a99fbd7a3f07cac7e0bb395bf3c595459412f,Airbyte,human,Python,57250
+airbytehq/airbyte,72140ea1e4c6e8f455762bef39bb49bc6d8b61f7,Airbyte,human,Python,56610
+airbytehq/airbyte,19bc4cd9782d3fbd90a09c227c7a9e365d063ccd,Airbyte,human,Python,53500
+airbytehq/airbyte,08e8da2fd2ebeff0d86b284cb4a433d2cb597040,Airbyte,human,Python,56614
+airbytehq/airbyte,0cfe5805c79f4142933695783a967558bf5a44ba,Airbyte,human,Python,53470
+airbytehq/airbyte,1491cd037d12351ad2b7447650b67bc6f24ccd55,Airbyte,human,Python,51349
+airbytehq/airbyte,ef4b56770ea1ad38936d3850f5747dc4b5fbc230,Airbyte,human,Python,55096
+airbytehq/airbyte,b7324d2017bbfed58494aa59f88905acacda97fc,Airbyte,human,Python,55348
+airbytehq/airbyte,d2106cb911f377c1de3c2168c4671a39da6cb66b,Yue Li,human,Python,54694
+airbytehq/airbyte,cfc09e14c812726a491f901e1c0ad40fea841d15,Airbyte,human,Python,54485
+airbytehq/airbyte,4bb5facb5f8595200b2fb11ad16d9d21545752ea,Airbyte,human,Python,59361
+airbytehq/airbyte,aff9bff8f86c124dfd1383bb6c35b09f2ab0173a,Airbyte,human,Python,56275
+airbytehq/airbyte,ac71800c203146bfc1879b6f3bb2a10d4fc2fc8e,Airbyte,human,Python,55428
+airbytehq/airbyte,aa87a79851bfc0ed473daa34d01183d4c5b1fcd5,Airbyte,human,Python,59437
+airbytehq/airbyte,5c5a8e0de711f7c4ce73c0dcfa66d62f8bdf70f5,Airbyte,human,Python,53591
+airbytehq/airbyte,c380efc91435e25275695d8c04a9710df2ee3d70,Przemysław Dąbek,human,Python,54677
+airbytehq/airbyte,92a72a1bb6314e2c74aa6bd2801629f83e7e5f9e,Airbyte,human,Python,61982
+airbytehq/airbyte,c0b97b217336207faec41817f5a4330450c9fad7,Airbyte,human,Python,57792
+airbytehq/airbyte,ea596e87f682819743b9c8ada32877ed33a93423,Airbyte,human,Python,51913
+airbytehq/airbyte,7fa76076b3d5470efa60ef13f0e3e61b0776b4c2,Airbyte,human,Python,53515
+airbytehq/airbyte,c37a9b9420e3a23f63cbc657003c51c8102bbf60,Aldo Gonzalez,human,Python,51585
+airbytehq/airbyte,85e15a55d8d0cfb0d0dc813efebb0e03c3e25c0f,Airbyte,human,Python,51292
+airbytehq/airbyte,cd8cf876796a0c11b85acaf9153787b20e91fa26,Airbyte,human,Python,61602
+airbytehq/airbyte,f5210f7edbb928edc12ed116b3501e48d97eb2a8,Airbyte,human,Python,51161
+airbytehq/airbyte,97725684ecdc9e7c9e0e9a0643b82e5af9b552dd,Airbyte,human,Python,56863
+airbytehq/airbyte,47de7bf5b3c21512512be68376f4816ba3bc5409,Airbyte,human,Python,51319
+airbytehq/airbyte,03fd33b5f2b24c95111c0801357d51554dbd3c13,Airbyte,human,Python,51081
+airbytehq/airbyte,9d99be50a11b62ce3566e18d8970f962fa700982,Airbyte,human,Python,59489
+airbytehq/airbyte,4bc2ce282d5dd02a2f79c67e7433153cfe24c8c4,Airbyte,human,Python,53359
+airbytehq/airbyte,d5ed16f3ad7bc5ec68e88df3718fd609f560f7a0,Airbyte,human,Python,59923
+airbytehq/airbyte,3bec10b71287291406f93d42a4557cca41958bcb,Airbyte,human,Python,57486
+airbytehq/airbyte,bb9a4039b75a056819bf01cd729e27c87a11d6ac,Airbyte,human,Python,53453
+airbytehq/airbyte,a6931a610c89928fd101c9178fb98cc76b0669ca,Airbyte,human,Python,55350
+airbytehq/airbyte,e957e5f526b255ad3efa4f3a511db53452dd965d,Airbyte,human,Python,54425
+airbytehq/airbyte,228c97dc220de081ce388270819bc1826e89c753,Airbyte,human,Python,51694
+airbytehq/airbyte,8863912f9d12288c2f98ff0ac43bcc4e4b0e0df1,Airbyte,human,Python,61781
+airbytehq/airbyte,929bb9ebf1c82684f08fa561aacd365d21d0ca7b,Airbyte,human,Python,54456
+dotnet/aspire,b6bf29f8fe3312234ef075adba0407135ef0c6e1,James Newton-King,human,C#,9191
+dotnet/aspire,cb0ea329a3d1bf6ae5d3118f78ceced922cebcf7,Mitch Denny,human,C#,7861
+dotnet/aspire,a38d9ef8d24a60634d5bbbd59705e403aefa820a,Safia Abdalla,human,C#,7961
+dotnet/aspire,826d52ee7b13acf72c65301e30c86b052fee8e9a,Safia Abdalla,human,C#,9108
+dotnet/aspire,15f9ee9ac02d1a4fed6cb75e59ddb3ee91c4ebe3,James Newton-King,human,C#,7286
+dotnet/aspire,1758c3227f1baa8a8b9df3dc29e12d90616ab43b,dotnet bot,human,C#,8035
+dotnet/aspire,9a1c41bc1caa450ce48843086704778f001dde55,dotnet-maestro[bot],human,C#,7776
+dotnet/aspire,d57970b465f75fbe805bf101125ee9e4ef69882c,Ankit Jain,human,C#,8972
+dotnet/aspire,22eefeca966937d653f30bf8d770c8011f15b8e9,Youssef Victor,human,C#,9876
+dotnet/aspire,4630a04438e6c5f4e5855813541d9a4a9850b120,Dan Moseley,human,C#,9369
+dotnet/aspire,5bb3734d2eb04024f686a9b28c68b0757b251bda,Eric Erhardt,human,C#,7700
+dotnet/aspire,f8430c45498c333b98023eb74e8431f3b6c1abb8,Mitch Denny,human,C#,8577
+dotnet/aspire,349a9b3e2912810f3f88e029642afff85e7f57a1,Larry Ewing,human,C#,7026
+dotnet/aspire,18f979212abab29d81b8c767cdafa035323ac10e,Igor Velikorossov,human,C#,9066
+dotnet/aspire,ab17b7fc46aace74cc5a0752dfe09e69be29a57d,Eric Erhardt,human,C#,8323
+dotnet/aspire,32aab9b244bb7f778a816f56f7057b524089d0f9,David Fowler,human,C#,8995
+dotnet/aspire,f49f9fe648afb0bf2539110f75d588ade723aa2e,Mitch Denny,human,C#,8318
+dotnet/aspire,a5c3ee9d93dec1a714fd7f6d38c66f546281db73,Eric Erhardt,human,C#,7690
+dotnet/aspire,0070c2c1662585b870536b10e01225ff5aed1a95,James Newton-King,human,C#,7782
+dotnet/aspire,22c562f47a9ce7ad8a58c1ea902bf0a2cc7acadb,Safia Abdalla,human,C#,7675
+dotnet/aspire,7ec607f2799a7749e3b588d494e0bdb7e4554ee3,Mitch Denny,human,C#,7801
+dotnet/aspire,1c4a6857099cbbdbd85cf2fe25b533cd65ce44c9,dotnet-maestro[bot],human,C#,7313
+dotnet/aspire,9fac7708bc7e502cc67e96a7da95ae90b5e57812,Adam Ratzman,human,C#,9264
+dotnet/aspire,652f774f5821f41f79efd3e50495d0881f17d5bb,Eric Erhardt,human,C#,7733
+dotnet/aspire,f317cd08ac6c389724bc635ecae9a8f8619f6bd4,Eric Erhardt,human,C#,7463
+dotnet/aspire,9d8c5b7842c482beca2c181ef4ad1bdf660c62f6,Eric Erhardt,human,C#,7468
+dotnet/aspire,a6993d8188e5d729956000e91b301a406f48adf0,Mitch Denny,human,C#,8892
+dotnet/aspire,1392f90bf5322ce62119b3059286bec826486ff2,dotnet-maestro[bot],human,C#,7959
+dotnet/aspire,6266864c6dfd6bf229f924e7ea3bb0777ff397be,Mitch Denny,human,C#,7728
+dotnet/aspire,0aee4149ed0818993086029c2a0418840a826c9d,Adam Ratzman,human,C#,7994
+dotnet/aspire,c57b0e9294f826b8cf9facaa67fc2985df6b8b28,Mitch Denny,human,C#,8850
+dotnet/aspire,363eab203bbc1610cbb3be66b9800af68e5a57c1,James Newton-King,human,C#,8156
+dotnet/aspire,62d7aa036bfd77a957363276c62dbe6733444cf3,Sebastien Ros,human,C#,9958
+dotnet/aspire,23c1460b7d912aff89f5ad5872a05190044dadeb,James Newton-King,human,C#,9303
+dotnet/aspire,79507d03e250d1749a9ffb60669cfd6c7f3bc56e,Eric Erhardt,human,C#,7389
+dotnet/aspire,b0719217beda848c005d2c1f0aa8835c098537a5,dotnet-maestro[bot],human,C#,9186
+dotnet/aspire,7cb3fb7ad21390c5de30aa3cb2fde8e17aebd1b0,Alex Crome,human,C#,7142
+dotnet/aspire,d165903c69dce5c8918b11a3c210876d281bee32,davidfowl,human,C#,9525
+dotnet/aspire,4e55096393eef841d31121d9c3c1c275c9fe58b7,James Newton-King,human,C#,7261
+dotnet/aspire,28784e59be96cbc084e44609507b9b2524b385ee,Ankit Jain,human,C#,8705
+dotnet/aspire,a581db98268ba97c81aa467129c0254dc1d3cc75,Ankit Jain,human,C#,10104
+dotnet/aspire,c16a759f40b1cf952cb00b76b0597a37936d97f6,Mitch Denny,human,C#,7838
+dotnet/aspire,0767aa11ae86126db7ed1a39820a5dd46b164ab3,dotnet bot,human,C#,7332
+dotnet/aspire,db1940330b3b3902e018951009fa86db2938edba,amrali21,human,C#,9054
+dotnet/aspire,c7928b133d9117b6300583e59ba0b9ab1ba9ef00,Ankit Jain,human,C#,10030
+dotnet/aspire,912fcf7883e41fe84e9e25e6f0d5564323d5ab9b,Safia Abdalla,human,C#,8825
+dotnet/aspire,5e515681699f416bea37f548e49beba66f2ef2c9,Adam Ratzman,human,C#,9794
+dotnet/aspire,53f9f3ced2273492eed888b311689a8d116cc555,David Fowler,human,C#,8163
+dotnet/aspire,ee6a3c0f42a6c4221ff7221e554965792292ad0f,Ankit Jain,human,C#,7933
+dotnet/aspire,a2a61b08d1e0419f5a4ebe3610c7dfaea38d5298,dependabot[bot],human,C#,7390
+dotnet/aspire,93e37156a56bc650de726b4cf5c05360a19eccfe,James Newton-King,human,C#,7798
+dotnet/aspire,eeb77bea60c8b9228532c8f1557b77132ecb73a9,Damian Edwards,human,C#,9133
+dotnet/aspire,e124d45c9422a0f53d28787d5f93c91bc0b01f9b,Karol Zadora-Przylecki,human,C#,7938
+dotnet/aspire,c53cfd55a9d91f8f0ce55b949ffb2405da3dae5a,Safia Abdalla,human,C#,8231
+dotnet/aspire,87851133891e34008d85cacd4d02350fea584c02,Jose Perez Rodriguez,human,C#,9348
+dotnet/aspire,39dcf6c719a5ce084be304a2ec5d6f4a6de0354c,David Fowler,human,C#,7397
+dotnet/aspire,d93b68636cc38ca72a3e308a1274e09c62d51671,Jose Perez Rodriguez,human,C#,8560
+dotnet/aspire,154ec624906df1bf532d33f2393e11f11eba6660,Eric Erhardt,human,C#,9779
+dotnet/aspire,c1ef29d5015048c5ecaaa19653354f143c031e77,James Newton-King,human,C#,8985
+dotnet/aspire,8d879dd5c1a1480cb8fe86051824aaf9069b654c,dotnet bot,human,C#,8176
+dotnet/aspire,971c53aa7a5efdd47b23a934f2fe61c53613aa5a,Eric Erhardt,human,C#,7129
+dotnet/aspire,6830eea415adddd802f3d4feac199fd0edf7f08b,Dan Moseley,human,C#,8873
+dotnet/aspire,c9212678d4524d734b26bbbae1c34d12f1636bd0,dotnet bot,human,C#,8927
+dotnet/aspire,5fa4b7446ec26c1224105154ecbbcf1d76cf2ed6,dotnet-maestro[bot],human,C#,7224
+dotnet/aspire,003b4abc057b67650a1979c42552c5b9f0cd84d7,Safia Abdalla,human,C#,9215
+dotnet/aspire,46aa81ca03636b8b91fb0f8c70d2fc1a314ce514,Damian Edwards,human,C#,7962
+dotnet/aspire,9d11a83467474211b5e36c5ea752d575ea57ac7b,William Godbe,human,C#,7542
+dotnet/aspire,9ba673332146dbd6ee93c883fe009d4a68ead2a5,Eric Erhardt,human,C#,7670
+dotnet/aspire,7c4df1f24b5c214849b1c36c4dae509ca506fa13,Eric Erhardt,human,C#,7356
+dotnet/aspire,47a1547459bcb7dcd0aeca660990bb5edd6dc769,Dan Moseley,human,C#,8603
+dotnet/aspire,87d7f467587b03e6403babb9f18069cbc79d7727,Sebastien Ros,human,C#,7764
+dotnet/aspire,c4186edda5c680c37c02897b7416017d17ee41c1,Ankit Jain,human,C#,8647
+dotnet/aspire,584b29d4e5921a05190d73cce311d518bfbdbf56,Mitch Denny,human,C#,8166
+dotnet/aspire,65565dda3fa10c05ca958a33045f77569a9d79ed,Eric Erhardt,human,C#,7408
+dotnet/aspire,b1299b1680e7202f3d963b6b71c641889bf43a3c,Karol Zadora-Przylecki,human,C#,7141
+dotnet/aspire,30641bd683f96b418cc2a70985e44607cfba7435,Sebastien Ros,human,C#,9159
+dotnet/aspire,da5f2070f18c6f2525a463ff39dceaa98183430b,Ankit Jain,human,C#,10095
+mlflow/mlflow,3e5ea5ba7542dbdd766a7bbfad665e8e3a1f1334,Jacek Laskowski,human,Python,14701
+mlflow/mlflow,78799bab92f22e818ba4d9fffe546243ec8b81ac,Daniel Lok,human,Python,14291
+mlflow/mlflow,ccd1fdc19bd1d6f0ad52987fd24948773dea8fec,Tomu Hirata,human,Python,15256
+mlflow/mlflow,a1926533632cb57b2b4051fc969f26df96ada078,serena-ruan,human,Python,15522
+mlflow/mlflow,0e3a4ad84021ae14fae510f95da05216e4f932ed,Samraj Moorjani,human,Python,16125
+mlflow/mlflow,e1e68cb7b6ccf2bff09d9d46d7f09863b4e7ff65,Ben Wilson,human,Python,16224
+mlflow/mlflow,b5f32cf348f26df40f3a96dfcc4f9b7f1dbda521,dbczumar,human,Python,16059
+mlflow/mlflow,79805a3f31de807b1675fb9729943cd8b36de344,B-Step62,human,Python,15298
+mlflow/mlflow,cee43c7a85ffd9287af4ff1151fbe391f9f91e09,Weichen Xu,human,Python,15250
+mlflow/mlflow,42ab829a360742148465b649058dbb31b56ed131,Yuki Watanabe,human,Python,14826
+mlflow/mlflow,9b876f6249b963a5204dbc0942df7475183e9134,harupy,human,Python,15420
+mlflow/mlflow,86fed10b58ed2f163de6d01f08722a0825d0a256,harupy,human,Python,14342
+mlflow/mlflow,48e905fab50399bb258db3ca2076d50a10cdd6b7,serena-ruan,human,Python,14860
+mlflow/mlflow,4c77c5956501d99c451f0782796549caffad09f6,harupy,human,Python,16171
+mlflow/mlflow,131d68995cdd876bead8d36e13ec213576abbceb,Tomu Hirata,human,Python,16271
+mlflow/mlflow,83223bc087499d4dac83c5928d83076aec0a78b9,Daniel Lok,human,Python,14304
+mlflow/mlflow,85d3fb102ff811fd23178f1b62a3fa7d48b30300,Dhruv Yadav,human,Python,15809
+mlflow/mlflow,3b05b93b0ce46bfc6f75284211fced8e3c68065c,Harutaka Kawamura,human,Python,14364
+mlflow/mlflow,f2de138c0afab271dcc0c12293810de497cbfb4c,Harutaka Kawamura,human,Python,15509
+mlflow/mlflow,a43fcdd647b560a414be56a1d7470060581ad693,harupy,human,Python,15746
+mlflow/mlflow,020c414d5dc07697ddce9aaa44b582dd86fa81fe,harupy,human,Python,15834
+mlflow/mlflow,bdbf340b914cc472fb627a89964ebc478dd024e6,Daniel Lok,human,Python,14759
+mlflow/mlflow,022bcf8ae8f99f9c302ecd886e28fa496e3f42d5,B-Step62,human,Python,14439
+mlflow/mlflow,116ed464facfea1dfd9c816a09b558eeb4721323,Daniel Lok,human,Python,14346
+mlflow/mlflow,869618dbe38e211a7e5e7091436453ff921ab1d1,harupy,human,Python,15249
+mlflow/mlflow,674008bf697f5223d087808ce94e60c18dd664bd,serena-ruan,human,Python,14651
+mlflow/mlflow,d48402735bf1577cbbe36276c70b04c4b249ab35,harupy,human,Python,14938
+mlflow/mlflow,f6b8866175158837021baa6dcbf36dfc73f0d87c,harupy,human,Python,14278
+mlflow/mlflow,a0763bf734ce01037db82632eff3bee20a3b3892,serena-ruan,human,Python,14572
+mlflow/mlflow,15904b08f6dcd1f681e1fcf27846e9f15325f8e4,harupy,human,Python,16458
+mlflow/mlflow,aaa17207d7919997a6283bba52f9863a974a637d,harupy,human,Python,14716
+mlflow/mlflow,0ffbe5de83c94913a5b8f2ca43c258c384cfbb16,harupy,human,Python,15160
+mlflow/mlflow,e3160a5648cee563d9b1ada300f99e53fdcfb8d5,Samraj Moorjani,human,Python,15985
+mlflow/mlflow,58a95e7276e5c9e6a4dda74071a0db7e13b2e317,B-Step62,human,Python,15481
+mlflow/mlflow,351654e9ee3b895cb7fc54bb0732bfcadbc96a29,B-Step62,human,Python,16103
+mlflow/mlflow,1c0eb43695140f8a6927df35c3e265dc7ed2f115,joelrobin18,human,Python,16340
+mlflow/mlflow,2fbf6bc1cdcb3e76069169e327bbb1f5427a04b1,Tomu Hirata,human,Python,14632
+mlflow/mlflow,73935ebd4acc85672a41a6d9898d2e61dea551f0,B-Step62,human,Python,14703
+mlflow/mlflow,1ca28d523c6d7bdd4a1a7e6f5682f7833847d1fd,Harutaka Kawamura,human,Python,16001
+mlflow/mlflow,8b61d57f019d71d0bb921bb86016d3f308c441e2,harupy,human,Python,14522
+mlflow/mlflow,189e287ecbc446e784a3f4458b19a6995da57254,B-Step62,human,Python,15733
+mlflow/mlflow,d581c2964fd24fa2e0c81b7a6dce565867a7c8f2,serena-ruan,human,Python,14265
+mlflow/mlflow,a0415ef1da89041f304600ebd9c4120f1b371883,B-Step62,human,Python,15902
+mlflow/mlflow,da814bf4fc9a437f699cf36164ac14db878cbfe8,Daniel Lok,human,Python,14821
+mlflow/mlflow,a90d5fda2649fb6d56d4b47540e313f37ccbd1b8,Harutaka Kawamura,human,Python,15786
+mlflow/mlflow,7a858bd63cc9900ed8d86380cca1caca15db083c,Tomu Hirata,human,Python,15859
+mlflow/mlflow,2c2f43863d9587c642fb049cf09971c6677db7eb,TomuHirata,human,Python,14689
+mlflow/mlflow,4a385327b1b284d5e6e0704ca2a820c5df23670f,mlflow-automation,human,Python,15171
+mlflow/mlflow,1cfd0456c383271affa887df124495f5a5f4e993,B-Step62,human,Python,15807
+mlflow/mlflow,1ca65e31732052c1e68677cc576928226af03e90,harupy,human,Python,15219
+mlflow/mlflow,b8a703a3d53e1e449aeca02c46c29417105df1e2,harupy,human,Python,15743
+mlflow/mlflow,11df30afb3e7b652f6a9f99fd3c715400d35947f,Tomu Hirata,human,Python,15810
+mlflow/mlflow,9cf09222171d599b850df78ffc27d4e711711744,harupy,human,Python,16033
+mlflow/mlflow,259e7f7365b732eef9ba75ff0b6e13367088a2a4,harupy,human,Python,15775
+mlflow/mlflow,54df2d8b274d7f6c84e994933737e7d49f9fb43b,Tomu Hirata,human,Python,15683
+microsoft/testfx,104b9feee3c21232f88787283056137af3255541,Youssef1313,human,C#,4502
+microsoft/testfx,cb84ac2cad4adbda646df488214203b11b149146,Youssef1313,human,C#,4604
+microsoft/testfx,029adc08c294061a39e1e1e960bbecc38749745f,Youssef1313,human,C#,5221
+microsoft/testfx,af6000b71447d930a0492e78e6bc369f169a1a13,Youssef1313,human,C#,4497
+microsoft/testfx,4f25a55adc4b7afbdfc9cb3500a881c0496c613f,Youssef Victor,human,C#,5488
+microsoft/testfx,fc863cb4b2704a6d2e4068545e0e3beb97f5169f,Amaury Levé,human,C#,4585
+microsoft/testfx,c92ee47c31dd165a880fd6653b3dcf1ab9ab9a29,Youssef Victor,human,C#,5254
+microsoft/testfx,e40a555b49570359207c53d931ffa63042c4c72e,dotnet-maestro[bot],human,C#,4844
+microsoft/testfx,ed026e93e512d48a66dba911c033aad21298fa3e,Amaury Levé,human,C#,4765
+microsoft/testfx,69373b9ff2765e1114baa9c042dc19fdb8ff4b75,dotnet bot,human,C#,5773
+microsoft/testfx,581bb8a399e169dbec7477422ac688e5c0802f24,dependabot[bot],human,C#,4836
+microsoft/testfx,c6eb599061d966c73db342c566f51aaa59f536aa,Youssef1313,human,C#,5873
+microsoft/testfx,9d17b890351347a01e4ee759d3512c861b3eee8c,dotnet bot,human,C#,5417
+microsoft/testfx,890a1ffecf794fc1b0387bae9c038ef098345b86,Youssef Victor,human,C#,4926
+microsoft/testfx,5d4f72b9588d15eaae7cdfb7d874c85f68ac0023,Youssef1313,human,C#,4527
+microsoft/testfx,017d1a090a9b922361b7c0cc558744f3c85765ca,dependabot[bot],human,C#,4792
+microsoft/testfx,a05d55bee6ecedffa39b8819936dcc0b148f18c0,dotnet-maestro[bot],human,C#,5763
+microsoft/testfx,5ecac2746c0dd21948df6f8edc811cbcfe5d68c9,Youssef1313,human,C#,5868
+microsoft/testfx,484bb0b827feec2fa7f605a8fc1093c676b10e51,Youssef1313,human,C#,4626
+microsoft/testfx,d6e481e955cc963dcc6c8e3071f231d7d69041a0,dotnet bot,human,C#,5820
+microsoft/testfx,367b49b574f45264db0de8ce1e7d796cdcc6bff5,Youssef1313,human,C#,5297
+microsoft/testfx,b1c677cd8bded80d1da61c89b1fd6b3756f1ab6a,Youssef1313,human,C#,5236
+microsoft/testfx,dffa52228dd25c6187d91164c9f16364c3906fbd,Jakub Jareš,human,C#,5124
+microsoft/testfx,16cda01fe0f2301e63d80dde8408b0152cd2bc7c,dependabot[bot],human,C#,4522
+microsoft/testfx,ace30dd4548c9417ca9d8ff5939c997c42b3a216,dotnet-maestro[bot],human,C#,4785
+microsoft/testfx,3f73a5a779849d8ddc2c68ac51f9a4e16dd9c4e5,Youssef Victor,human,C#,5439
+microsoft/testfx,5afb70a973fbe4d96b1792801730f6f8bdc5df26,Youssef1313,human,C#,5128
+marimo-team/marimo,f98aeb4ae3ba0386e6893b4a8f851f2a92b7d9e8,Myles Scolnick,human,Python,3368
+marimo-team/marimo,ef6c22a925dd9f818bb53873de5a235b09f0528c,Myles Scolnick,human,Python,4853
+marimo-team/marimo,0e2ff5710b57c7c07f820c55e7ca50f81b860742,dylan madisetti,human,Python,3755
+marimo-team/marimo,2edf15af3807b801be289d696896c88c70d81012,renovate[bot],human,Python,5150
+marimo-team/marimo,0358cbd9681665118ddb3ab0a789fa2a999e1e67,Akshay Agrawal,human,Python,3527
+marimo-team/marimo,3c102f8261897e2eefb7976c7c43266976608f2e,Myles Scolnick,human,Python,5175
+marimo-team/marimo,f479bef0ce957f5377afe961cd1d97925bbda9e8,renovate[bot],human,Python,5418
+marimo-team/marimo,104d1db5fef3ba17235de84883ec939168562bf7,dylan,human,Python,4737
+marimo-team/marimo,51da99cdc32ae8b8781451a9a776aebf499b66a7,Myles Scolnick,human,Python,3525
+marimo-team/marimo,dc13224596324b683466de5024d4676c852e852c,renovate[bot],human,Python,3551
+marimo-team/marimo,07b9aca4546d3c5e5feb65b9bb624121ef672008,Akshay Agrawal,human,Python,4449
+marimo-team/marimo,a20737ce21fe4b2eb31b28cd5a9eeccb3a792312,Akshay Agrawal,human,Python,5398
+marimo-team/marimo,b8ed14722f23b2abdfaeb35a00cb939df40cafbf,Myles Scolnick,human,Python,3395
+marimo-team/marimo,690c9188faf4f8e13105bd6e396fa35d2f7cb545,Dylan Madisetti,human,Python,5177
+marimo-team/marimo,f707149a57ce5f45c1c0a40fd64f05a79d46ef04,Shahmir Varqha,human,Python,4666
+marimo-team/marimo,43b20992ac89b1651d40d4f8c9c25fa197dcb621,Akshay Agrawal,human,Python,5305
+marimo-team/marimo,aeafd0df69be0c5760d28555b051a1a47e5d0f72,Myles Scolnick,human,Python,4279
+marimo-team/marimo,c4a1e0d0c856ff9761e84d2f5e83d9c9b268aabe,dylan madisetti,human,Python,4442
+marimo-team/marimo,c448dc84243258f583682970eafacf950d4113fb,Joaquin Coromina,human,Python,4890
+marimo-team/marimo,87df6ea88ea590460e0b72c288b8d8b8427bdcee,Myles Scolnick,human,Python,3437
+marimo-team/marimo,da0a7fec898650d527de783fd458c7e6eb45cbe8,Shahmir Varqha,human,Python,3993
+marimo-team/marimo,7bfa038fa969986e960b404cf303331dd975794f,Akshay Agrawal,human,Python,5476
+marimo-team/marimo,04f7f0fd9d20ae360f06dec8ee4943a870d10b00,Akshay Agrawal,human,Python,3703
+marimo-team/marimo,661c0bb38c041ec7ea03fbb41e14c24cf6e4164f,Myles Scolnick,human,Python,4838
+marimo-team/marimo,eff6295a2c56768d5ddce1e10f0419c584f60b8e,Myles Scolnick,human,Python,4492
+marimo-team/marimo,80013eca3c5ead06d58088ee62be4c14b17eafac,Shahmir Varqha,human,Python,3968
+marimo-team/marimo,a2c027684bca384ed6fead4947216d51f99f9326,Myles Scolnick,human,Python,4048
+marimo-team/marimo,51d274d9f437ada0802e0ea8ed89afe752c3248f,Shahmir Varqha,human,Python,4700
+marimo-team/marimo,35065cef56d8a102eadfd512433e23e0b001ae4b,dylan,human,Python,5436
+marimo-team/marimo,28982ecb8a7b2bb530be374f24dad0403c4e68e6,renovate[bot],human,Python,5086
+marimo-team/marimo,f00b39ac0036ce33dcaee10435987039ba68496e,Akshay Agrawal,human,Python,5403
+marimo-team/marimo,fbb07b4d376e314805648378fe9b84488b47dfc7,Shahmir Varqha,human,Python,5399
+marimo-team/marimo,1c42ab1cc68bc05c51c46405485617453bb04b94,Srihari Thyagarajan,human,Python,3577
+marimo-team/marimo,51fa332c2557fd9332bdc4384f7c702dd1d4edc8,Akshay Agrawal,human,Python,3926
+marimo-team/marimo,266b7e03050340bb527ce7fe69f1d7568c99d14e,Myles Scolnick,human,Python,4861
+marimo-team/marimo,d6cda22902fd53f37972d72b98c34df6577da198,Myles Scolnick,human,Python,4664
+marimo-team/marimo,c60048b5a9944790e505eaadf22df8825269d596,Myles Scolnick,human,Python,4840
+marimo-team/marimo,ca469fcdd4e9379c35683ed476924a6691e50d24,métaboulie,human,Python,5050
+marimo-team/marimo,fa8f7394c39e229c5824ba0c29ebee9cbc528da1,Qin,human,Python,4718
+marimo-team/marimo,10b70122537f009b4087abf4e1acc37d7722a935,pre-commit-ci[bot],human,Python,3628
+marimo-team/marimo,4fd978ba06149e8ad1fb7675f08582637c93131c,Myles Scolnick,human,Python,5000
+marimo-team/marimo,b7a0c46e1b87c38c76f942013221b780575c4045,Myles Scolnick,human,Python,4733
+marimo-team/marimo,fca60fe8a566108db13633349582d73f4d8bbfab,pre-commit-ci[bot],human,Python,3520
+marimo-team/marimo,cf6ec8d36d9225ad9a47fbea92fc2d131511efda,Shahmir Varqha,human,Python,5224
+antiwork/flexile,e253028b4c1b30f0a94858161e7abb66626c07e4,Maya,human,Ruby,373
+antiwork/flexile,dde74a662a6cb79f41f78b2e24d49c6df98b34ed,Sahil Lavingia,human,Ruby,317
+antiwork/flexile,9405ed701b4e76b4f37603e18e4204f26831843c,Maya,human,Ruby,310
+antiwork/flexile,b33282094e7e7b409aef95e3217c65c1779b0135,Maya,human,Ruby,164
+antiwork/flexile,4d06e3aadbd5e058363bb1a35ff7682391973da2,Raul Popadineti,human,Ruby,228
+antiwork/flexile,f22b7ca8f0401f870cca2d2d08a582a98e8b6232,Devin AI,human,Ruby,414
+antiwork/flexile,fa65809ca651703471ea3ec68bb2a31c4d728c7f,Raul Popadineti,human,Ruby,144
+antiwork/flexile,8679f4334ab4d1db4504f333d11de0113768f833,Maya,human,Ruby,404
+antiwork/flexile,d1230f1575b3ac827758dd03fac5df79b46acc96,renovate[bot],human,Ruby,92
+antiwork/flexile,1b639580332d5d88c33339eb1c692ec5f464f373,Raul Popadineti,human,Ruby,268
+antiwork/flexile,8930a7003dad32e5f6761630797b2aa0e1901dd9,renovate[bot],human,Ruby,51
+antiwork/flexile,b09b0cd316b5b1e59bb1b7beb53147770ee8a1d5,renovate[bot],human,Ruby,79
+antiwork/flexile,d85038be71e5fc7daf4fef23e0bf375cfe678c97,Maya,human,Ruby,85
+antiwork/flexile,a5b25db4b8987143415ee0cc3cd269bd3bfb0f17,Sahil Lavingia,human,Ruby,90
+antiwork/flexile,e9c471f5a75e617c614d6fd92e43ad8423f54460,Sushil Kumar,human,Ruby,137
+antiwork/flexile,5f48ca15cac6569d2830ba3e9abba4a26a993786,renovate[bot],human,Ruby,135
+antiwork/flexile,922eaa5f111da8f6b114dc4944b974a5424d4b9e,autofix-ci[bot],human,Ruby,245
+antiwork/flexile,085629584971b95276dc2dcb778625a0c8351179,Raul Popadineti,human,Ruby,263
+antiwork/flexile,551ae55c7ae2d6f39c74f46e60bfcc4bfb70d508,Maya,human,Ruby,298
+antiwork/flexile,e6b414a6ed37a34404d9b20ec3f95e0d3549f36d,Maya,human,Ruby,113
+antiwork/flexile,93344d82b213f9b0a3e221ac3f022e4008f343ce,jc26,human,Ruby,266
+antiwork/flexile,84c650612b87f0fb0b096bd0b0d55733548426d1,renovate[bot],human,Ruby,127
+antiwork/flexile,3b946f5fd3ceffcaf13b679c9ada739457e7f719,jc26,human,Ruby,232
+antiwork/flexile,4b87eba3ae8cdea2acc075ae5df473275dac52d3,renovate[bot],human,Ruby,49
+antiwork/flexile,bb3c968dc650e4a481a4603f5d6c38cf794d639f,renovate[bot],human,Ruby,56
+antiwork/flexile,e3160f70c1c4f858f5d62803fd27b4c036a972c6,autofix-ci[bot],human,Ruby,84
+antiwork/flexile,b65592a43f19f32778612146d54cb6a3f7a3d14b,jc26,human,Ruby,194
+antiwork/flexile,d1b7537e56a72bf4b27f77d2a1e043477b5d654b,Maya,human,Ruby,27
+antiwork/flexile,7e9cb982c63903915de10c78fba302e854feb3c1,Raul Popadineti,human,Ruby,269
+antiwork/flexile,0b412dd045e29e1a4589e08bf2cfa4b9919da73d,Maya,human,Ruby,399
+antiwork/flexile,bcf733af9c0ceb389ef60720f002dd11ddb5f0c3,Jason Chang,human,Ruby,248
+antiwork/flexile,abb4c19a53d690b63d224e2b1fc967ec56894730,Sahil Lavingia,human,Ruby,361
+antiwork/flexile,9ec7b1212d252b5c7c16d4f3608f3c7d4b071546,Raul Popadineti,human,Ruby,193
+antiwork/flexile,0ae849cc0a78601dea6dc0fb7c23737e168c2f89,Pratik Chanda,human,Ruby,83
+antiwork/flexile,c27c717e2f935db226dc70bbf42a2b079127f20a,renovate[bot],human,Ruby,143
+antiwork/flexile,372b8bf44419731707f3b900ab8d9fbb7e3cd770,Raul Popadineti,human,Ruby,157
+antiwork/flexile,a7b11166695e6f0e4cb1377cfa79ce220738de00,Raul Popadineti,human,Ruby,277
+antiwork/flexile,1fa60b2c19cb02963ae8ca6a0d381b0e52471353,Maya,human,Ruby,344
+antiwork/flexile,5748ba25c1aa0c69c2613e367af227d02c694678,renovate[bot],human,Ruby,136
+antiwork/flexile,86238d3a3a0469ab677e44268ba67266366b3ac1,Maya,human,Ruby,60
+antiwork/flexile,697fe1fee494ae47e90971ff44102123769f918d,Raul Popadineti,human,Ruby,229
+antiwork/flexile,abd47509612ba1e5770f6c3429ab81a97c618d3c,Maya,human,Ruby,74
+antiwork/flexile,c5f89653d89a09edd88c71d4656663218722c181,Raul Popadineti,human,Ruby,244
+antiwork/flexile,0cd73d7a4662794139dcd967e18fadf580f5d27c,renovate[bot],human,Ruby,38
+antiwork/flexile,470ecb5e53782f889113408fc7107c4829d83f1e,Sushil Kumar,human,Ruby,115
+antiwork/flexile,563d72a6522dec46e1579a4e51265a84529d33fa,Jason Chang,human,Ruby,125
+antiwork/flexile,7e997b3f9e47fbb7e80858330deb0733c29214d6,Sahil Lavingia,human,Ruby,355
+antiwork/flexile,608123ab02812cfe4ed0643005231097fd687546,Laura Garcia Dieguez,human,Ruby,321
+antiwork/flexile,fd86ca18fc133bc116aa8206c5715c0f866141e4,renovate[bot],human,Ruby,152
+antiwork/flexile,7ae04d8e5845d203c95fb715873315d2cf29b51e,Sahil Lavingia,human,Ruby,304
+antiwork/flexile,eb4936228c8b2613d6b96b6e4f6baa7043eb6b3a,Raul Popadineti,human,Ruby,273
+antiwork/flexile,0edda3faeadb024d5020100391a42982b96d1535,Maya,human,Ruby,166
+antiwork/flexile,f40f0428b8a26abc8de4097dc1874e4b8e0a9a41,renovate[bot],human,Ruby,146
+antiwork/flexile,e8b02a73696a98f3611351a5651e4986efcbc026,Raul Popadineti,human,Ruby,91
+antiwork/flexile,31790c268e543de0b70eb12a983faa3fde8e839b,renovate[bot],human,Ruby,168
+antiwork/flexile,282e04ae39b3406a59eb628e85603729908d2b98,Maya,human,Ruby,278
+antiwork/flexile,4be2550c29e1d0b8fa90caf99bd776576344de34,renovate[bot],human,Ruby,81
+antiwork/flexile,3e7fb04ff9f20ff1e2033f91cc69126307547cd0,Maya,human,Ruby,290
+antiwork/flexile,83d5096a932fd7c6253e04dedd8725a91cebc3dc,Maya,human,Ruby,53
+antiwork/flexile,0f8e279d592e083aa4be74a6b47209d203844c08,Maya,human,Ruby,47
+antiwork/flexile,f0b368701c98d52ec4201930f73ce3883595ad0a,Maya,human,Ruby,225
+antiwork/flexile,aae7172fc1449f478acabccb6f80fcf7f49b277b,Raul Popadineti,human,Ruby,179
+antiwork/flexile,3ba8a9d49a2dbe03bb547792d5be04701f4948de,Maya,human,Ruby,124
+antiwork/flexile,ac81319754b47583a14ca01269ded4cce152bd07,renovate[bot],human,Ruby,161
+antiwork/flexile,458fe5471556e8ed0922172bd9a7ffcac5a6f927,Devin AI,human,Ruby,402
+antiwork/flexile,6b88d5aa7ee1c852de39b3b7e66a5cf61d98af63,Sahil Lavingia,human,Ruby,338
+antiwork/flexile,59cc40278b77432edd05ea352fa32ad588beb7a4,Pratik Chanda,human,Ruby,95
+antiwork/flexile,0c5f01dad347c3c728492ada1eb7af7eee9f7435,renovate[bot],human,Ruby,54
+antiwork/flexile,ea7c6e0fc8014230f38f2015eb3cbe6b64f08b1a,renovate[bot],human,Ruby,145
+antiwork/flexile,867df933bbb2fb190384d132508b86def9bb804f,Maya,human,Ruby,296
+antiwork/flexile,8f88f5bd6fd6fffd8f61ee55a039058bef8bbd92,Maya,human,Ruby,120
+antiwork/flexile,a43173484e94bc88567a91f6a261b8a6a20160d1,autofix-ci[bot],human,Ruby,33
+antiwork/flexile,336a2883e3d93b9f4da8d620eee2124613d27a78,Maya,human,Ruby,267
+antiwork/flexile,deaf41ac1def88b7b4fc0c17058dcba51ee7ee22,Raul Popadineti,human,Ruby,270
+antiwork/flexile,bcc4b64b3aa71f6792be4acc7f1ce60f57843474,Maya,human,Ruby,73
+antiwork/flexile,553de43242da316f38d2345ae8ca7ee815638b20,Raul Popadineti,human,Ruby,128
+antiwork/flexile,c7807908ab2c96d669fdaccb3d2227554c2f2837,Laura Garcia Dieguez,human,Ruby,299
+antiwork/flexile,80389fc51fbfd1f63b2e4bd7d0caa372be00ea8b,jc26,human,Ruby,170
+antiwork/flexile,46cef731a8bdcd8e1d83512c901699444c7d6695,Raul Popadineti,human,Ruby,249
+antiwork/flexile,a34bfbacab55dd179e0886adfc82505a0b8c9cd9,renovate[bot],human,Ruby,40
+antiwork/flexile,1d1dfdf4e7c046becbf036bcb719d8efc0622876,Sahil Lavingia,human,Ruby,98
+antiwork/flexile,b8962e190805bc34fd88a6b77cf276cce0d86b2f,autofix-ci[bot],human,Ruby,191
+antiwork/flexile,658012c1ee267648dcf02c4245b5de5ea593ce8d,Jarren San Jose,human,Ruby,224
+antiwork/flexile,9517b4899d2992385e56730fbb86c4c41c8fe351,renovate[bot],human,Ruby,41
+antiwork/flexile,208b228b20e4bc05d8e96b155d0ca88eaece88b2,Maya,human,Ruby,292
+antiwork/flexile,27684ab20ff8a09c1ffd6c34aaa90402594ca176,jc26,human,Ruby,199
+antiwork/flexile,8ce001a06e3ac3b035fa70e6870ceeca0825c9e7,Maya,human,Ruby,160
+antiwork/flexile,ffeab94143f475cfd6a78ea8a91033e75918e503,autofix-ci[bot],human,Ruby,195
+antiwork/flexile,fcaef2cb2e3d39de289e744ada4e812a0d56fb4f,Raul Popadineti,human,Ruby,265
+antiwork/flexile,c1ab52ff6adca13d586738b15b80330a4a2452d7,Maya,human,Ruby,116
+antiwork/flexile,2cce5a38ef1a526c24199814c72be2dca11e888b,Laura Garcia Dieguez,human,Ruby,303
+antiwork/flexile,887bb4f46708988b63cb60ac546d0a555c18e685,Maya,human,Ruby,293
+antiwork/flexile,0acc0fd73de4970e48c439b41e91ca13c9e8ceb6,Maya,human,Ruby,294
+antiwork/flexile,3474841cf40b1803c9c06d9b3835469103fdfce2,jc26,human,Ruby,233
+antiwork/flexile,a841837be9218d68028671e9b368e313093dc54e,Devin AI,human,Ruby,403
+antiwork/flexile,0fcd2769c3e73956de6fc47053a48b2304dd8a31,renovate[bot],human,Ruby,93
+antiwork/flexile,60a53c204ad10955b1e0e654dadeae50473cf5e6,autofix-ci[bot],human,Ruby,366
+antiwork/flexile,c5b748e7cf763832c93668b003cd3e89cc877318,Raul Popadineti,human,Ruby,241
+antiwork/flexile,a773713da901d6c31f9c25bcdd0b897885598f91,jc26,human,Ruby,173
+antiwork/flexile,d9a2b828d437ba17a15e47b5743851af04f0fa89,Maya,human,Ruby,283
+antiwork/flexile,93e5723662486b50acd6cfd8a5c972dd8fcd0b7b,Sushil Kumar,human,Ruby,184
+antiwork/flexile,a273d5c700e7d6ba544c025ba6895885d5fbb031,Maya,human,Ruby,55
+antiwork/flexile,8e258bbb1dd55a1d3802e75e3bc18b2d3b222336,Maya,human,Ruby,259
+antiwork/flexile,567b65ce20ce310bc63897aaca553f9150f09f74,Raul Popadineti,human,Ruby,234
+antiwork/flexile,24ebfe4f3dbe97f1206f0d1db28eb36715c3c215,renovate[bot],human,Ruby,147
+antiwork/flexile,c9e16a49407db7aaf44f048f21978812718ee7a4,Maya,human,Ruby,88
+antiwork/flexile,79d7bb8c99bd12258897e36e8186f157a436c10c,jc26,human,Ruby,226
+antiwork/flexile,71b2697b5c6631e45ae97012cac12cc7214e0082,Maya,human,Ruby,52
+antiwork/flexile,f4f74f475755efbcb22194dcd454131172c061da,Maya,human,Ruby,151
+antiwork/flexile,3dbe1740e4fbe909ff6411de483655ad4db470f1,jc26,human,Ruby,176
+antiwork/flexile,af68c3c26a9f04d8e8a221791b66b6b918f25fc0,Sahil Lavingia,human,Ruby,313
+antiwork/flexile,63dcc64fe18011f7f9c96446e77953c489e51b43,Raul Popadineti,human,Ruby,272
+antiwork/flexile,2a73eaae75f6bb7d026680e32f3aa77fd9d2326f,Maya,human,Ruby,264
+antiwork/flexile,f1add239cf555fc1c54865dd738c244d1c7daabe,Maya,human,Ruby,150
+antiwork/flexile,3a5017233a37a2f0b55bb7c9e04913e0d10c7b38,Maya,human,Ruby,300
+antiwork/flexile,bcd9c83002f7c08048803914b2c4c9daa611ecda,Jason Chang,human,Ruby,172
+antiwork/flexile,6879b59b03d5b763339f66b1369dac2ec859fe69,Maya,human,Ruby,133
+antiwork/flexile,c23eaf5342c1bf3d2d0f50fcd97ef905f672e7f8,renovate[bot],human,Ruby,67
+antiwork/flexile,bc723916928370c4b309777a1f451c0736edc65b,Sahil Lavingia,human,Ruby,388
+antiwork/flexile,5347f256db27ea5594194a051dfa8e90d74e44de,Maya,human,Ruby,306
+mlflow/mlflow,9325e444ec074e4c1b636b52c6492217eec7bf23,harupy,agent,Python,16658
+mlflow/mlflow,dfe5183a28587c6c20a27ef46c7087cabea79d57,harupy,agent,Python,16449
+mlflow/mlflow,81c32912368a82de0e95b391c2613681f77bd4c4,harupy,agent,Python,16482
+mlflow/mlflow,595291ae7040638e173895979470be5495212944,harupy,agent,Python,16758
+airbytehq/airbyte,27d8ccfbfd44f56dff10a5b2a01d79bf63ce930b,burakku,agent,Python,62941
+mlflow/mlflow,3068f9eb19a127f86fe4b25fbb9ef94bcf29c666,harupy,agent,Python,16442
+mlflow/mlflow,59f0edfee7941c3fca1ee8612f700ae287951f79,harupy,agent,Python,16909
+mlflow/mlflow,956762d2a9d86685e6e2778299fc7a36b102ee8d,Copilot,agent,Python,16911
+mlflow/mlflow,a93cb4a536ec84e851069ae562859a3e1eee6349,Copilot,agent,Python,16913
+mlflow/mlflow,9ca3aee52bfdc265df212b3801b14faf52b5a27e,Copilot,agent,Python,16007
+mlflow/mlflow,e81c4be6b71741af8e84a6dc012bf443f7288c18,harupy,agent,Python,16009
+mlflow/mlflow,1099b950d41852db0a37da3379cafa07566b11c7,Copilot,agent,Python,16014
+microsoft/testfx,1c71d5be7151420a459a7eb647f066760799e474,Youssef1313,agent,C#,5792
+microsoft/testfx,27ae00d0d00b7947220d0b5ed508675efc86b338,Evangelink,agent,C#,5793
+dotnet/aspire,dd807f57969c2aeb4697ee80008bfc463dfe9d77,Copilot,agent,C#,9903
+dotnet/aspire,be2048aab7fccc56cac8e48e1c99ac8a04b22f44,Copilot,agent,C#,9458
+dotnet/aspire,693580246194435c66ddd6132e220523c1a053f7,captainsafia,agent,C#,10037
+mlflow/mlflow,0d2daaadb5bca53c19f66efc999e0a8c1889bca0,Copilot,agent,Python,16376
+mlflow/mlflow,351388a55ff3e4372cff2e5400a31499f9d0c821,Copilot,agent,Python,16385
+mlflow/mlflow,6548e87a257102d936eecd043fcdca979b6c2f05,Copilot,agent,Python,16389
+mlflow/mlflow,fee6b7fd743d7edc59bbdddecf704f0339da45f1,Copilot,agent,Python,16392
+dotnet/aspire,1731e1a27d3eeda32b151b3a4503698979e4546d,Copilot,agent,C#,9748
+dotnet/aspire,6fff8f40b4e9ddbb23bb07a25878dcc9932504d9,captainsafia,agent,C#,10074
+dotnet/aspire,e7c43f4d86127c197ae0af59aff4b3b826a4fffa,Copilot,agent,C#,9433
+mlflow/mlflow,616a22bd472dd485f88538244519766746aeb737,Copilot,agent,Python,16531
+mlflow/mlflow,f4def3a54e165ce4085924681bad10c57ed3f972,Copilot,agent,Python,16533
+mlflow/mlflow,fc2439231196df54c248abc60daf26856201788c,Copilot,agent,Python,16535
+dotnet/aspire,338a1ea620e775d5bb5a8fc5dc8f10b41fa49556,mitchdenny,agent,C#,10203
+dotnet/aspire,a77a64729d7b0c4740468a120e15622a3be0071c,mitchdenny,agent,C#,10207
+mlflow/mlflow,06f386ee7153c2cb0e1698bc89a8f0ffaf43dfeb,harupy,agent,Python,15996
+microsoft/testfx,91085545986b33a579e703c7b849e0e58781739a,dotnet-bot,agent,C#,5795
+microsoft/testfx,092e8f3e942fbd6e6f8a5e5e052da2039f14ab38,Evangelink,agent,C#,5797
+microsoft/testfx,725eaffc808e4ecb923d7fd4937bbb0ef2fc05cb,Evangelink,agent,C#,6058
+dotnet/aspire,82b0cf3a67cc8aa338d79c7f96941f58d90bdf35,mitchdenny,agent,C#,10453
+microsoft/testfx,b8f800e48151f457af1197942fc321079dadc1fb,Evangelink,agent,C#,6060
+dotnet/aspire,2e0eacab5a147e963b4c2a43f7942ffc197351d5,davidfowl,agent,C#,10152
+dotnet/aspire,17bd8a1ec00f6ab4f8f54e19c708719eaf0b20b2,Copilot,agent,C#,10320
+dotnet/aspire,9c8bc8c46c1aa324cd717788cc958e2c86cc2c15,Copilot,agent,C#,9655
+dotnet/aspire,bb2b9f17eb05098115add0cfecf85915bb0e5b6e,Copilot,agent,C#,9657
+dotnet/aspire,395a272f4b2b4bf55d6fa7465b761d841bfb1b76,mitchdenny,agent,C#,10525
+dotnet/aspire,05d655b4db6149885d2a23a4ce982598d625bff8,Copilot,agent,C#,9447
+dotnet/aspire,c496eef4c5d99c073717459b097dbbef4c7fedd2,Copilot,agent,C#,10059
+dotnet/aspire,6c448f660cbae7e034e02def71e63b45a936b462,Copilot,agent,C#,9721
+dotnet/aspire,75dd13ae24e036aaca8bddf56e9865253adb2cdc,Copilot,agent,C#,9730
+mlflow/mlflow,d75e0864fa0f0df755507fcbf5c1a6564665d030,Copilot,agent,Python,16112
+mlflow/mlflow,19674dfc9721247b52a1f6a64fbaf99111b943e2,Copilot,agent,Python,16114
+mlflow/mlflow,5b8e19a96e97fe569588db51b498d860ac98e8d5,Copilot,agent,Python,16727
+mlflow/mlflow,e642179b54c8e01765a5674a46c9914e027b8d4c,mlflow-app[bot],agent,Python,15987
+mlflow/mlflow,154a425e517d565ade3503b2d86b5a1e441b178d,Copilot,agent,Python,15989
+mlflow/mlflow,c04c3895ce27081366027e1305a38b2103af59c1,Copilot,agent,Python,15991
+mlflow/mlflow,45d27f59cf266a595b9ea36fd95908b7ae7af23b,Copilot,agent,Python,15993
+dotnet/aspire,038d71ed88cb0bc20c8506b5286d7867f9049a12,Copilot,agent,C#,10499
+dotnet/aspire,3c49c02187559487f309f7c114d6cff5479eccde,mitchdenny,agent,C#,10485
+mlflow/mlflow,3c74e69a9017e1ef5e7451bbfd1a7569fbfc15f0,Copilot,agent,Python,15953
+dotnet/aspire,2ae0a5dedbd24e773d9cd92c1134cf6f2066c1c0,Copilot,agent,C#,9552
+dotnet/aspire,e579d0581d6565d28dffbc817e5f20cf51ef068a,Copilot,agent,C#,9965
+mlflow/mlflow,c650c8d48ce1539830f7f114bf50691670620724,Copilot,agent,Python,15863
+mlflow/mlflow,64642c440b0fd999b5f43729f27f79e952172454,harupy,agent,Python,15865
+dotnet/aspire,39a5805ea58e1f41662f4c195720ea3d10ece8d2,Copilot,agent,C#,9538
+dotnet/aspire,d1d428f00bccbac3ce4a22978ece67d4f6738f28,Copilot,agent,C#,9573
+dotnet/aspire,4e4b7ab9442d27229cfbbbd35c4b64bfcafbd74e,Copilot,agent,C#,9574
+mlflow/mlflow,98f2bf96fb96065b9aac6ee9a302df9884f7c301,Copilot,agent,Python,15909
+dotnet/aspire,b347c3f65f21d0ea8d9866151e83054516c92af6,Copilot,agent,C#,9527
+dotnet/aspire,c517e8d891689f62c9a286e43621d030aa2ff7b5,mitchdenny,agent,C#,9676
+dotnet/aspire,e99b3384b827962483990cce04769e2b7dafbf35,Copilot,agent,C#,10554
+dotnet/aspire,0cc2affa5208a2c209683902c0f999741871ba84,Copilot,agent,C#,10172
+dotnet/aspire,719f21cc04d8167fc90873dbb02864d883a9ed1e,davidfowl,agent,C#,10336
+microsoft/testfx,415a392f8cfa02b47bd84ea59f0994f25587db54,Copilot,agent,C#,5613
+dotnet/aspire,910e87eb26b949e7734ceac23849cb9010e92531,Copilot,agent,C#,9491
+dotnet/aspire,a0955605e26e48774949a6aa9c628b5bdf7c1bfd,Copilot,agent,C#,9505
+microsoft/testfx,e69cb8ccb40b3d21f9ca4992cc3caed9ff4e64db,Youssef1313,agent,C#,5705
+microsoft/testfx,e9089baa4218915428762ec5c5a31d6fa4c95e48,Copilot,agent,C#,5706
+microsoft/testfx,80222db2306f052c753e6c1628e982dfe84cf883,Copilot,agent,C#,5708
+dotnet/aspire,4c88164eb8299f5f9eb60cb6ee072b60445c4213,Copilot,agent,C#,9604
+mlflow/mlflow,0836c881e7293d94fbb69a16ab4119c79e65f9ad,Copilot,agent,Python,16367
+dotnet/aspire,f8720b27d41ae00bbc892f6edb24aafe5b8640d8,mitchdenny,agent,C#,9498
+dotnet/aspire,9c5787987f6f394b459e456760d7457e7f1d5d1f,Copilot,agent,C#,9776
+dotnet/aspire,3d1af73102176125c8412f967baa0adeff1455b3,Copilot,agent,C#,10237
+dotnet/aspire,24f7fef9fc35c3a2457cd29537619bee043f7142,Copilot,agent,C#,10737
+mlflow/mlflow,13a4be643aa23dadbe883ec413648da013725e8d,Copilot,agent,Python,16265
+microsoft/testfx,0a9a7a0ac91719ae3d20ee10051beffdca5d542b,Youssef1313,agent,C#,5935
+mlflow/mlflow,91aac25e0b6056018e7fa8f07dbbe7d29e7e8036,Copilot,agent,Python,15852
+mlflow/mlflow,f88521c6945baa440b29e9070ed9362a42f6b894,Copilot,agent,Python,15854
+mlflow/mlflow,6338d0bb0a6b501d23242bc4ef96a4da0bbc0a8b,copilot-swe-agent[bot],agent,Python,15856
+mlflow/mlflow,af4bce88e2419f7f6aa61a0b42a3b92dac607891,B-Step62,agent,Python,16053
+dotnet/aspire,b927cf7e4efe6a4b00ff73c2b86cae3695220084,mitchdenny,agent,C#,9992
+dotnet/aspire,8db3dc5795a8ccfac2f176ec3e184fccfd41dd69,Copilot,agent,C#,9995
+mlflow/mlflow,d0d323a75123a01e9d314e44569f0f0db17786e7,harupy,agent,Python,16600
+mlflow/mlflow,2a86a135358e15a84538c2dece5c9fbb5dc777c5,Copilot,agent,Python,15848
+dotnet/aspire,d2308bd342eb1666ee5174a0999f3f86e8b8998d,Copilot,agent,C#,10334
+microsoft/testfx,c781667b352086a69bf897242691a6ca41e10958,Copilot,agent,C#,5691
+dotnet/aspire,bc9983daf61a051852de5d3b96d2e883d835c38b,Copilot,agent,C#,9501
+dotnet/aspire,4c2123f9df11274bf90fab9f42a79003a13fe12a,davidfowl,agent,C#,9503
+dotnet/aspire,45a1e1424095ea8acf934e1a6e2e36a2f6275047,davidfowl,agent,C#,10456
+mlflow/mlflow,489efd1b61f502ca9ec4dfc7cc706f5f15fc951d,Copilot,agent,Python,16369
+dotnet/aspire,39b5e7b77d64d47a7b545b6f8e6c15c051baa1f4,Copilot,agent,C#,10624
+dotnet/aspire,94892655adde0b9a6c90616d3961a9babceaaed1,Copilot,agent,C#,10626
+microsoft/testfx,ac2874fff298204e7dc68fde1f64b213027c7d15,Youssef1313,agent,C#,5944
+dotnet/aspire,935b50fcedff5599b1cc0b62bfd8cd3e0bf5b98c,Copilot,agent,C#,10115
+dotnet/aspire,d3f5ffba843e188bfde81aa8069ce09eeb968715,Copilot,agent,C#,10267
+dotnet/aspire,346a72163242afbc1437ab0b6879b13ac6870bf6,Copilot,agent,C#,9494
+dotnet/aspire,76fe7af380a160ba7c2d58b72e46c6c007a72c0a,Copilot,agent,C#,10496
+dotnet/aspire,ca80d5aeadd2e6e3df41fade5023a75b0c0e1a5a,Copilot,agent,C#,9979
+microsoft/testfx,0945cd3e072fc95e6c006940a73c452efabfd072,Youssef1313,agent,C#,5600
+microsoft/testfx,7592ae68a99bf75fb360fe85ec8f6f6dc46ca88c,Copilot,agent,C#,5601
+dotnet/aspire,776ef4e6b152df760b4aea5ddb4ad0f181948cbe,davidfowl,agent,C#,9597
+dotnet/aspire,90bbcb52c1f636f21b184f40aa43e7d30b2610dd,davidfowl,agent,C#,9600
+mlflow/mlflow,44bb337754fc91782ca2d67cfe711976fe93d330,Copilot,agent,Python,16472
+dotnet/aspire,a5a61d8fc5b8c4b48cefbbc0da5379e3733af514,Copilot,agent,C#,10089
+mlflow/mlflow,7cee59b65c2785334a89556c85bd4ae45d430419,harupy,agent,Python,15889
+microsoft/testfx,826ab5b25cbce690e7a3e78067744d7fd9f38ebd,Copilot,agent,C#,6200
+dotnet/aspire,2b6335dec612cd70bd605071430b31b678f85d84,adamint,agent,C#,10111
+mlflow/mlflow,e6c3cb73f9cba91a0a21e3f06fa34ff2810ed239,Copilot,agent,Python,16191
+microsoft/testfx,5a185c79028e481a4e77a7a875de3c9fd2399026,Youssef1313,agent,C#,5786
+microsoft/testfx,79dd288f5846455fb0d6fd256b02c5b1ff5c58e8,Evangelink,agent,C#,5790
+dotnet/aspire,89f841ef7dea43517ddd4551ce46f2c65308cadc,Copilot,agent,C#,9737
+mlflow/mlflow,30026f1e6d26b38b64b7830f12ce9da201d4b4f0,Copilot,agent,Python,15877
+mlflow/mlflow,d40751de145ac1035f2e13aeeeaf55b8acd1ca8a,Copilot,agent,Python,15879
+mlflow/mlflow,ccd940447dcc03f99b5251d09063f446b99993e2,Copilot,agent,Python,15881
+dotnet/aspire,d80eced41cd4f56167939ed0699a8447d38a7d0b,Copilot,agent,C#,10067
+dotnet/aspire,7e6c3f03775717a49d879c63659a8bf6a4d8dc0e,Copilot,agent,C#,9615
+microsoft/testfx,38fb41ad7ebc5cdeb39ccac8a8770874758ecfd6,Copilot,agent,C#,6021
+dotnet/aspire,7689f842bc1cd063e358a0d14d191f0efde7dabc,mitchdenny,agent,C#,10673
+mlflow/mlflow,611dc05293b94cbe65a226c23406963e4f782536,Copilot,agent,Python,15926
+mlflow/mlflow,6215c3ba66a31bf24cd7645373ff7ea4340ebfe0,harupy,agent,Python,15929
+microsoft/testfx,ccdb0dadc267d0bbfe192c31689ad1ede8326f28,Evangelink,agent,C#,6164
+microsoft/testfx,305b40be31c1c5547acbe50bab79afa72cf8dd85,Evangelink,agent,C#,6165
+dotnet/aspire,27075e051633e85ca997e45a1eb0b8587ee522dc,Copilot,agent,C#,10166
+microsoft/testfx,1537316fb95e5ea669b024ce091f3e5f5c7cfbf5,Evangelink,agent,C#,6055
+dotnet/aspire,0f8f4a0ee103a9843fd9b4791f33eedf937b37bf,Copilot,agent,C#,9836
+mlflow/mlflow,cd4426fc1beba221e8bc7196d2f64382a1d8273c,harupy,agent,Python,16039
+mlflow/mlflow,4217a2b6b84f39746d63e1c6ce05be93b9bbbfc7,Copilot,agent,Python,16221
+dotnet/aspire,e57581a64f3c3b7a618e22ddb58c2d74c3654a65,mitchdenny,agent,C#,9848
+dotnet/aspire,5f2a3264c593733399fe396a03371e434f77e4b2,Copilot,agent,C#,9849
+mlflow/mlflow,dcdf94e2a213b7a26534de8d81d6e57eb67e9db6,Copilot,agent,Python,16226
+dotnet/aspire,43c710acead1fadafcef3275b027ca934c44bab3,Copilot,agent,C#,9700
+mlflow/mlflow,09fd8c97651bfb85f752bd41aec0d144033a4295,Copilot,agent,Python,16080
+dotnet/aspire,b75c670edcad6108705388c5e13857ce62d2e784,Copilot,agent,C#,9939
+microsoft/testfx,22faec79e85486716695f3bc16bdcf101c0a7c96,Evangelink,agent,C#,5818
+microsoft/testfx,fadea40ee19f93553bb890f5c7adbaf699c4580e,Evangelink,agent,C#,5819
+microsoft/testfx,d248f6083b938c452909fd2b42bc8cf1338a67fc,Copilot,agent,C#,5666
+dotnet/aspire,b7381033485768d5ae9cd4898e118c672ca29c19,Copilot,agent,C#,9509
+dotnet/aspire,61e0382b61c18ae2bf41f603779ff24663b9ecb6,davidfowl,agent,C#,9752
+dotnet/aspire,36da189de5e8ac09bdf2aef991f6c02d9af6b05f,davidfowl,agent,C#,9753
+dotnet/aspire,2022e57a52a7be6bd9655d9eaaf89a68703d2c4b,Copilot,agent,C#,10120
+dotnet/aspire,fb7cd7f055522e0ef2fcb72730c929f5696ec59e,Copilot,agent,C#,10459
+dotnet/aspire,81fb833940ddfe7666c65a183bbedb329ebf3263,mitchdenny,agent,C#,9946
+mlflow/mlflow,80313038313a8da78ec3c439bc6eec33f525ef0b,harupy,agent,Python,16321
+mlflow/mlflow,ba2163454036be4bc4e7f46dff61a7c2eef5e05f,harupy,agent,Python,15934
+mlflow/mlflow,05ff0f612240661aeeabb2c78c8d04f0fd464fee,harupy,agent,Python,16551
+dotnet/aspire,f710e97e48f7aef43e31ad6e7eed538de1456271,Copilot,agent,C#,9802
+dotnet/aspire,fe0e2eccf38c3510f19ead98beedab44a36241e0,Copilot,agent,C#,10627
+microsoft/testfx,65efccd9d08ef94976f4f3bc6bac3687ac68220c,Youssef1313,agent,C#,5804
+mlflow/mlflow,28ce19f8342137476b068a489f2e78152b7ae093,Copilot,agent,Python,16088
+mlflow/mlflow,1d1fcff8539927abc7cf13f438b65ef31a32fc0a,harupy,agent,Python,16093
+mlflow/mlflow,a7fd083f55ada3769553cee44ba3b07249b9c303,harupy,agent,Python,15978
+microsoft/testfx,00a826c6b789e0645da8ccc180e4cba573ac4bb6,Copilot,agent,C#,6035
+mlflow/mlflow,b0f83ec2f1f61ef0bbb3f9d5bc8edfa72cb50dcc,Copilot,agent,Python,16268
+mlflow/mlflow,9c2f274e8234d4f8e6fec73f7bfb0205f5b0b3db,Copilot,agent,Python,16273
+mlflow/mlflow,ac6d33cce3b2b2a717c1864c798ec1df135f668e,Copilot,agent,Python,15900
+mlflow/mlflow,ba8c1f123851bdd58ff0b5e6e7bb158e8a00de24,Copilot,agent,Python,15904
+dotnet/aspire,5102768f8574c8a7efe973caf48a96a3d04d3569,mitchdenny,agent,C#,10035
+dotnet/aspire,9ff0a940be741119eeff1fbf27677c4b12e145f1,mitchdenny,agent,C#,10155
+dotnet/aspire,511781fd2a08c0801b785a7deaebdbd51424639f,Copilot,agent,C#,10411
+dotnet/aspire,aac7141da427c6155a45d5c328a7d0c2262f200f,Copilot,agent,C#,10209
+dotnet/aspire,37c5d3d62ec2edd8328c7766a9b9dfe4d1f0d7ae,Copilot,agent,C#,9456
+dotnet/aspire,954ce8cc4089cd4acd28c684620ff7d12c3171af,davidfowl,agent,C#,10077
+mlflow/mlflow,cc349ee43da2b8c8719415f24ffdd8d78ec8dff3,Copilot,agent,Python,16311
+microsoft/testfx,84b07005f0678a83584b16e14a26d3725efe9092,Evangelink,agent,C#,5815
+mlflow/mlflow,653b8b3a4f78a509982e50d21dd364e3c553f927,harupy,agent,Python,16231
+microsoft/testfx,88156928adc9643811ef674eceab7e54743acbcb,Youssef1313,agent,C#,5650
+microsoft/testfx,f275ec4a23fce0cb8f559f8240c33c5d9afee410,Youssef1313,agent,C#,6190
+dotnet/aspire,8bdf886dab918ab799a16e6cfd45d4dafaaad985,Copilot,agent,C#,10454
+dotnet/aspire,4b1751ec5257683f86d1229d40e51dc61798af37,davidfowl,agent,C#,10691
+dotnet/aspire,67cd7aff31141aaf6567b5cb857b43b3579dcff9,Copilot,agent,C#,10700
+dotnet/aspire,850fe3d914997d743a81263460ae2b8b3b40e36f,mitchdenny,agent,C#,9400
+dotnet/aspire,dfc81e93e43f90d703e07a0f8752e2ffc415342d,Copilot,agent,C#,10108
+microsoft/testfx,fc00053fe9bf383f4272844442434cc3cfa38a35,Evangelink,agent,C#,6123
+dotnet/aspire,e263d1f926ba265ecbb1dd428f35590e248da255,Copilot,agent,C#,9437
+dotnet/aspire,430266ae58398c2aad245b61ac62d0c713a2528f,Copilot,agent,C#,9439
+dotnet/aspire,de11e236bad517b6088b2bb9b3c50fc8bae565e5,Copilot,agent,C#,9813
+mlflow/mlflow,6196542f789855c7309c5365292837977524bd20,Copilot,agent,Python,16196
+dotnet/aspire,001b020b21a15617cb77eb26697bc9d5c903de60,Copilot,agent,C#,9814
+dotnet/aspire,7acebca1ea1d26c4e4e1ecb9c8f979c8105410ba,Copilot,agent,C#,9815
+dotnet/aspire,be56454cc4702b3b246a4244bda6ade29feafec0,mitchdenny,agent,C#,9816
+mlflow/mlflow,beff66ab4c8192388c5e7d157b96fb45d9248a2d,Copilot,agent,Python,16915
+dotnet/aspire,1011118133c73c36bb83efbe3864fcc2c2e23c9e,davidfowl,agent,C#,9511
+mlflow/mlflow,8ce28d8836391e8247d0afcba04797c3fb3a64d4,B-Step62,agent,Python,15839
+mlflow/mlflow,78ae5e833ebefaa29d3635178e7f36d6c4c71f04,Copilot,agent,Python,16878
+mlflow/mlflow,6834aed0244f245d1ed21ab2486eb5ae486ca508,Copilot,agent,Python,16307
+dotnet/aspire,d092f40e4d30771e6628978befbe19a61d5c83e0,mitchdenny,agent,C#,10521
+dotnet/aspire,ab8cdab3c0145f5cd15bc8de8c9ca3d2a906be2a,Copilot,agent,C#,10522
+dotnet/aspire,a36c7740e20c4107ab372c8bd78bb6fcd5063118,Copilot,agent,C#,10523
+mlflow/mlflow,2ea584482b4e2e24649eea54f381b3e389366d3e,harupy,agent,Python,15893
+mlflow/mlflow,5198f4fe7720f877f3a18cb45ca8f7b64f281e3c,Copilot,agent,Python,16889
+dotnet/aspire,748c3f2788430a72bbffcffe906ea152ef6f397d,Copilot,agent,C#,10688
+microsoft/testfx,40775e4e374fce595d1f956256e50d3f804055f6,Youssef1313,agent,C#,5990
+mlflow/mlflow,ab91e95dc8d406ffb493280a4e37933c09a70833,Copilot,agent,Python,16526
+dotnet/aspire,99219befc77fb39eaaaaedfa989b96839d8d9dc5,eerhardt,agent,C#,10064
+mlflow/mlflow,6e0adde6121cc87ea84fb6285a764e04a348c9c2,Copilot,agent,Python,16927
+dotnet/aspire,c12e71ff53b5444fc24e2ce4b08545082d9ea661,Copilot,agent,C#,10562
+dotnet/aspire,5bdadb6dfa3f8c97c1a25b876a8f05f24d86fd98,Copilot,agent,C#,10145
+dotnet/aspire,64ad2458653afeb01d9e3bf57bb978428c5e9537,Copilot,agent,C#,9791
+dotnet/aspire,a6112f605cc66ca83c42df81c5d102112cf134d8,Copilot,agent,C#,9619
+dotnet/aspire,93af07d289620d85176403c82817b78ff7e16189,davidfowl,agent,C#,9620
+dotnet/aspire,ae174dd94d8749c4a46328859b91d4add776d944,Copilot,agent,C#,9918
+dotnet/aspire,2d503996b77bf91d2388f33836122f9d03465950,captainsafia,agent,C#,10253
+microsoft/testfx,305a3ec37dadf3e0b8f449eb0da8a70cf8958a23,Copilot,agent,C#,6033
+mlflow/mlflow,7d319064bf60ffc7914cac54417381ef70e49d3c,mlflow-app[bot],agent,Python,16541
+mlflow/mlflow,258e678878efbe32d78c7ee83b5637631b869e33,harupy,agent,Python,16543
+dotnet/aspire,2d8d525ac38b92665262799a8ef20b2741d7136e,mitchdenny,agent,C#,10363
+dotnet/aspire,efa5312a6e30be2af7a4c7416198bf237400918d,Copilot,agent,C#,9872
+mlflow/mlflow,a3c5e57bea4410864a038c5b6e90c9aec195c0f6,Copilot,agent,Python,16243
+microsoft/testfx,d7cfc92107781b9db51149c44b1de0e4820f05ea,nohwnd,agent,C#,5765
+dotnet/aspire,e7399a131b89f0eb40594d5363f4562dfca25cd8,Copilot,agent,C#,9875
+microsoft/testfx,2a0db56fd4765637ad948c9efce19ba0215f6396,Evangelink,agent,C#,5767
+antiwork/flexile,1694c033cbdec783a818f981f3f02ae8aa7ac618,devin-ai-integration[bot],agent,Ruby,680
+airbytehq/airbyte,503078a9c4a19beed3818331c28bf3bac4679c0c,devin-ai-integration[bot],agent,Python,61365
+antiwork/flexile,587f0c9b19ab183e0a045cf2477f5654232b35ca,MayaRainer,agent,Ruby,354
+airbytehq/airbyte,3f11c57a2c551c59bdc7c85f85fbc80437977798,letiescanciano,agent,Python,60964
+antiwork/flexile,9498018e67ab381deff64c824c6e56b395b77325,MayaRainer,agent,Ruby,274
+antiwork/flexile,f4aba6cb89f685511042a1a7f574c6d0045aa0df,MayaRainer,agent,Ruby,276
+airbytehq/airbyte,314db0b8ab0ece0d577aed7a6f57d79aae03d76f,theyueli,agent,Python,60252
+antiwork/flexile,abacf1ef34912e1b0c4758d567d883412d48a8c1,devin-ai-integration[bot],agent,Ruby,308
+antiwork/flexile,4c2e4a181d3f684e03f1112e975737c8140be8c1,devin-ai-integration[bot],agent,Ruby,309
+airbytehq/airbyte,b71defc67c6dd58405fc3c6e79c322dfdfd7dc96,devin-ai-integration[bot],agent,Python,58130
+airbytehq/airbyte,c6b1f9a234400131ea892361e43b1dd30ac61471,devin-ai-integration[bot],agent,Python,58131
+antiwork/flexile,6a940ddd9097d1b0dd656c891cae32124bdebfa0,autofix-ci[bot],agent,Ruby,356
+airbytehq/airbyte,6467687571915a3a0037742489a32fd42b29ebf5,devin-ai-integration[bot],agent,Python,56936
+airbytehq/airbyte,00e1d9b271fa455284c2a65ebf3b28cbff71f16d,davinchia,agent,Python,56355
+airbytehq/airbyte,83ee3c0d6b28133cb9c4c8191006aa56b820ffaf,davinchia,agent,Python,56356
+airbytehq/airbyte,3f12ea95bda84951da016704192b1ba2bb006986,devin-ai-integration[bot],agent,Python,56357
+airbytehq/airbyte,6670afb6ae532bd2e367d80cdcbd501b7f2b6fde,devin-ai-integration[bot],agent,Python,52143
+antiwork/flexile,676b5be3548888bade123660fa1ec86902a536f1,devin-ai-integration[bot],agent,Ruby,424
+airbytehq/airbyte,98c00b4bdbf96c461b15762e754b5c48e5389e0d,devin-ai-integration[bot],agent,Python,62455
+airbytehq/airbyte,6a7126a13772ebd76745d88e7ae36829e07850ad,aaronsteers,agent,Python,52636
+marimo-team/marimo,72ef0605bc4d4624ab1e76ae861eb204c8d3dcac,devin-ai-integration[bot],agent,Python,3621
+airbytehq/airbyte,443c389d648d9c086f2b5e20bdf871451aabe343,aaronsteers,agent,Python,52659
+airbytehq/airbyte,179c82463ab41e19f3c6526472c2a15adf262d21,octavia-squidington-iii,agent,Python,52663
+airbytehq/airbyte,588c77899d787321e1e64cacee253443b5ba41c1,natikgadzhi,agent,Python,52664
+antiwork/flexile,48b0df161caf166f36255f5bdf58bb72d71e4adc,MayaRainer,agent,Ruby,341
+antiwork/flexile,054a5d07b221f2b2352189872ccb2e8dd6d182ff,autofix-ci[bot],agent,Ruby,342
+airbytehq/airbyte,a35ce9aa6e2211ded7710f848044c73bbd3636f4,devin-ai-integration[bot],agent,Python,58076
+airbytehq/airbyte,395d5872675fe6a53e1ae80e23637a1bd30da9f4,ian-at-airbyte,agent,Python,58077
+antiwork/flexile,d4f566bfb248f4c228b86e274b450217624ec8a7,devin-ai-integration[bot],agent,Ruby,138
+antiwork/flexile,edbf5e5501124f82a38573a370f9c44c4415562a,MayaRainer,agent,Ruby,337
+antiwork/flexile,5ca165b6b218e4a1d4a765bd12c13c779fee5ec8,devin-ai-integration[bot],agent,Ruby,520
+airbytehq/airbyte,1d87f3c0e82be731157531223ea0df1862636f20,devin-ai-integration[bot],agent,Python,62945
+antiwork/flexile,20400d35f587f9a2f29b534aa8c70a2d4e79ef72,devin-ai-integration[bot],agent,Ruby,243
+antiwork/flexile,4aad153831ce477e83dca592baf64b515e62322f,devin-ai-integration[bot],agent,Ruby,246
+antiwork/flexile,71e2e44fde6643c3ba321e3a71c9ae67aa9af5c1,raulpopadineti,agent,Ruby,247
+airbytehq/airbyte,11c908a4d711b3c21eb086ccaa109d773df5e391,aaronsteers,agent,Python,53607
+antiwork/flexile,c9da4ac26ec73459b63fc4dbf22b40e4ebbbcd63,raulpopadineti,agent,Ruby,99
+antiwork/flexile,b3bce72fe254479986241668b35b31ef9fde38e9,raulpopadineti,agent,Ruby,100
+antiwork/flexile,d905477f921d45385a7dbdfbd0faf06c836fc412,MayaRainer,agent,Ruby,433
+antiwork/flexile,a1af2733520603430744d66a62dd7729dd1a0158,devin-ai-integration[bot],agent,Ruby,434
+antiwork/flexile,9fae32d5ff571a7ec2265b094194d7056edf4b27,devin-ai-integration[bot],agent,Ruby,436
+antiwork/flexile,eac850946318e5544a76b993cb293173f40d2b5c,devin-ai-integration[bot],agent,Ruby,437
+airbytehq/airbyte,6e20fa92d46541fdc828f237c3b129b9b2e81304,devin-ai-integration[bot],agent,Python,62514
+airbytehq/airbyte,74d3a0cc3a1bc73a7af0e20118673dd30fa203a1,devin-ai-integration[bot],agent,Python,62515
+antiwork/flexile,3f841b2b27d92ed40613fde68c4e4fcc0cd50bfa,MayaRainer,agent,Ruby,180
+antiwork/flexile,5a77826b9f4ddc853fa6ce0c24623adb1c752019,MayaRainer,agent,Ruby,181
+antiwork/flexile,82e2476811300ee910aa0a5607879041efa6a2af,MayaRainer,agent,Ruby,182
+airbytehq/airbyte,3d2980ebf998b080ba278a59d5537f8bab6a2420,devin-ai-integration[bot],agent,Python,58646
+antiwork/flexile,9f3de9a7211a7922bc7dbdbf1e16f85cfd021db2,MayaRainer,agent,Ruby,615
+antiwork/flexile,f22b7ca8f0401f870cca2d2d08a582a98e8b6232,devin-ai-integration[bot],agent,Ruby,414
+airbytehq/airbyte,34ba2a4bcbf834c0e77444936e3d0582b7c3f27d,devin-ai-integration[bot],agent,Python,56996
+antiwork/flexile,d44eb65a15981de381cc28efb3be69c3c05ad4d5,devin-ai-integration[bot],agent,Ruby,61
+antiwork/flexile,ef64cb97021e57ef118c18337dd07e97b5d121d0,MayaRainer,agent,Ruby,220
+antiwork/flexile,ce703ca60f511017d3f3d45bc5b772bbcd94d388,devin-ai-integration[bot],agent,Ruby,222
+antiwork/flexile,eb3410ad0945828cb6eb2d5dcfe22a47bee4f573,devin-ai-integration[bot],agent,Ruby,223
+marimo-team/marimo,614162f5a5358475b1b1101430abd03e9e5a20a4,devin-ai-integration[bot],agent,Python,3378
+antiwork/flexile,458fe5471556e8ed0922172bd9a7ffcac5a6f927,devin-ai-integration[bot],agent,Ruby,402
+antiwork/flexile,a841837be9218d68028671e9b368e313093dc54e,devin-ai-integration[bot],agent,Ruby,403
+airbytehq/airbyte,4989787a881a7de9deb72a823c0b89d8653f2680,dbgold17,agent,Python,60225
+marimo-team/marimo,fcaf2a63371a4004d03a287947f717849bdfd1ba,devin-ai-integration[bot],agent,Python,3883
+antiwork/flexile,da3efc8badd1784adca324839a80d896fe30e83e,devin-ai-integration[bot],agent,Ruby,379
+antiwork/flexile,5d3d631778cc70b7674d309095c634e3f02c022a,MayaRainer,agent,Ruby,322
+antiwork/flexile,410aaded758b83a2a39789b0aa93977b90c9006d,MayaRainer,agent,Ruby,323
+antiwork/flexile,48612f6f5ad4214ae5899c922a38a047b3363f00,MayaRainer,agent,Ruby,324
+antiwork/flexile,61098d04116590e5daf21d00c442e68d167819c9,MayaRainer,agent,Ruby,325
+airbytehq/airbyte,e03bd9e513def0c4f5855c3abc19dcef731ec7a8,devin-ai-integration[bot],agent,Python,63330
+antiwork/flexile,ae8a9c54c08c99cdc69b48b835fb828b5de5716e,devin-ai-integration[bot],agent,Ruby,563
+antiwork/flexile,24e6ddc4e5261d25a06c9a657a34b6c3b9c1e092,devin-ai-integration[bot],agent,Ruby,447
+marimo-team/marimo,e7f1278c7805f7d277c101e5040313a14fbe325e,devin-ai-integration[bot],agent,Python,3840
+marimo-team/marimo,48faf05598ffe5205f5a531db9933087e2d5c20e,mscolnick,agent,Python,3842
+marimo-team/marimo,114b1c1901b892a652d8f5d1fd7860a461a56cdc,mscolnick,agent,Python,3843
+antiwork/flexile,0ba1ee571333082e7b557f74a9d3a91dd18bda24,MayaRainer,agent,Ruby,614
+airbytehq/airbyte,12aa478297a550ecd39a96511e658aa50d08c7fb,devin-ai-integration[bot],agent,Python,63306
+airbytehq/airbyte,36d6d438036226345ad9cf7c1fdd929887f4e75b,devin-ai-integration[bot],agent,Python,63310
+airbytehq/airbyte,7aa68461cd2b97854b3a7dfb827b8d295057ea5d,devin-ai-integration[bot],agent,Python,63314
+antiwork/flexile,8d9b7f22b6ac7a26e698e87b62f39305c0e1fac9,autofix-ci[bot],agent,Ruby,256
+antiwork/flexile,e60ac2f7376323fd8234052d4f919ff753313b6c,MayaRainer,agent,Ruby,131
+airbytehq/airbyte,1fb3c77d739a5253c9b26363fea023ce3a0f9283,octavia-squidington-iii,agent,Python,55234
+antiwork/flexile,bec86d0ded3765aecb9453191aa0f2c1634cbeb6,devin-ai-integration[bot],agent,Ruby,589
+antiwork/flexile,e9444d291356e66783ef8dfffd68e354da061290,devin-ai-integration[bot],agent,Ruby,590
+airbytehq/airbyte,0a000572e2844c3533a1235b08140b5e1e80aa3c,devin-ai-integration[bot],agent,Python,54670
+antiwork/flexile,9bc4734f1eb598be528562e6579b640e50a5de89,devin-ai-integration[bot],agent,Ruby,389
+antiwork/flexile,cbe51af8df00d2bae0c8995272ad45b8ea3c77ab,devin-ai-integration[bot],agent,Ruby,390
+antiwork/flexile,8e4fe56a4c44c019532293a1cf7e78c28932e634,devin-ai-integration[bot],agent,Ruby,392
+marimo-team/marimo,295e0249bc26d1b43dd564f7ca4c9abac26ef9b5,mscolnick,agent,Python,3467
+marimo-team/marimo,2ccd52d5802dfcd687e7db461f1901b5c182aff4,devin-ai-integration[bot],agent,Python,3479
+marimo-team/marimo,01e7abfab834e49a17d2e60bedbae242f0f860fc,devin-ai-integration[bot],agent,Python,3481
+marimo-team/marimo,9529996fa2270610d2f958a74a3fd3552a3e7058,mscolnick,agent,Python,3484
+antiwork/flexile,a522af88019f05e2ff675478bf91e0b5f9873b10,autofix-ci[bot],agent,Ruby,663
+antiwork/flexile,4ef5fe841afa64d52ebe183e8e63701662d2f92e,autofix-ci[bot],agent,Ruby,664
+antiwork/flexile,01aedb6209f3ebe48cee87872da891763201a450,Udit-takkar,agent,Ruby,481
+antiwork/flexile,5312f611b0ec44733aeeba855d1febea7a280fba,devin-ai-integration[bot],agent,Ruby,327
+antiwork/flexile,88a00b1d1f181936f0264c688e379d42e0d5a53a,MayaRainer,agent,Ruby,328
+antiwork/flexile,96a2dec2338caa8779dd637c5d8b2d6cf37eaf07,autofix-ci[bot],agent,Ruby,329
+antiwork/flexile,f3d57d6ef14ca64a5098e5b6993f8db9e96e8de1,devin-ai-integration[bot],agent,Ruby,330
+antiwork/flexile,1d484a829c1edb52e3eb4cb6d253a83cd590c8d9,devin-ai-integration[bot],agent,Ruby,331
+antiwork/flexile,2dded5ebf993d6e7901c64c8a7e3bdb6671a1085,devin-ai-integration[bot],agent,Ruby,332
+antiwork/flexile,64302e79c572e810607746d3e014a091905a57de,devin-ai-integration[bot],agent,Ruby,333
+airbytehq/airbyte,1e85082c7ea864a2fa43eb22754c3e85487d6bba,natikgadzhi,agent,Python,54708
+airbytehq/airbyte,ade085dc05f6b59465f74286d0490645b76f11da,devin-ai-integration[bot],agent,Python,54878
+airbytehq/airbyte,f01ea20fcdb0daea6058521565b83a34442db02b,devin-ai-integration[bot],agent,Python,54897
+airbytehq/airbyte,4d4be5c195a8233c925fe6ff167472489b83361c,devin-ai-integration[bot],agent,Python,55005
+antiwork/flexile,934af3d8757a1dc7c5600d759b535b0eb18e0758,devin-ai-integration[bot],agent,Ruby,476
+airbytehq/airbyte,1f847a6440182b9acd03c27b73bf51b120efde68,devin-ai-integration[bot],agent,Python,63713
+antiwork/flexile,a7430dcb43e05f7f7283a0ab6631e17b4572e50e,devin-ai-integration[bot],agent,Ruby,257
+airbytehq/airbyte,b8dd0770cd97e1d3dc6b41d4d0732061e0da15fc,devin-ai-integration[bot],agent,Python,63320
+airbytehq/airbyte,e3fef17e49b32b6c47cd29b1850b5ea2552d4c4d,devin-ai-integration[bot],agent,Python,63321
+airbytehq/airbyte,560986136e55424fa713c05977fee22300386776,devin-ai-integration[bot],agent,Python,63328
+antiwork/flexile,1d15bc4c6a91b3e2e5bb57a2ccd29ede35e8afc7,raulpopadineti,agent,Ruby,141
+antiwork/flexile,d1cbe1a0d1fef27b05f71f24412e0c733acbac7f,devin-ai-integration[bot],agent,Ruby,363
+marimo-team/marimo,7f381da695f2cc6af079214a2e834a6574abaef4,pre-commit-ci[bot],agent,Python,4033
+marimo-team/marimo,8e74115e49f545f32e250d82b5a7e862e6a12127,devin-ai-integration[bot],agent,Python,4035
+airbytehq/airbyte,a20ef77106fef95551b2c710cff7cddf95addb0d,devin-ai-integration[bot],agent,Python,59764
+marimo-team/marimo,ca4808e0ace82dd61e55a6d59560148ea63aa300,devin-ai-integration[bot],agent,Python,3847
+airbytehq/airbyte,865199b7b1e1bab49f63af97fd1d5ec36f14cff1,pnilan,agent,Python,54164
+airbytehq/airbyte,16e5915d8a6a854b847d05a4fa6fc54251e24eae,pnilan,agent,Python,54167
+antiwork/flexile,e1645a17f145aaf214f97fa6ed52a98d2d279540,devin-ai-integration[bot],agent,Ruby,382
+antiwork/flexile,07ffdb1df194a3296ddf10a0669636dfb86f2d20,autofix-ci[bot],agent,Ruby,383
+antiwork/flexile,77d8deb42855dfb9d9bab33026491b634283e607,autofix-ci[bot],agent,Ruby,385
+antiwork/flexile,50bbaae55f8a3f1ba2535a4801fc2cebcb11a541,devin-ai-integration[bot],agent,Ruby,387
+antiwork/flexile,9c6faec7c4656e7bf5c02963e14727e118593b87,devin-ai-integration[bot],agent,Ruby,375
+antiwork/flexile,2fce866971bb372ba3309106dbdc2bdf6cdb3f8f,devin-ai-integration[bot],agent,Ruby,376
+antiwork/flexile,6705ae987cc90232dd87a2e6acef1a957e508cf9,autofix-ci[bot],agent,Ruby,377
+antiwork/flexile,886752443f56b47874841203b24ad35e8bdba5b4,devin-ai-integration[bot],agent,Ruby,378
+antiwork/flexile,cec4ad9772451f85b1608c00b856650ee758e145,devin-ai-integration[bot],agent,Ruby,661
+antiwork/flexile,98219cc88835ed2ba7b2ea7fd04a103a995a0cb7,devin-ai-integration[bot],agent,Ruby,631
+antiwork/flexile,2e5b2758553876ba55e92584d442ac16b74d10d3,Udit-takkar,agent,Ruby,632
+antiwork/flexile,4fc30051b6f8ab98ec597455fe89cc4a5388cc50,devin-ai-integration[bot],agent,Ruby,633
+antiwork/flexile,d0466b4cbf03b5a563045321b109332c224bc6e5,devin-ai-integration[bot],agent,Ruby,634
+antiwork/flexile,8171f7047ce2e31ba7f722c599ef8afa6139d722,kanhayaKy,agent,Ruby,635
+marimo-team/marimo,12d13473c5e0422df4105bdeb16a013ef8ba2f6b,devin-ai-integration[bot],agent,Python,3349
+airbytehq/airbyte,adbc96ce4031a45b0940eddb1336f25b21bbcd90,devin-ai-integration[bot],agent,Python,62497
+antiwork/flexile,badaaeda0f3bf703979fbe2d5a06766320f78f68,autofix-ci[bot],agent,Ruby,314
+airbytehq/airbyte,95f838253ee5cf44b02279804b45a20ff75c85b5,devin-ai-integration[bot],agent,Python,60821
+airbytehq/airbyte,1d9d52fc013af2d4b5d85bb7b014c8ebf53269fc,aaronsteers,agent,Python,60329
+airbytehq/airbyte,186c6678940d3d5db59bd3df2fbee2b61753d08a,devin-ai-integration[bot],agent,Python,60341
+antiwork/flexile,1a8793c0fb9ae97c04a2cf9f95e5eae58e233b79,devin-ai-integration[bot],agent,Ruby,153
+antiwork/flexile,a1e599590e03d749a7e38a80592b2754b0b4ea68,MayaRainer,agent,Ruby,183
+antiwork/flexile,20f8a8700e55e5e22b7e1158efc5338af5bef70d,devin-ai-integration[bot],agent,Ruby,185
+antiwork/flexile,39ef714efe162aa310b3cc913d069341355a29e4,devin-ai-integration[bot],agent,Ruby,187
+antiwork/flexile,c45876c39966e82300099c4dec4071cd2f49f100,MayaRainer,agent,Ruby,188
+airbytehq/airbyte,8f2b36aa7168190942d87643454e4c680ec61476,marcosmarxm,agent,Python,56389
+antiwork/flexile,973a647d7e0567db1858b9752016dfd50fcab6cd,devin-ai-integration[bot],agent,Ruby,280
+antiwork/flexile,9f62522259684e8cc9c87ead4ebc1b52487b7209,devin-ai-integration[bot],agent,Ruby,284
+antiwork/flexile,286ae2e05e4300f7aaa230296c73d4691b4f5e56,MayaRainer,agent,Ruby,288
+antiwork/flexile,9fd0afdb696df8fac613cc5e3a8a8efe27beaf24,MayaRainer,agent,Ruby,289
+airbytehq/airbyte,e6558b183f2a04b64e1aa48119ccd211ced5c8bf,devin-ai-integration[bot],agent,Python,57543
+marimo-team/marimo,48a78980fcab5b21b2e8af73e5693483c55612b7,devin-ai-integration[bot],agent,Python,3768
+antiwork/flexile,fe4077859005a7ae58a751738eaf082364119865,devin-ai-integration[bot],agent,Ruby,343
+antiwork/flexile,a13d212bee4ada58d86fa8026828aa3e285070ee,MayaRainer,agent,Ruby,357
+antiwork/flexile,2da46fa418c4613542d86a57d2587fd097380ab5,devin-ai-integration[bot],agent,Ruby,261
+antiwork/flexile,f70352eb421dad0dc9f9cf2bd88e160a68043afa,devin-ai-integration[bot],agent,Ruby,349
+antiwork/flexile,6503ae21afd6b92cc385200cee16e2610bee38b9,devin-ai-integration[bot],agent,Ruby,351
+marimo-team/marimo,14f6b6eab9df2cf0ef1bc806df270d84eeda0712,pre-commit-ci[bot],agent,Python,4055
+antiwork/flexile,68328894a27b307eabcb995a665adddd22c16b5f,devin-ai-integration[bot],agent,Ruby,438
+antiwork/flexile,70b5a898029cb66bc12e0ead627d152a728f6a06,MayaRainer,agent,Ruby,440
+antiwork/flexile,4b153b72b5bd6e85ea903c5c865c3e44382663a4,devin-ai-integration[bot],agent,Ruby,441
+antiwork/flexile,53cdae31993e5d4c70b7311fc6114e2b71eed804,devin-ai-integration[bot],agent,Ruby,104
+antiwork/flexile,47e1692dc39a4ad8c3d1c77c098dd7d490f28894,slavingia,agent,Ruby,105
+antiwork/flexile,26071aeca2a42ab92d42546274c9a1eb0f6217b0,devin-ai-integration[bot],agent,Ruby,106
+antiwork/flexile,e4907f765dad9d4617771b2ddf6dc645b638070e,devin-ai-integration[bot],agent,Ruby,108
+antiwork/flexile,6d33a3240d7d1fce7b0e697e2ddd974ca08a1a23,MayaRainer,agent,Ruby,110
+antiwork/flexile,aac0f15374e3be559dae936eb1bd1cfec7d20e00,devin-ai-integration[bot],agent,Ruby,111
+antiwork/flexile,07a426b50f97119e3f9583c6669dcd1eb9b9a7ad,devin-ai-integration[bot],agent,Ruby,112
+antiwork/flexile,69495e270e69aba020cc562e80df8e21e429d18b,autofix-ci[bot],agent,Ruby,371
+antiwork/flexile,d26d48a094082bc716ba3381d2af31183df1a013,autofix-ci[bot],agent,Ruby,374
+airbytehq/airbyte,9fc7e4cfca40f9e67aebc573b9961e049dd5746f,devin-ai-integration[bot],agent,Python,54733
+antiwork/flexile,d1d00e381f57e8b8adb002ce834cb3a1635270ea,devin-ai-integration[bot],agent,Ruby,380
+antiwork/flexile,7c2ffd2f39efb8f9a15f6c05cb8bb275817bffff,devin-ai-integration[bot],agent,Ruby,260
+antiwork/flexile,a588fdbce1f60471b1b775c5fb7961a74a094bf0,devin-ai-integration[bot],agent,Ruby,426
+airbytehq/airbyte,5c562578559c301f45351d16bc50fdd863f910f0,devin-ai-integration[bot],agent,Python,62470
+airbytehq/airbyte,0c0a6eba6a277cb13b5544274cdff47457f9da20,devin-ai-integration[bot],agent,Python,62476
+airbytehq/airbyte,413e6ae761522dac450d61eec359a9751ff7bef6,devin-ai-integration[bot],agent,Python,55175
+airbytehq/airbyte,d8ceb7899848c7b1334d4f939e2563d26f5e3078,ian-at-airbyte,agent,Python,55182
+marimo-team/marimo,e59df0ac494a5f4b7e9055022925297e42a2cdb7,pre-commit-ci[bot],agent,Python,3966
+airbytehq/airbyte,7a9f8f18b4aa182ceacded59c13c932da976785a,devin-ai-integration[bot],agent,Python,61644
+airbytehq/airbyte,25dbd242075a1d0721f741e53f3ace61267f162c,devin-ai-integration[bot],agent,Python,55781
+antiwork/flexile,6bfe55fcb2416926630f2b98cee190a43df13dfb,devin-ai-integration[bot],agent,Ruby,626
+airbytehq/airbyte,bb90be14cb055021f6adbd7b29587818a8146c9a,aaronsteers,agent,Python,53233
+airbytehq/airbyte,655fd3b37f85cea10064e2ad46c34bf8890a40c1,natikgadzhi,agent,Python,53235
+marimo-team/marimo,c2361e43b1877e58c6838d55851522d4eac4d4bb,mscolnick,agent,Python,3723
+airbytehq/airbyte,adb87737f68565c0f12c86e6ff86be759a6890a1,devin-ai-integration[bot],agent,Python,53238
+airbytehq/airbyte,813fc6cdf2bb89043642327fd9c2f2e882e57edb,devin-ai-integration[bot],agent,Python,62911
+airbytehq/airbyte,bc7e21add39709113755495a1206505b0e7f2f6c,devin-ai-integration[bot],agent,Python,62912
+airbytehq/airbyte,76b4f4748b70d0a4fc3ebb013bbdd481a3e6cfb3,devin-ai-integration[bot],agent,Python,62913
+airbytehq/airbyte,a25817d6c6ebbe16e7ae50b0d0724381a13360aa,devin-ai-integration[bot],agent,Python,62914
+airbytehq/airbyte,988744de5fed0abfc11b36e0879b3c636b24d7f8,devin-ai-integration[bot],agent,Python,62915
+airbytehq/airbyte,1bb5a58d09e74322ce32a8d0014ae17670fe9435,devin-ai-integration[bot],agent,Python,62916
+airbytehq/airbyte,f914b667af02cf493dcca7f53efd30fd26a3a070,devin-ai-integration[bot],agent,Python,62917
+airbytehq/airbyte,98df5c439e7593fe9faf04b512304019ca825509,devin-ai-integration[bot],agent,Python,62918
+airbytehq/airbyte,e31917d768a846057dbfd1f3f3eec9db8f8b583d,devin-ai-integration[bot],agent,Python,62919
+airbytehq/airbyte,5321301443b8d5d251fb4983e2979898b7536394,theyueli,agent,Python,62920
+airbytehq/airbyte,591c41bd2bdd0bf815c29008ef4aba727b6aa1c4,devin-ai-integration[bot],agent,Python,62921
+airbytehq/airbyte,45580c3361b56b85f6d2dbc38321b60a4e592998,devin-ai-integration[bot],agent,Python,62922
+airbytehq/airbyte,db643302b33fbb1696ac577f6fce7e47513d68b2,devin-ai-integration[bot],agent,Python,62923
+airbytehq/airbyte,ba8abba0a823159d3320680db2ef8699e68edb07,devin-ai-integration[bot],agent,Python,62924
+airbytehq/airbyte,43e93ffd25a1c0908b745c2ef3e5800b5622deb6,theyueli,agent,Python,62925
+airbytehq/airbyte,b79171d286c494357119f39827bafc830adad8bf,devin-ai-integration[bot],agent,Python,62926
+airbytehq/airbyte,0ed1ae7f24503aba39df5b9b04dbe66c9447da46,devin-ai-integration[bot],agent,Python,62927
+airbytehq/airbyte,9d4256ec536653c47bf9578aa0bf1a4423fe8373,devin-ai-integration[bot],agent,Python,61416
+antiwork/flexile,65c7b171ab909760f8365e7a4b67f475692477f8,MayaRainer,agent,Ruby,210
+antiwork/flexile,dd1d77a4fad627cf5a61e1a5990a4498b46e6893,devin-ai-integration[bot],agent,Ruby,213
+antiwork/flexile,e10a198e156a45cc3ddf9f9aebe83985d7410fe7,devin-ai-integration[bot],agent,Ruby,214
+antiwork/flexile,e9ea925554e6a6bdc462aa2025ffd029e2457b80,MayaRainer,agent,Ruby,215
+antiwork/flexile,e70ecc8849ab4e7538f3d510fe5a98dbe810c4f7,devin-ai-integration[bot],agent,Ruby,216
+antiwork/flexile,8d36cef26680fc17905d746d694a1dddbb95e128,autofix-ci[bot],agent,Ruby,217
+antiwork/flexile,3ee56864df069cd2043894ef40f0b694c32e1d3f,autofix-ci[bot],agent,Ruby,218
+marimo-team/marimo,4baa85cba93bc3398b7164d23291158b7b1be026,devin-ai-integration[bot],agent,Python,3335
+airbytehq/airbyte,11a6327af183501f7127974c59914e9047c669c3,devin-ai-integration[bot],agent,Python,62109
+airbytehq/airbyte,b6a0945bcf4f496dc11212f0f8bffd9bedf3f99c,devin-ai-integration[bot],agent,Python,55239
+marimo-team/marimo,20283f75ba8c024afc8340abb78292ef0a2fed14,devin-ai-integration[bot],agent,Python,4008
+marimo-team/marimo,8ed8852ff70aaebaef751f261149f2483af6ee9f,devin-ai-integration[bot],agent,Python,4009
+marimo-team/marimo,5117686639fabfedcb8174b0d982063872001330,devin-ai-integration[bot],agent,Python,4010
+marimo-team/marimo,45f1439d5eba3219c7eb7154e5a9c970dbb15854,pre-commit-ci[bot],agent,Python,4011
+airbytehq/airbyte,667ab322268b155cfa4536509e6b25269a844e0c,aaronsteers,agent,Python,55244
+antiwork/flexile,d928703088b59db8144f22dc9630b62bfad3ac26,MayaRainer,agent,Ruby,432
+antiwork/flexile,f6fc8a85d9dd284bc0268ca29aaae1ce789c92ac,devin-ai-integration[bot],agent,Ruby,148
+antiwork/flexile,bd6e563c0e2a2c550847ed3f05b130a3344f9204,MayaRainer,agent,Ruby,149
+antiwork/flexile,0f618bee28dffb198051c997d16837fb775c8fcf,MayaRainer,agent,Ruby,301
+airbytehq/airbyte,8a887802fc6672e59f28559b8a2e377296a454c5,devin-ai-integration[bot],agent,Python,60314
+antiwork/flexile,be92eab2e420d5839f8fabded4aa39f79859870e,devin-ai-integration[bot],agent,Ruby,252
+antiwork/flexile,d83e1455c4a92d1b481eeec290f119618d0ba773,devin-ai-integration[bot],agent,Ruby,253
+airbytehq/airbyte,1f7822f2f47cf71e12a63ac3af9f44d67050fca7,devin-ai-integration[bot],agent,Python,63290
+airbytehq/airbyte,083a63bd453008f6b4192797a8609f6cd2f05a52,devin-ai-integration[bot],agent,Python,63291
+airbytehq/airbyte,0c03a874f57766f68a331223d9fed1baa4a2a352,devin-ai-integration[bot],agent,Python,63292
+airbytehq/airbyte,5054a31c1d65287a138869c4799026f92e560224,devin-ai-integration[bot],agent,Python,63294
+airbytehq/airbyte,014e1ea5789a60715232a32489913c0749838061,devin-ai-integration[bot],agent,Python,63295
+marimo-team/marimo,afee5a5039378e30f4f81e50e8ccf4c807e51fc0,devin-ai-integration[bot],agent,Python,3671
+marimo-team/marimo,4c5794344eaa63d5b14cf581aeb37ea0044c9298,devin-ai-integration[bot],agent,Python,3673
+marimo-team/marimo,8f22ae6bfcea89284c021c832ae2fcf496304094,devin-ai-integration[bot],agent,Python,3618
+antiwork/flexile,8e6e5cc6e9c89b7448caf9d5ce90c7bc12da1c22,devin-ai-integration[bot],agent,Ruby,446
+airbytehq/airbyte,f24ad1509b3914603ffa6f3c3696d0b3a97a6c4d,devin-ai-integration[bot],agent,Python,55883
+antiwork/flexile,a1dd23db123391440d3ca83cd8eb86ad46da0a19,autofix-ci[bot],agent,Ruby,171
+antiwork/flexile,cc26dcb3b4478ba2aaee3073e1da08227d62787d,autofix-ci[bot],agent,Ruby,175
+antiwork/flexile,6287063c9ca7091d7365a6fd938411c25ed66a6e,raulpopadineti,agent,Ruby,178
+airbytehq/airbyte,0d2369b374a450085e8480b52a2bbc34bb9f6320,barduinor,agent,Python,56432
+airbytehq/airbyte,6e61a76e7830d10e28163c2242ef069ff3c0df14,devin-ai-integration[bot],agent,Python,55699
+airbytehq/airbyte,b81feee0febf777f5208ed0a58e9b1b1ed4e63f8,devin-ai-integration[bot],agent,Python,55709
+antiwork/flexile,cccd2763544e96e6ee3d4da0fc72091e023a0711,devin-ai-integration[bot],agent,Ruby,490
+marimo-team/marimo,b0fb21f87f85ebe1e5916a2c41ac86edae99ae0f,mscolnick,agent,Python,3729
+antiwork/flexile,2245389dadec8837ff3fe0eb9ce5294d9f16dd1b,MayaRainer,agent,Ruby,339
+airbytehq/airbyte,65ac1c5318faaa21f3e6b1e5e9b172882cc75038,aaronsteers,agent,Python,61441
+airbytehq/airbyte,e20d723d74a6fd9659b5db1cd75b074d70b3b413,aaronsteers,agent,Python,61443
+antiwork/flexile,682d7d4aeaf41775b997235440c43963b72eea05,raulpopadineti,agent,Ruby,155
+antiwork/flexile,6b959ff41695984c9e963a2d5633c4eda4d637ad,raulpopadineti,agent,Ruby,156
+antiwork/flexile,6bc439469b115fcd80842674ec078a83baa46d83,autofix-ci[bot],agent,Ruby,318
+airbytehq/airbyte,ee17ac41255248760a00fd653e3b08382dfdeb7f,devin-ai-integration[bot],agent,Python,60531
+antiwork/flexile,2b5f4d697d2bfdd7068acdda8e4e5aedc7f213bf,devin-ai-integration[bot],agent,Ruby,196
+antiwork/flexile,d5b6cde95d55311dc8eae2c4f6891a021aac094d,devin-ai-integration[bot],agent,Ruby,197
+antiwork/flexile,70dd0653612884f2d9d27653ed880d7b4a05fe71,devin-ai-integration[bot],agent,Ruby,198
+antiwork/flexile,bfae5feba32d495d36fab2bf028039f384a38899,devin-ai-integration[bot],agent,Ruby,201
+antiwork/flexile,bcc5fccb033a5dba014ccde52040a32cf8d30763,MayaRainer,agent,Ruby,202
+antiwork/flexile,00bdd9d14c0e9697dd1471eeec35b3299af2c7a1,devin-ai-integration[bot],agent,Ruby,204
+antiwork/flexile,166101659f872971b2a0897a7a60eb82263715bf,MayaRainer,agent,Ruby,206
+antiwork/flexile,72802720b182bdb34921dd64d372781057dc7e9e,MayaRainer,agent,Ruby,207
+antiwork/flexile,4a20d341267ca5d152241057ccca40deb4ea017b,MayaRainer,agent,Ruby,208
+antiwork/flexile,b35b53cb204fdc23e9c81c89bdb9886f2051b7fa,devin-ai-integration[bot],agent,Ruby,209
+airbytehq/airbyte,c8d95a2f378087594e3075b48ef0f8a6d87c81b4,devin-ai-integration[bot],agent,Python,62123
+airbytehq/airbyte,12ae85b20413eb39e29bb782cfa2f39288032fb2,aaronsteers,agent,Python,62133
+antiwork/flexile,3487afd741ffc27250946e147559a3d70e092dd6,slavingia,agent,Ruby,431
+antiwork/flexile,403644093b0b3170820b4cd8aa23adbca49464ed,devin-ai-integration[bot],agent,Ruby,358
+antiwork/flexile,ba589215fd20c6708498526ec76609b9c7eea6c4,devin-ai-integration[bot],agent,Ruby,359
+airbytehq/airbyte,204d73abf29bada9f46e5a1ee932e5caf660fa6d,devin-ai-integration[bot],agent,Python,60275
+airbytehq/airbyte,0f05e4b67ca7446a371295aa73f8088b4b1e093a,devin-ai-integration[bot],agent,Python,60279
+marimo-team/marimo,14157daac53239ff2aae68d7f11e490def29a8bc,devin-ai-integration[bot],agent,Python,3699
+antiwork/flexile,77883aeb9b9194d318b327b586f6a46650fb70d4,devin-ai-integration[bot],agent,Ruby,544
+airbytehq/airbyte,085cc362d20268ddf1012ff41c1fc8578dd4e875,devin-ai-integration[bot],agent,Python,60991
+antiwork/flexile,657ed4170974722e52b2a642849051074552a5e3,binary-koan,agent,Ruby,364
+antiwork/flexile,4ca57598a60cd301399fbb52fb790d07d1828f13,autofix-ci[bot],agent,Ruby,367
+airbytehq/airbyte,ac6b2d0b8c4b07d295ce681df83e11c7c82ced34,devin-ai-integration[bot],agent,Python,52575
+marimo-team/marimo,262a71b9e458826e57d966ace32560a502c37317,mscolnick,agent,Python,3591
+airbytehq/airbyte,89dc0eb5129066fcc16f5c6f6b53d33d98cbbece,devin-ai-integration[bot],agent,Python,52585
+airbytehq/airbyte,5f8a0a21adde778fe05467d64ffabc32cc77972b,devin-ai-integration[bot],agent,Python,52591
+antiwork/flexile,2fa79e1fd0102d438697c6bf775d43a11481cfe1,devin-ai-integration[bot],agent,Ruby,442
+antiwork/flexile,51de50d63e3efd7bae3a86758488a903892619e4,MayaRainer,agent,Ruby,227
+airbytehq/airbyte,fa77d5a8bab0595a1377a3b28e0db3abc465f30e,ian-at-airbyte,agent,Python,56424
+antiwork/flexile,2be4411ad79e3d950c7fc500b6b3ef13bebab348,autofix-ci[bot],agent,Ruby,381
+airbytehq/airbyte,93a61822a35fbccc0ac5e4be6960adb432fdb660,octavia-squidington-iii,agent,Python,54737
+airbytehq/airbyte,275a70fd7ab3c7dee015b36820af47b1af9d11e7,octavia-squidington-iii,agent,Python,54738
+airbytehq/airbyte,e2f03f22ba3399c37c89491cfa846566c9454710,octavia-squidington-iii,agent,Python,54739
+airbytehq/airbyte,65c7b9309456a99b230bfd3347253230600324bf,devin-ai-integration[bot],agent,Python,54740
+airbytehq/airbyte,f750104143eb6066f3cb63efae06bafa5822e3fe,octavia-squidington-iii,agent,Python,54741
+antiwork/flexile,9c6022e512e373ee0e57f287e656c91351c6cd6b,devin-ai-integration[bot],agent,Ruby,608
+antiwork/flexile,518feafceeb18570a1338bf799f378da09b9bd17,devin-ai-integration[bot],agent,Ruby,582
+antiwork/flexile,46bc85cd4b556c2cea27050c6b4b5fed0d248087,slavingia,agent,Ruby,650
+antiwork/flexile,ca376ba4ea0f417c383b931225d3a0ed44e5d3c2,devin-ai-integration[bot],agent,Ruby,652
+antiwork/flexile,c52c64185b59c5d8b1024ad576c369717ea4f84f,devin-ai-integration[bot],agent,Ruby,654
+antiwork/flexile,e9096de6cb8f83553b1ca8f4e4c5e15648e64754,MayaRainer,agent,Ruby,123
+marimo-team/marimo,1dba265298e0e427fac54fe779971bc40665fdee,pre-commit-ci[bot],agent,Python,3977
+marimo-team/marimo,4ae470bba18cdad91d612ec3a137629c5c359c3a,mscolnick,agent,Python,3978
+airbytehq/airbyte,5a51d9bf91e860d234c37d2ca5e4987cb4d407ed,aldogonzalez8,agent,Python,55202
+antiwork/flexile,b1cc2919ab004c3850473f1c47371f0df45ee9bb,MayaRainer,agent,Ruby,165
+antiwork/flexile,fce2ce39efe09af3bcede2205851a7879a763128,MayaRainer,agent,Ruby,167
+antiwork/flexile,105c1d6e73a410d0f35a6d0f26900a13836d2645,devin-ai-integration[bot],agent,Ruby,335
+airbytehq/airbyte,4de1e8698aca030f806fd85fb774b644118f7719,devin-ai-integration[bot],agent,Python,60883
+antiwork/flexile,d93bb44e14c4c198ca586edaf3d3cff70a655045,devin-ai-integration[bot],agent,Ruby,77
+airbytehq/airbyte,67964002e7094bb674f2a244e72304762be9ebcc,devin-ai-integration[bot],agent,Python,54663
+antiwork/flexile,159ef9ea52df15ed0b4b4338e758d173143ec14e,devin-ai-integration[bot],agent,Ruby,669
+antiwork/flexile,a006a76b3c7a95d1d368d7899678f1ee41c7cfec,devin-ai-integration[bot],agent,Ruby,670
+antiwork/flexile,6fe355dd79a7c20c5b3fc4979dac692b56079cb2,MayaRainer,agent,Ruby,622
+airbytehq/airbyte,6662304c7624ff743d9303f2d86c6dbf148f6032,devin-ai-integration[bot],human,Python,70960
+dotnet/aspire,d2d1d881537df94f23db7e3c96beac71bb9740c4,Copilot,human,C#,13113
+mlflow/mlflow,4bd5a57fe62ae12c6a245c21449d296268b83f59,Ben Wilson,human,Python,19474
+microsoft/testfx,4e84b8461ead6927f6323338a9f13bb4c09aabc4,dotnet-maestro[bot],human,C#,7151
+marimo-team/marimo,e6438eff48e1e234d55876a4d097da9028aae60f,Myles Scolnick,human,Python,7592
+antiwork/flexile,8d90f85b15d98801d884653802609bbeabeec14f,Ershad Kunnakkadan,human,Ruby,1511

@@ -1,0 +1,7 @@
+full_name,language,total_prs,agent_prs,human_prs,agent_percentage,human_percentage
+antiwork/flexile,Ruby,281,161,120,57.3,42.7
+airbytehq/airbyte,Python,259,109,150,42.08,57.92
+dotnet/aspire,C#,182,105,77,57.69,42.31
+mlflow/mlflow,Python,130,75,55,57.69,42.31
+marimo-team/marimo,Python,75,31,44,41.33,58.67
+microsoft/testfx,C#,62,35,27,56.45,43.55
