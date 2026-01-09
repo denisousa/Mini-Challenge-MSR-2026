@@ -21,6 +21,7 @@ This replication package is intended to support **reproducibility**, enabling ot
 - **Poetry**: Dependency manager (install via `pip install poetry`)
 - **GitHub Token**: Required to access GitHub API (https://github.com/settings/tokens)
 - **Git**: To clone repositories
+- **OS**: Tested on Ubuntu and Windows
 
 ## 🚀 Installation
 
@@ -55,10 +56,30 @@ This will install all dependencies listed in `pyproject.toml`:
 
 ## 🏃 Execution
 
+Then activate your virtual environment and run the pipeline. Examples:
+
+- Linux/Ubuntu (bash):
+  ```bash
+  source .venv/bin/activate
+  ./complete_execution.sh
+  ```
+
+- Windows (PowerShell):
+  ```powershell
+  .venv\\Scripts\\Activate.ps1
+  ./complete_execution.sh
+  ```
+
 Run the complete pipeline that executes all 10 analysis scripts in sequence:
 
 ```bash
 ./complete_execution.sh
+```
+
+If needed, make the script executable first:
+
+```bash
+chmod +x ./complete_execution.sh
 ```
 
 This script will automatically use **Poetry** to run each script in the proper order and provide timing information for each step.

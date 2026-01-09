@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 set -u
 
-# Use PYTHON_CMD to change the Python invocation (e.g., "poetry run python" or "python3")
-PYTHON_CMD="${PYTHON_CMD:-poetry run python}"
+# Use PYTHON_CMD to change the Python invocation.
+# Default: plain system Python (no poetry wrapper).
+# Example override (if needed):
+#   PYTHON_CMD="poetry run python" ./complete_execution.sh
+PYTHON_CMD="${PYTHON_CMD:-python3}"
 
 scripts=(
   "./src/0_get_aidev.py"
