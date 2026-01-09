@@ -97,11 +97,7 @@ The **`artifacts/`** directory contains pre-generated data and results. When you
 
 #### 📋 Analysis and Mining CSVs
 
-CSV files generated during the data mining process by the scripts in `src/`:
-- **1_prepare_agents_prs.py**
-- **2_prepare_human_prs.py**
-- **3_get_balanced_repositories.py**
-- **4_get_commits.py**
+The following CSV files are generated during the data mining process by the analysis scripts: **1_prepare_agents_prs.py** prepares agent pull requests, **2_prepare_human_prs.py** prepares human pull requests, **3_get_balanced_repositories.py** identifies balanced repositories, and **4_get_commits.py** retrieves commit data.
 
 - **`all_merged_prs_with_repo_info.csv`**: All merged pull requests with repository information
 - **`balanced_repositories.csv`**: Repositories selected for balanced comparison between agent and human PRs
