@@ -238,9 +238,3 @@ def process_directory_py(directory):
                 else:
                     errors += 1
     print(f"\nDone. Cleaned: {count}, Errors: {errors}")
-
-if __name__ == "__main__":
-    target_dir = "/home/denis/test/Mini-Challenge-MSR-2026/src/clone_genealogy/cloned_repositories/enrichmcp/dataset/production"
-    if len(sys.argv) > 1:
-        target_dir = sys.argv[1]
-    process_directory_py(target_dir)

@@ -27,9 +27,10 @@ This replication package is intended to support **reproducibility**, enabling ot
 
 ### 1. Clone the Repository
 
+`Download Repository` in https://anonymous.4open.science/r/Mini-Challenge-MSR-2026-C243/README.md and unzip folder. Next, you need make:
+
 ```bash
-git clone https://github.com/denisousa/Mini-Challenge-MSR-2026.git
-cd Mini-Challenge-MSR-2026
+cd Mini-Challenge-MSR-2026-C243
 ```
 
 ### 2. Configure GitHub Token
